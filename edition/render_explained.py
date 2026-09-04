@@ -27,6 +27,9 @@ whose whole claim is that it needs none.
 """
 import os, re, sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from render_docs import WARRANT_VARS, wordmark  # one mark, defined once
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT  = os.path.join(HERE, "almanac.explained.html")
 
@@ -162,10 +165,16 @@ math{font-size:1.05em}
 .colophon{margin-top:5rem; padding-top:1.4rem; border-top:2px solid var(--ink);
   font-size:.86rem; line-height:1.6; color:var(--dim)}
 .colophon p{max-width:none}
+
+/* THE MARK, on every html face of the almanac (Overseer, 2026-09-04). Horizontal cut here,
+   because it sits in a masthead and the square cut is for a margin beside prose. */
+.wordmark{display:block;margin:0 0 .7rem;height:38px;width:126px}
+__WARRANT_VARS__
 </style>
 
 <div class="wrap">
 
+__WORDMARK__
 <p class="eyebrow">Project Sandbox · Almanac A0a · a reader's companion</p>
 <h1>The multiplicative&nbsp;grid</h1>
 
@@ -444,6 +453,9 @@ s = pat.sub(repl, s)
 for leftover in (r"\\(", r"\\["):
     if leftover in s:
         sys.exit(f"unconverted TeX delimiter {leftover!r} left in output")
+# The mark goes in BEFORE the no-network check, so the check reads the bytes that ship.
+s = s.replace("__WORDMARK__", wordmark()).replace("__WARRANT_VARS__", WARRANT_VARS)
+
 # The MathML xmlns URI is an identifier, never fetched. A NETWORK reference is something a tag
 # would load: script/src/href. Check those.
 if re.search(r"<script\b", s) or re.search(r"""\b(?:src|href)\s*=\s*["']https?://""", s):

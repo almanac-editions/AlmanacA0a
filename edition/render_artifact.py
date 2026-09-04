@@ -12,6 +12,10 @@ import html
 import json
 import os
 import re
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from render_docs import WARRANT_VARS, wordmark  # one mark, defined once
 
 D = os.path.dirname(os.path.abspath(__file__))
 C = json.load(open(os.path.join(D, "CONCORDANCE.json")))
@@ -260,9 +264,15 @@ a{color:var(--struct)}
 .stems dd{margin:0; color:var(--dim)}
 .colophon{margin-top:4.5rem; padding-top:1.3rem; border-top:3px solid var(--ink);
   font-size:.86rem; color:var(--dim)}
+
+/* THE MARK, on every html face of the almanac (Overseer, 2026-09-04). Horizontal cut here,
+   because it sits in a masthead and the square cut is for a margin beside prose. */
+.wordmark{display:block;margin:0 0 .7rem;height:38px;width:126px}
+__WARRANT_VARS__
 </style>""")
 
 A('<div class="sheet"><div class="masthead">')
+A("__WORDMARK__")
 A('<div class="lbl">Project Sandbox · Almanac series · pilot edition</div>')
 A("<h1>Almanac A0a</h1>")
 A('<p class="deck">The Laurent polynomials taking values in <code>A_t</code> at every point of the '
@@ -567,6 +577,8 @@ A('<div class="colophon"><p><strong>Almanac A0a</strong> · the pilot edition ·
 A("</div>")
 
 out = os.path.join(D, "almanac.artifact.html")
-open(out, "w").write("\n".join(P))
+open(out, "w").write("\n".join(P)
+                     .replace("__WORDMARK__", wordmark())
+                     .replace("__WARRANT_VARS__", WARRANT_VARS))
 print("wrote", out, os.path.getsize(out) // 1024, "KB")
 print(f"entries {len(rows)} · warrants {cnt.get('ink',0)}ink/{n_c}orange/{n_k}blue · gaps {n_gaps} · artifacts {n_ship}")

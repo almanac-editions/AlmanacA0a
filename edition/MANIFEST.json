@@ -204,7 +204,7 @@
  "edition_artifacts": [
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/EDITION.md",
-   "sha256": "653425b0cee368d2f7f3bcb9ca0fa83ac43e403f2fbf655dbe63e2341b578f03",
+   "sha256": "4ad3c7de90b6ef5ce1cf4ab55c1ce764d9109df82a1eab5a09fe9d045c7c98de",
    "role": "edition: assembled by the Editor",
    "produced_by": "the Almanac Editor, 2026-08-13"
   },
@@ -242,13 +242,13 @@
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/MEASUREMENT_LOG.md",
-   "sha256": "b5085e0c7ef9da32e6ad93210087163ca00e4ce8489364ad4799c16c273e0ef1",
+   "sha256": "2f9d2516dc6df26862eed50435c4d185842c5e61b3d69d950756a9106375f6f0",
    "role": "edition: assembled by the Editor",
    "produced_by": "the Almanac Editor, 2026-08-13"
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/ACTIVITY.md",
-   "sha256": "ca5fc69e6af3da2fa5d0d0c8140303b8cc63d2988694239c4985f4208413a4e2",
+   "sha256": "b99bb0b2d2f71efbc90cd07866613119af0be8fb45197e8c454344a82a2ddcce",
    "role": "edition: the campaign journal — the per-activity timestamps the measurement log is summed from",
    "produced_by": "the Almanac Editor, 2026-08-13 onward",
    "self_reference": "F-E11, 2026-08-14 — a THIRD instance of the §12.3 relation, and it had been UNLISTED while the manifest cited it: `how_to_re_measure` sends a reader here to re-derive the cost figure, and this file was not in the checkable set at all (the F-E7 class). It cannot be pinned before deposit, because the journal records the act of writing the manifest — every entry, including the one recording the pinning, falsifies the pin. Under §12.2 it pins at the deposit re-hash gate, when journalling for this edition stops. STATE.md is deliberately NOT listed: it is this seat's resume header, working state rather than edition content, and nothing in the edition cites it.",
@@ -265,26 +265,26 @@
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/almanac.html",
-   "sha256": "540e9646911772ebbe7515bc7412fb139ca18e0a0a10196d48b4f836f0a66f44",
+   "sha256": "7dab67c0297bf3716e9b7744b2ae0ddeb2e3b6ad8549abc3e1c34a26a342caf3",
    "role": "edition: the reading view — what a reader sees",
    "produced_by": "the Almanac Editor, 2026-08-13"
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/render_almanac.py",
-   "sha256": "2d919fe1b7c5fd2753ecd6d67be4af2392130da4043c2da2e3c5bddb320355c2",
+   "sha256": "8ae5ff2b54ffb447e7a02691a39e35a9d4b6b713407187df7ea7f2197b05b751",
    "role": "edition: generator for the reading view (renders from the edition's own JSON; no transcription)",
    "produced_by": "the Almanac Editor, 2026-08-13"
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/almanac.artifact.html",
-   "sha256": "4b4b29609c4bfa61fa24ea01c8a7d8ad5c863e2e98a8bd768af80d7fdce3fa3a",
+   "sha256": "fafba17cc1c48308085242f2815bd4223cd777130065a7138c2774d66893b369",
    "role": "edition: the READER'S EDITION — the form a reader receives",
    "produced_by": "the Almanac Editor, 2026-08-13",
    "self_reference": "NO HASH IS RECORDABLE HERE, and this is structural, not an omission — finding F-E10, 2026-08-14. The page renders its own inventory FROM this manifest, so any sha written here is embedded into the page and thereby falsified by the very act of writing it. Until 2026-08-14 this row carried b7a25bae…, the hash of the PREVIOUS render, while the file on disk hashed 8d46f37f…: one row of an integrity record that could never resolve, in the one artifact a reader is most likely to check. Verify this file instead by re-running render_artifact.py (sha recorded above) over this manifest and comparing bytes."
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/render_artifact.py",
-   "sha256": "3c17ac2be03463ce22e29db1b7e9b45ad702008272c2b77c49becfa542236716",
+   "sha256": "36026501c34a604f8d094fb24aa12c2d01404056a1b76f1f0615aa669d237f7b",
    "role": "edition: generator for the reader's edition (renders from the edition's own data; no transcription)",
    "produced_by": "the Almanac Editor, 2026-08-13"
   },
@@ -297,30 +297,48 @@
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/almanac.explained.html",
-   "sha256": "15dcead6c75e57ba1968faa9b01395566f15ddd4b5454c6060bd16ac8128f8fa",
+   "sha256": "9891a7dd93997ee0ee49e5139654f821b2cdb28b709f893c37805263e613681c",
    "role": "edition: the EXPLANATORY COMPANION — the mathematics explained for a reader from outside the programme",
    "produced_by": "the Almanac Editor, 2026-08-15, on the Overseer's request",
    "note": "HAND-WRITTEN, and therefore hashable — unlike almanac.artifact.html it does NOT render from this manifest, so §12.3's self-reference relation does not apply to it. It explains and does not certify; where it and the register disagree, the register is right. See the explanatory_companion block for its URL and its build-time oracle verification."
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/render_explained.py",
-   "sha256": "1c17a7c1c0c9bc2e814ada75de5fa4080222b63826d8faab6c36ffd9145f1f48",
+   "sha256": "4b0d9e998ef6fbe0a81db14df614d6e86b74f19a2f2fe4957c7251341b544d44",
    "role": "edition: generator for the reader's companion page (TeX -> MathML at build time; template embedded; added 2026-08-29 when the page gained typeset mathematics and, with it, a regeneration path)",
    "produced_by": "the Shadow, 2026-08-29"
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/render_docs.py",
-   "sha256": "e61f94d8772a224068fefa3e34570ae9e9cb932b08548de04f50df5b16d7de04",
+   "sha256": "7849c1ab37804f284b1fcffa6ff3c125aed10ae861e9a90f08d4c5f388eedc7c",
    "role": "edition: the generator for the guides' HTML pages — renders the markdown guides so a browser shows a page rather than a text file",
    "produced_by": "the Almanac Editor, 2026-09-03",
    "added": "2026-09-03 — the published site served .md as plain text. The markdown files stay; these are siblings. Ships so an unzipped copy can regenerate them, which is the same rule the other four generators travel under."
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/render_formal.py",
-   "sha256": "0dbeb8b4c74964d529c033bbac691d615fb473cf9c1af1e2d73e52d226071d95",
+   "sha256": "6ebb152013eb38912b7cdea0ec2f0733f2e0ba7ccc65e6027db518dde5c1bf39",
    "role": "edition: the generator for formal.html — the formal layer as a page, assembled from the concordance and the release log",
    "produced_by": "the Almanac Editor, 2026-09-03",
    "added": "2026-09-03 — 'Going further' had been pointing a browser at a .lean file and a build log."
+  },
+  {
+   "path": "SandboxA/sandboxA0a/almanac/edition/paper.pdf",
+   "sha256": "c5edc72fd0c16da984b875deeddde067969e3caae7bc5038f7c63e009e76fe3a",
+   "role": "edition: the paper, the edition's reading document",
+   "produced_by": "render_paper.py, assembled from SandboxA/informal/goalA.tex, sandboxA0a/informal/goalv0a.tex and proofv0a.tex; paper.tex reproduces byte-for-byte from those three sources (measured 2026-09-04)"
+  },
+  {
+   "path": "SandboxA/sandboxA0a/almanac/edition/paper.tex",
+   "sha256": "f421b7ec729bb75ec259e671984555a09e6828dcba4028079d838806ce46ca5e",
+   "role": "edition: the paper's LaTeX source",
+   "produced_by": "render_paper.py, assembled from SandboxA/informal/goalA.tex, sandboxA0a/informal/goalv0a.tex and proofv0a.tex; paper.tex reproduces byte-for-byte from those three sources (measured 2026-09-04)"
+  },
+  {
+   "path": "SandboxA/sandboxA0a/almanac/edition/render_paper.py",
+   "sha256": "ce0529cc8e68080b170e82c11cc9ec88e84c6850d943ea8bc7619a8e4a61bfbe",
+   "role": "edition: the paper's assembler",
+   "produced_by": "render_paper.py, assembled from SandboxA/informal/goalA.tex, sandboxA0a/informal/goalv0a.tex and proofv0a.tex; paper.tex reproduces byte-for-byte from those three sources (measured 2026-09-04)"
   }
  ],
  "reproducibility_recipe": {
@@ -458,7 +476,7 @@
   },
   {
    "path": "corpus/literature/transcribed/own-habiro-le-even-hybrid-centers-explicit-torus.md",
-   "sha256": "8c3d9277b05d8fb1f104e609d532f34318cebb58372a78040f8f31c388bed6df",
+   "sha256": "73c81474ca5c87a539dc76dda8d70a32cf7e2adcd60e2c6ce1908729a0ebef40",
    "role": "ancestry: the programme's own transcript cited by ANCESTRY.md and CONCORDANCE.json as the predecessor for the explicit-torus half",
    "produced_by": "the programme",
    "added": "2026-08-14 under §12.4, THIRD instance — found by running the Librarian's derived-vs-citable shape over this edition's own prose. Cited as evidence by two shipped files and never a row."
@@ -567,7 +585,7 @@
   },
   {
    "path": "corpus/statements/lit-jantzen-harish-chandra-even-torus.md",
-   "sha256": "905738f51514995f63d93b988945ee3b22c7ffc3e73c4ade2327b1eabb1ff7c7",
+   "sha256": "dcfc3d0e9464ef0aeb5265454750845f0fca01e8fda491b7078e5d6521d9dcaa",
    "role": "card: the project's own written statement ABOUT a source, carrying its convention frame",
    "produced_by": "the Librarian"
   },
@@ -592,7 +610,7 @@
    "De Concini-Procesi LNM 1565; Jantzen GSM 6; Lusztig; Habiro-Le; Polya; Polya-Szego; Gauss — referenced only, several not held at all"
   ],
   "why_the_distinction_is_load_bearing": "A reader receives the project's own writing in full — including its writing ABOUT other people's results, with the convention frame under which the project reads them — and obtains the sources themselves as they normally would. Shipping a card is attribution; shipping a source would be redistribution.",
-  "size": "DERIVED by verify_edition.py, 71 rows measured: 2.0 MB; no third-party PDF is included. Never type this number — §12.5."
+  "size": "DERIVED by verify_edition.py, 74 rows measured: 2.6 MB; no third-party PDF is included. Never type this number — §12.5."
  },
  "explanatory_companion": {
   "path": "SandboxA/sandboxA0a/almanac/edition/almanac.explained.html",
@@ -638,6 +656,14 @@
    "note": "Rows outside this seat's write surface, re-pinned on a named authority rather than absorbed. The attribution is the record of who read the bytes.",
    "confirmed_by_the_content_owner": "librarianCM, mail 20260901T111812Z-librarianCM-76657-160d, 2026-09-01 — measured INDEPENDENTLY by a three-way blob read (HEAD : index : disk) rather than by mtime, on the stated ground that a Dropbox-synced tree dates the SYNC and not the act. Their four sha256 values agree with this manifest's pins and with the bytes on disk, checked here a third time before recording: 14927be5… / 1bc9730e… / 41f67b32… / cfb0eb7d….",
    "why_this_matters": "The re-pin was authorised by the TREE OWNER (hypervisorA) and is now confirmed by the CONTENT OWNER (the Librarian), who says why each is settled rather than merely quiet: MINING_LOG's drift is one act, a struck head-format change, and its arc is closed by the Architect's grammar repair; the two F-A6 cards and gl2-hc-image-theorem were last touched by an alias-vocabulary pass that decided no content question, with no WITHDRAWN-PENDING and no open erratum. Authorisation and confirmation are different acts by different owners, and the row now carries both."
+  },
+  {
+   "rows": [
+    "corpus/literature/transcribed/own-habiro-le-even-hybrid-centers-explicit-torus.md",
+    "corpus/statements/lit-jantzen-harish-chandra-even-torus.md"
+   ],
+   "settled_by": "librarianCM, 20260904T114913Z-shadow-471917-c59f",
+   "note": "Rows outside this seat's write surface, re-pinned on a named authority rather than absorbed. The attribution is the record of who read the bytes."
   }
  ]
 }

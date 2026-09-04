@@ -59,7 +59,17 @@
  a { color:var(--accent); }
  footer { margin-top:4rem; padding-top:1.2rem; border-top:1px solid var(--rule);
    color:var(--faint); font-size:.85rem; }
+
+/* THE MARK, on every html face of the almanac (Overseer, 2026-09-04). Horizontal cut here,
+   because it sits in a masthead and the square cut is for a margin beside prose. */
+.wordmark{display:block;margin:0 0 .7rem;height:38px;width:126px}
+
+:root{--w-orange:#eb6834;--w-blue:#2a78d6}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--w-orange:#d95926;--w-blue:#3987e5}}
+:root[data-theme="dark"]{--w-orange:#d95926;--w-blue:#3987e5}
+
 </style></head><body><div class="wrap">
+<svg class="wordmark" width="126" height="38" viewBox="0 0 190 58" role="img" aria-label="almanac"><text x="5" y="43" font-family="Georgia, 'Iowan Old Style', 'Times New Roman', serif" font-size="44" fill="var(--ink)" textLength="180" lengthAdjust="spacingAndGlyphs">alm<tspan fill="var(--w-orange,#eb6834)">a</tspan>n<tspan fill="var(--w-blue,#2a78d6)">a</tspan>c</text></svg>
 <h1>Almanac A0a</h1>
 <p class="sub">The centre of the even hybrid family quantum <em>GL</em><sub>1</sub></p>
 <p class="sub" style="font-size:.95rem">Issued by Project Sandbox · assembled 2026-08-13 · <strong>the pilot edition</strong></p>
@@ -114,12 +124,12 @@ located" in this edition carries the search that produced it.</strong></p>
 that does not make every row kernel-certified.</p>
 <div class="scroll"><table>
 <tr><th>grade</th><th>rows</th><th>what it means</th></tr>
-<tr><td class="k">kernel-certified</td><td><strong>9 of 11</strong></td>
+<tr><td class="k">kernel-certified</td><td><strong>9 of 12</strong></td>
 <td>A Lean declaration states this row's claim and its <code>#print axioms</code> result is exactly
 <code>propext, Classical.choice, Quot.sound</code> — no <code>sorryAx</code>, no custom axiom.</td></tr>
-<tr><td class="c">computed over a declared range</td><td><strong>2 of 11</strong></td>
+<tr><td class="c">computed over a declared range</td><td><strong>2 of 12</strong></td>
 <td>Verified by computation over a stated bound, and over nothing else. The bound is part of the claim.</td></tr>
-<tr><td>ink</td><td><strong>0 of 11</strong></td><td>—</td></tr>
+<tr><td>ink</td><td><strong>1 of 12</strong></td><td>—</td></tr>
 </table></div>
 <p class="fine">Every axiom result was measured first-hand through the Lean language server. The
 two computed rows are the instrument and the oracle referee pin,
@@ -133,7 +143,7 @@ which does not contain the endpoint it names. The mathematics is independently s
 were verified first-hand and every one returned the clean triple. What is defective is the retained
 evidence, and its repair is a separate act awaiting signature.</div>
 <h2>The concordance</h2>
-<p class="fine">11 rows · all kept · every row carries ancestry. An incomplete row stays in
+<p class="fine">12 rows · all kept · every row carries ancestry. An incomplete row stays in
 the edition with its missing field shown as <code>null</code>, so the edition always displays its
 true state.</p><article class="row"><header>
       <span class="rid">A0a-01-clause-i</span>
@@ -168,8 +178,11 @@ true state.</p><article class="row"><header>
       <span class="stmt">The GL1Newton package computes the object set of goalv0a — the divided classes, the grid, the Newton coordinates, and the three membership predicates — and separates them as the theory requires.</span></header><div class="body"><dl><dt>informal</dt><dd>almanac/GL1Newton/README.md · THE INSTRUMENT (adopted into this edition 2026-08-13; ADOPT confirmed by the record owner)</dd><dt>CAS object</dt><dd>the ten GL1Newton stems + the four QFunctions stems</dd><dt>Lean</dt><dd><span class='fine'>none — this row's subject is not a Lean statement</span></dd><dt>declared range</dt><dd class='fine'>Acceptance battery 87/87, re-measured 2026-08-13 (Oscar 1.8.0, Julia 1.12.6). Ranges: grid integrality r ∈ 0..8 × χ ∈ −9..9 (171 cases); triangularity r ∈ 0..8; bridge identity 0 ≤ r ≤ m ≤ 8 (45 pairs); trap-4 separation k ∈ 0..6; frame controls χ ∈ −4..4, r ∈ 0..4; negative control 171 + 78 cases, all required to FAIL and doing so. newton() default verdict window χ ∈ −12..12.</dd><dt>frame</dt><dd class='fine'>Current symbols throughout (q, v, t) — the package was migrated on 2026-08-10, unlike the Lean sources and unlike every card. Stems are IDENTIFIERS, not notation: the three-world same-name contract survives the migration by design.</dd><dt>ancestry</dt><dd class='fine'>AN INSTRUMENT — this row records a Julia package, and criterion 13 binds results, so ancestry is owed by results alone; owing a predecessor search to an instrument would be a category error (ruled at the form level, 2026-08-13). Recorded in this category shape, replacing the field&#x27;s previous &#x27;none located&#x27; wording — an assertion dressed as a finding — corrected 2026-08-13.</dd><dt>notes</dt><dd class='fine'>NOT kernel-certified and cannot be: NO LEAN DECLARATION STATES THE CODE&#x27;S BEHAVIOUR. This is the manifest&#x27;s §9 rule 1 and the record owner&#x27;s explicit instruction on adoption — adoption makes the package a row, not a certificate. The 87/87 figure is the Editor&#x27;s own measurement; three records carry &#x27;70/70&#x27; and a static count of the test file gives 83 (finding F-E4). The edition ships the number it measured and names the discrepancy rather than repeating a figure it could not reproduce.</dd></dl></div></article><article class="row"><header>
       <span class="rid">A0a-11-n1-referee-pin</span>
       <span class="stamp c">orange — computed over a declared range</span>
-      <span class="stmt">Clause (iii) is refereed independently of the proof: the evaluation-defined predicate and the span-defined predicate agree, with no disagreements, on positive samples, adversarial seeds and a separator.</span></header><div class="body"><dl><dt>informal</dt><dd>n1_clause3_referee_pin.jl · THE ORACLE GATE for clause (iii) (finding N1 arc, closed 2026-07-21)</dd><dt>CAS object</dt><dd>newton vs mem_span, measured non-circularly</dd><dt>Lean</dt><dd><span class='fine'>none — this row's subject is not a Lean statement</span></dd><dt>declared range</dt><dd class='fine'>window = 8; 60 random positive samples (x^u ν_r(x), u ∈ 0..5, r ∈ 0..4, coefficients q^{rand(−3..3)} t^{rand(−2..2)}·rand(−5..5)); 5 named adversarial seeds, all required to be REFUTED by both predicates; 1 separator (ν_1, required to be in the lattice and the span but NOT in the Laurent ring); random seed fixed at 20260721. Recorded verdict: PROVED_BOUNDED, disagreements = 0.</dd><dt>frame</dt><dd class='fine'>Legacy symbols (Q, q, z) — this pin predates the 2026-08-10 migration and was NOT migrated. Its Q is today&#x27;s q and its z is today&#x27;s t.</dd><dt>ancestry</dt><dd class='fine'>AN INSTRUMENT — this row records an oracle run, and criterion 13 binds results, so ancestry is owed by results alone; owing a predecessor search to an instrument would be a category error (ruled at the form level, 2026-08-13). Recorded in this category shape, replacing the field&#x27;s previous &#x27;none located&#x27; wording — an assertion dressed as a finding — corrected 2026-08-13.</dd><dt>notes</dt><dd class='fine'>THIS ROW EXISTS BECAUSE OF A REAL DEFECT, and the edition prints the defect rather than only the fix. The substrate&#x27;s original newton() was defined by ν-span, so it could NOT referee clause (iii) — the claim that the evaluation-defined lattice EQUALS the span — without circularity. The oracle gate was therefore unable to confirm the theorem independently of the proof until the predicate was redefined by evaluation. This is the strongest computational evidence in the edition and it is still a BOUNDED verdict about a Julia program (EMBEDDING_NOTE.md §2c).</dd></dl></div></article><h2>What a reader receives</h2>
-<p><strong>69 artifacts, about 1.0 MB, containing no third-party PDF.</strong> The governing
+      <span class="stmt">Clause (iii) is refereed independently of the proof: the evaluation-defined predicate and the span-defined predicate agree, with no disagreements, on positive samples, adversarial seeds and a separator.</span></header><div class="body"><dl><dt>informal</dt><dd>n1_clause3_referee_pin.jl · THE ORACLE GATE for clause (iii) (finding N1 arc, closed 2026-07-21)</dd><dt>CAS object</dt><dd>newton vs mem_span, measured non-circularly</dd><dt>Lean</dt><dd><span class='fine'>none — this row's subject is not a Lean statement</span></dd><dt>declared range</dt><dd class='fine'>window = 8; 60 random positive samples (x^u ν_r(x), u ∈ 0..5, r ∈ 0..4, coefficients q^{rand(−3..3)} t^{rand(−2..2)}·rand(−5..5)); 5 named adversarial seeds, all required to be REFUTED by both predicates; 1 separator (ν_1, required to be in the lattice and the span but NOT in the Laurent ring); random seed fixed at 20260721. Recorded verdict: PROVED_BOUNDED, disagreements = 0.</dd><dt>frame</dt><dd class='fine'>Legacy symbols (Q, q, z) — this pin predates the 2026-08-10 migration and was NOT migrated. Its Q is today&#x27;s q and its z is today&#x27;s t.</dd><dt>ancestry</dt><dd class='fine'>AN INSTRUMENT — this row records an oracle run, and criterion 13 binds results, so ancestry is owed by results alone; owing a predecessor search to an instrument would be a category error (ruled at the form level, 2026-08-13). Recorded in this category shape, replacing the field&#x27;s previous &#x27;none located&#x27; wording — an assertion dressed as a finding — corrected 2026-08-13.</dd><dt>notes</dt><dd class='fine'>THIS ROW EXISTS BECAUSE OF A REAL DEFECT, and the edition prints the defect rather than only the fix. The substrate&#x27;s original newton() was defined by ν-span, so it could NOT referee clause (iii) — the claim that the evaluation-defined lattice EQUALS the span — without circularity. The oracle gate was therefore unable to confirm the theorem independently of the proof until the predicate was redefined by evaluation. This is the strongest computational evidence in the edition and it is still a BOUNDED verdict about a Julia program (EMBEDDING_NOTE.md §2c).</dd></dl></div></article><article class="row"><header>
+      <span class="rid">A0a-12-proof-proves-the-signed-statement</span>
+      <span class="stamp n">ink</span>
+      <span class="stmt">The stand-alone proof proves the statement that was signed: proofv0a.tex establishes the three clauses of goalv0a.tex — no clause weakened, none strengthened, no convention changed.</span></header><div class="body"><dl><dt>informal</dt><dd>proofv0a.tex · THE CLAIM EVERY OTHER ROW RESTS ON, AND THE ONLY ONE NO MACHINE CAN SETTLE.</dd><dt>CAS object</dt><dd><span class='fine'>none — no computational claim</span></dd><dt>Lean</dt><dd><span class='fine'>none — this row's subject is not a Lean statement</span></dd><dt>frame</dt><dd class='fine'>Both documents are read in the CURRENT frame (q, v, t; q = v², t = z²). The first referee read the pre-migration text in the legacy frame (Q, q, z); the migration between them was verified mechanically, not by eye, and is recorded in the chain below.</dd><dt>ancestry</dt><dd class='fine'>AN EDITORIAL FACT ABOUT THIS EDITION&#x27;S OWN DOCUMENTS, not a mathematical result with predecessors — ancestry is owed by results, and owing a predecessor search to a document-comparison claim would be the category error ruled at the form level 2026-08-13 for A0a-11.</dd><dt>notes</dt><dd class='fine'>THIS ROW EXISTS BECAUSE THE EDITION WAS SILENT ON ITS OWN LOAD-BEARING CLAIM. Every other row presupposes that the proof proves the signed statement, and nothing recorded it as a result with a warrant. It cannot be blue: a kernel certifies a formal statement and cannot compare two documents. It cannot be orange: no computation adjudicates whether one text proves another. It is exactly what the ink warrant is for — a written argument, read by an independent adversarial referee — which is also why an edition with zero ink rows was understating its own record rather than reporting it.</dd></dl></div></article><h2>What a reader receives</h2>
+<p><strong>71 artifacts, about 1.0 MB, containing no third-party PDF.</strong> The governing
 rule is that <em>cards travel and sources do not</em>: a card is this project's own writing about
 someone else's statement, carrying the convention frame under which we read it, and it ships inside
 the edition. The source itself is referenced by author, title and section, and never redistributed.
@@ -177,7 +190,7 @@ Shipping a card is attribution; shipping a source would be redistribution.</p>
 <div class="scroll"><table>
 <tr><th>ships</th><th>count</th></tr>
 <tr><td>the almanac proper — front matter, concordance, embedding note, ancestry, authorship,
-manifest, gap list, verdicts</td><td>16</td></tr>
+manifest, gap list, verdicts</td><td>18</td></tr>
 <tr><td>statement cards the ancestry resolves to</td><td>24</td></tr>
 <tr><td>the project's own substrate — manuscripts (TeX and PDF), Lean sources, the Julia instrument
 with its dependency pin, ledgers, referee and panel reports, closure records</td>

@@ -17,7 +17,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from render_docs import PAGE  # one page shell, so the guides and this cannot drift apart
+from render_docs import MARK, PAGE  # one page shell, so the guides and this cannot drift apart
 
 CLEAN = ["propext", "Classical.choice", "Quot.sound"]
 
@@ -85,7 +85,7 @@ def build(directory):
 
     open(os.path.join(directory, "formal.html"), "w", encoding="utf-8").write(
         PAGE.replace("__TITLE__", "The formal layer").replace("__BODY__", "\n".join(out))
-            .replace("__ROOT__", ""))
+            .replace("__MARK__", MARK).replace("__ROOT__", ""))
     return "formal.html"
 
 

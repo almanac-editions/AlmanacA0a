@@ -44,6 +44,8 @@ can be decided from the warrants above and the convention frame carried on every
 
 | to… | read |
 |---|---|
+| read the mathematics | **`edition/paper.pdf`** — the paper, 12 pp.: the statement for general *n*, and the case *n* = 1 proved |
+| read it at length, without LaTeX | **`edition/almanac.explained.html`** — the same mathematics explained for a general reader |
 | look around | **`edition/index.html`** — interactive, offline |
 | check any of it independently | **`edition/FOR_A_HUMAN.md`** — including how to install every piece of software from scratch |
 | hand it to an AI assistant | **`AGENTS.md`** at the root — it routes to `edition/FOR_AN_AI_AGENT.md` |

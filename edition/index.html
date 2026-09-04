@@ -89,14 +89,15 @@
   .rowhead:hover { background:var(--surface-2); }
   .badge { flex:none; font-size:11px; font-weight:640; padding:3px 8px; border-radius:5px;
            letter-spacing:.02em; white-space:nowrap; margin-top:2px; }
-  .b-kernel { background:var(--cat-1-soft); color:var(--cat-1); border:1px solid var(--cat-1); }
+  /* INK, ORANGE, BLUE — declared in the order the reader meets them everywhere in this edition.
+     INK is a warrant and wears the ink colour — the same colour as the mark's first 'a' and as
+     the running text. It is not a lesser blue or a paler orange: the three are KINDS, not levels. */
+  .b-ink    { background:var(--surface-2); color:var(--text-primary); border:1px solid var(--text-primary); }
   .b-range  { background:var(--cat-2-soft); color:var(--cat-2); border:1px solid var(--cat-2); }
+  .b-kernel { background:var(--cat-1-soft); color:var(--cat-1); border:1px solid var(--cat-1); }
   /* A row carrying NO warrant must not wear a warrant's colour. Orange means a computation
      was checked; blue means a kernel checked a proof. Neutral means neither was done, and it
      has to look like neither. */
-  /* INK is a warrant and wears the ink colour — the same colour as the mark's first 'a' and as
-     the running text. It is not a lesser blue or a paler orange: the three are KINDS, not levels. */
-  .b-ink    { background:var(--surface-2); color:var(--text-primary); border:1px solid var(--text-primary); }
   /* the neutral badge is now ONLY the fallback for a value this page does not know. */
   .b-none   { background:var(--surface-2); color:var(--text-secondary); border:1px solid var(--border-strong); }
   .rowtitle { flex:1; }
@@ -116,6 +117,13 @@
   .empty { color:var(--text-muted); font-size:14px; padding:22px; text-align:center; }
   ul.plain { padding-left:19px; color:var(--text-secondary); font-size:14.5px; }
   ul.plain li { margin-bottom:7px; }
+  /* The three layers: no bullet, because the WARRANT BADGE is the marker. Hanging indent so the
+     three colours line up on one edge and the eye reads them as a scale, ink -> orange -> blue. */
+  ul.layers { margin:2px 0 7px; }
+  ul.layers li.layer { list-style:none; margin-left:-19px; margin-bottom:9px;
+                       padding-left:64px; text-indent:-64px; }
+  ul.layers li.layer .badge { display:inline-block; width:52px; text-align:center;
+                              margin-right:12px; text-indent:0; }
   footer { margin-top:56px; padding-top:20px; border-top:1px solid var(--border);
            color:var(--text-muted); font-size:12.5px; }
   a { color:var(--cat-1); }
@@ -141,9 +149,9 @@ in three layers &mdash; an informal proof, a computer program, and a machine-che
 
 <div class="hero">
   <div class="fig">9 of 12</div>
-  <div class="cap">results carry a proof-kernel certificate. Of the rest, 2 are verified by
-  computation over a stated range and 1 by a refereed written argument &mdash; three different
-  kinds of check, kept visibly different.</div>
+  <div class="cap">results carry a proof-kernel certificate. Of the rest, 1 rests on a
+  refereed written argument and 2 on computation over a stated range &mdash; three different
+  kinds of check, kept visibly different, and always named in that order: ink, orange, blue.</div>
 </div>
 
 <div class="kpis">
@@ -188,15 +196,33 @@ one can be decided from the warrants and the convention frame carried on every r
   <ul class="plain">
     <li><a href="almanac.explained.html">The mathematics explained</a> &mdash; at length, for a
       general reader. Formulas typeset; no renderer, no network.</li>
-    <li><a href="formal.html">The formal layer</a> &mdash; what the proof kernel actually certified,
-      row by row, with the axioms measured for each and the sources beside them.</li>
-    <li><a href="source/informal/proofv0a.pdf">The informal proof</a> (PDF), which proves
+  </ul>
+
+  <!-- THE THREE LAYERS, ALWAYS INK -> ORANGE -> BLUE (Overseer, 2026-09-04: "the order everywhere
+       should be ink -> orange -> blue"). The order is the mark's own: the three a's of "almanac"
+       run ink, orange, blue left to right, and a reader who meets the layers in one order here and
+       another order there has to learn the scheme twice. Each row wears its warrant's colour as
+       its marker, so the colour is taught where it is used rather than only in the legend. -->
+  <ul class="plain layers">
+    <li class="layer"><span class="badge b-ink">Ink</span>
+      <a href="paper.pdf">The paper</a> (PDF, 12 pp.) &mdash; the mathematics written up to be read:
+      the statement for general <em>n</em>, which this edition does <strong>not</strong> prove, and
+      the case <em>n</em>&nbsp;=&nbsp;1, which it does. It is assembled from the record beneath it,
+      every definition, statement and proof step lifted verbatim.
+      Beneath it: <a href="source/informal/proofv0a.pdf">the informal proof</a> (PDF), which proves
       <a href="source/informal/goalv0a.pdf">the signed goal</a> (PDF) &mdash; and
       <a href="source/informal/REFEREE_REPORT_PROOFv0a.html">the referee&rsquo;s report on it</a>,
       which is what the one ink-warranted row rests on.</li>
-    <li><a href="source/informal/proofv0a.ledger.cas_receipts.html">The proof ledger</a> &mdash;
+    <li class="layer"><span class="badge b-range">Orange</span>
+      <a href="source/informal/proofv0a.ledger.cas_receipts.html">The proof ledger</a> &mdash;
       which computation backs which step, receipt by receipt. Not a Lean blueprint, and this edition
       has none: its formal layer is seven files, not a dependency graph.</li>
+    <li class="layer"><span class="badge b-kernel">Blue</span>
+      <a href="formal.html">The formal layer</a> &mdash; what the proof kernel actually certified,
+      row by row, with the axioms measured for each and the sources beside them.</li>
+  </ul>
+
+  <ul class="plain">
     <li><a href="almanac.html">The edition as one page</a>, the
       <a href="almanac.artifact.html">reader&rsquo;s edition</a>, and
       <a href="EDITION.html">the edition&rsquo;s own front matter</a>.</li>

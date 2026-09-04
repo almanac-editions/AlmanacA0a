@@ -19,16 +19,69 @@ import os
 import re
 import sys
 
-try:
-    import markdown
-except ImportError:
-    sys.exit("render_docs: needs the `markdown` package:  python3 -m pip install --user markdown")
+# THE DEPENDENCY IS CHECKED WHERE IT IS USED, NOT AT IMPORT. This module is now also the one
+# place the MARK and the warrant colours are defined, and four renderers import those. A module
+# that exits on import took the whole build down with it when `markdown` was absent — measured
+# 2026-09-04 on castalia, where the estate had moved and the package was not installed: five
+# renderers that need nothing from markdown refused to run. It still refuses rather than
+# degrading; it just refuses at the point of the act.
+def _markdown():
+    try:
+        import markdown
+    except ImportError:
+        sys.exit("render_docs: needs the `markdown` package:  python3 -m pip install --user markdown")
+    return markdown
 
 DOCS = ["FOR_A_HUMAN.md", "FOR_AN_AI_AGENT.md", "EDITION.md",
         "EMBEDDING_NOTE.md", "AUTHORSHIP.md", "ANCESTRY.md",
         # markdown that lives deeper than the root but is still something a reader is sent to
         "source/informal/proofv0a.ledger.cas_receipts.md",
         "source/informal/REFEREE_REPORT_PROOFv0a.md"]
+
+
+# ---------------------------------------------------------------------------- THE MARK
+# EVERY HTML FACE OF THIS ALMANAC CARRIES THE MARK (Overseer, 2026-09-04: "there should be an
+# almanac logo ... on every html page in the almanac as well"). Six of the guides already carried
+# the square cut, floated, because their MARKDOWN carries it and the markdown is also read
+# unrendered; formal.html and the two source pages carried nothing at all. So the shell supplies it
+# and skips the page that already has one — one mark per page, never two.
+#
+# TWO CUTS, ONE DRAWING (the rule the asset files already state): the SQUARE cut where the mark
+# sits in a margin beside prose, the horizontal WORDMARK where it sits in a masthead. The wordmark
+# is inline SVG rather than an <img> so it follows the page's own ink colour through the theme
+# toggle and fetches nothing; the square cut is the shipped asset, in a <picture> so it follows
+# prefers-color-scheme.
+MARK = ('<picture class="mark">'
+        '<source media="(prefers-color-scheme: dark)" srcset="__ROOT__almanac-mark-dark.svg">'
+        '<img src="__ROOT__almanac-mark.svg" width="92" alt="almanac">'
+        '</picture>')
+
+# The three warrant colours as CSS variables, so a page that has its own palette can still set the
+# mark's two coloured a's from ONE definition. The values are index.html's --cat-1/--cat-2 and its
+# dark-theme pair; the mark must not be a different orange on a different page.
+WARRANT_VARS = """
+:root{--w-orange:#eb6834;--w-blue:#2a78d6}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--w-orange:#d95926;--w-blue:#3987e5}}
+:root[data-theme="dark"]{--w-orange:#d95926;--w-blue:#3987e5}
+"""
+
+
+def wordmark(fill="var(--ink)", width=126, height=38, klass="wordmark"):
+    """The horizontal ALMANAC wordmark (W1, adopted 2026-08-29), inline and asset-free.
+
+    The word carries the form: "almanac" has exactly three a's, one per KIND OF WARRANT, and they
+    run INK -> ORANGE -> BLUE left to right — the same order the layers are listed in and the
+    concordance is filtered by. `textLength` pins the set width so a system-font fallback cannot
+    reflow the mark.
+    """
+    return (f'<svg class="{klass}" width="{width}" height="{height}" viewBox="0 0 190 58" '
+            'role="img" aria-label="almanac">'
+            '<text x="5" y="43" '
+            'font-family="Georgia, \'Iowan Old Style\', \'Times New Roman\', serif" '
+            f'font-size="44" fill="{fill}" textLength="180" lengthAdjust="spacingAndGlyphs">'
+            'alm<tspan fill="var(--w-orange,#eb6834)">a</tspan>'
+            'n<tspan fill="var(--w-blue,#2a78d6)">a</tspan>c</text></svg>')
+
 
 PAGE = """<!DOCTYPE html>
 <html lang="en">
@@ -56,10 +109,14 @@ th,td{border:1px solid var(--rule);padding:.42rem .6rem;text-align:left;vertical
 blockquote{margin:1rem 0;padding:.1rem 1rem;border-left:3px solid var(--rule);color:var(--dim)}
 hr{border:0;border-top:1px solid var(--rule);margin:2rem 0}
 .back{display:inline-block;margin-bottom:1.6rem;font-size:.92em}
+.mark{float:right;margin:0 0 1.2rem 1.5rem;width:92px}
+.mark img{display:block;width:92px;height:auto}
+@media (max-width:520px){.mark,.mark img{width:64px}}
 img{max-width:100%;height:auto}
 </style>
 </head>
 <body><main>
+__MARK__
 <a class="back" href="__ROOT__index.html">&larr; the almanac</a>
 __BODY__
 </main></body></html>
@@ -68,6 +125,7 @@ __BODY__
 
 def convert(directory):
     made = []
+    markdown = _markdown()
     present = {d for d in DOCS if os.path.exists(os.path.join(directory, d))}
     for name in sorted(present):
         src = os.path.join(directory, name)
@@ -84,9 +142,13 @@ def convert(directory):
         out = os.path.join(directory, name[:-3] + ".html")
         os.makedirs(os.path.dirname(out), exist_ok=True)
         depth = name.count("/")
+        # ONE MARK PER PAGE. Six of these guides carry the square cut in their own markdown — it is
+        # there for the reader of the UNRENDERED file — and a shell that added a second would put
+        # two marks on one page. Detection is on the rendered body, which is the thing that ships.
+        mark = "" if "almanac-mark" in body else MARK
         open(out, "w", encoding="utf-8").write(
             PAGE.replace("__TITLE__", html.escape(title)).replace("__BODY__", body)
-                .replace("__ROOT__", "../" * depth))
+                .replace("__MARK__", mark).replace("__ROOT__", "../" * depth))
         made.append(os.path.relpath(out, directory))
     return made
 

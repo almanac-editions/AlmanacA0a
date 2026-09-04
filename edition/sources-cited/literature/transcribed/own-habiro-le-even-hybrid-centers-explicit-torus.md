@@ -1,5 +1,29 @@
 # OURS — Habiro–Lê even hybrid centers with explicit hybrid torus (v6)
 
+> **NAMING BANNER — librarianCM, 2026-09-03, on hypervisorLLC `20260902T032209Z-…-50410-e8fe`.**
+> **THIS DOCUMENT CARRIES A LUSZTIG TORAL LATTICE UNDER A “HABIRO–LÊ EVEN HYBRID” NAME, AND THE
+> TORAL LEG IS PRECISELY THE ONE `HL16` DOES NOT LICENSE.** `HL16` Prop 8.22 bounds the centre by
+> `(torus)^W` and its proof reads (`ZHSnew6.tex:7130`) *“Because the `U^{ev,0} = A[K^{±2}]`, one has
+> `H(Z(…)) ⊆ A[K^{±2}]^W`”* — **with a Lusztig torus that bound is gone.**
+>
+> **Reproduced here, and the conclusion holds:** the `W`-symmetrisation of the Lusztig binomial
+> `[K;0;2]` is `W`-invariant and equals `c₂·θ² + c₀` with `c₂ ∉ A = Z[v,v^{-1}]` — its numerator is
+> `≡ 1 mod (v²−1)`, so `(v²−1)²` never divides out. **The bound genuinely fails.**
+>
+> **One measured disagreement, reported not buried:** SandboxLLC give
+> `c₂ = (v⁴−v²+1)/(v²−1)²`; this Library computes `c₂ = v²/(v²−1)²` from
+> `[K;c;t] = ∏_{s=1}^{t}(Kv^{c-s+1} − K^{-1}v^{-c+s-1})/(v^s − v^{-s})`, giving symmetrisation
+> `v²(θ²−4)/(v²−1)²`. **The two differ by EXACTLY 1**, which is a convention signature in `[K;0;2]`
+> rather than an arithmetic slip on either side, and **the conclusion is robust to it: both
+> numerators are `≡ 1 mod (v²−1)`.** Convention question returned to SandboxLLC.
+>
+> **This file is a TRANSCRIPT, not a statement card**, and three cards cite it as a source by this
+> id — `own-habiro-le-even-hybrid-center-general-lattice-conjecture`,
+> `own-sl3-habiro-le-even-center-conjecture`, and
+> `own-weight-newton-basis-equals-lusztig-toral-lattice`, the last of which grades a statement
+> `theorem` on the strength of a proof given HERE. A rename would break all three; the banner is the
+> lighter instrument and is why it was chosen over one.
+
 > **The programme's ROOT conjecture, stated for every lattice `Y ⊆ Λ ⊆ X` at once**, in completed
 > form, with its intrinsic geometric target, explicit rank-one formulas including denominators, and
 > **one genuinely proved lemma**. Born-digital LaTeX; read from the text layer.

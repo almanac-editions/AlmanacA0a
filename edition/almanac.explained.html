@@ -122,10 +122,20 @@ math{font-size:1.05em}
 .colophon{margin-top:5rem; padding-top:1.4rem; border-top:2px solid var(--ink);
   font-size:.86rem; line-height:1.6; color:var(--dim)}
 .colophon p{max-width:none}
+
+/* THE MARK, on every html face of the almanac (Overseer, 2026-09-04). Horizontal cut here,
+   because it sits in a masthead and the square cut is for a margin beside prose. */
+.wordmark{display:block;margin:0 0 .7rem;height:38px;width:126px}
+
+:root{--w-orange:#eb6834;--w-blue:#2a78d6}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--w-orange:#d95926;--w-blue:#3987e5}}
+:root[data-theme="dark"]{--w-orange:#d95926;--w-blue:#3987e5}
+
 </style>
 
 <div class="wrap">
 
+<svg class="wordmark" width="126" height="38" viewBox="0 0 190 58" role="img" aria-label="almanac"><text x="5" y="43" font-family="Georgia, 'Iowan Old Style', 'Times New Roman', serif" font-size="44" fill="var(--ink)" textLength="180" lengthAdjust="spacingAndGlyphs">alm<tspan fill="var(--w-orange,#eb6834)">a</tspan>n<tspan fill="var(--w-blue,#2a78d6)">a</tspan>c</text></svg>
 <p class="eyebrow">Project Sandbox · Almanac A0a · a reader's companion</p>
 <h1>The multiplicative&nbsp;grid</h1>
 

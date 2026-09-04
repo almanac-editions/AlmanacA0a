@@ -24,10 +24,14 @@ th,td{border:1px solid var(--rule);padding:.42rem .6rem;text-align:left;vertical
 blockquote{margin:1rem 0;padding:.1rem 1rem;border-left:3px solid var(--rule);color:var(--dim)}
 hr{border:0;border-top:1px solid var(--rule);margin:2rem 0}
 .back{display:inline-block;margin-bottom:1.6rem;font-size:.92em}
+.mark{float:right;margin:0 0 1.2rem 1.5rem;width:92px}
+.mark img{display:block;width:92px;height:auto}
+@media (max-width:520px){.mark,.mark img{width:64px}}
 img{max-width:100%;height:auto}
 </style>
 </head>
 <body><main>
+
 <a class="back" href="index.html">&larr; the almanac</a>
 <p><picture>
   <source media="(prefers-color-scheme: dark)" srcset="almanac-mark-dark.svg">
@@ -114,19 +118,19 @@ lattice reconciliation that would identify their lattice with ours is <strong>op
 </thead>
 <tbody>
 <tr>
-<td><strong>kernel-certified</strong></td>
-<td style="text-align: right;"><strong>9 of 11</strong></td>
-<td>A Lean declaration states the row's claim, and its <code>#print axioms</code> result is exactly <code>propext</code>, <code>Classical.choice</code>, <code>Quot.sound</code> — no <code>sorryAx</code>, no custom axiom</td>
+<td><strong>ink</strong> — a refereed argument</td>
+<td style="text-align: right;"><strong>1 of 12</strong></td>
+<td>An argument written for a human reader and refereed. No kernel certifies it and no computation bounds it: the check is a referee reading the proof</td>
 </tr>
 <tr>
-<td><strong>computed over a declared range</strong></td>
-<td style="text-align: right;"><strong>2 of 11</strong></td>
+<td><strong>orange</strong> — computed over a declared range</td>
+<td style="text-align: right;"><strong>2 of 12</strong></td>
 <td>Verified by computation over a stated bound, and over nothing else</td>
 </tr>
 <tr>
-<td><strong>ink</strong> — a refereed argument</td>
-<td style="text-align: right;"><strong>0 of 11</strong></td>
-<td>—</td>
+<td><strong>blue</strong> — kernel-certified</td>
+<td style="text-align: right;"><strong>9 of 12</strong></td>
+<td>A Lean declaration states the row's claim, and its <code>#print axioms</code> result is exactly <code>propext</code>, <code>Classical.choice</code>, <code>Quot.sound</code> — no <code>sorryAx</code>, no custom axiom</td>
 </tr>
 </tbody>
 </table>
@@ -137,7 +141,7 @@ be kernel-certified, because no Lean declaration states what a Julia program doe
 manifest's rule and the record owner's explicit instruction on adopting the package: adoption makes
 it a row, not a certificate.</p>
 <h2 id="was-every-row-fillable">Was every row fillable?</h2>
-<p><strong>Yes — and every row was kept.</strong> 11 rows, 9 fully filled, 2 carrying a named <code>null</code>.</p>
+<p><strong>Yes — and every row was kept.</strong> 12 rows, 9 with all three layers filled, 3 carrying a named absence: the two computed rows have no Lean declaration, and the ink row has neither, because what it claims is not the kind of thing either instrument can check.</p>
 <p>The nulls are all of one kind: <em>this layer has nothing to say about this result.</em> Two rows are
 formal-side guarantees with no counterpart environment in the manuscript (the non-degeneracy pin and
 the coefficient-field bridge); two have no computational claim to make because the content is

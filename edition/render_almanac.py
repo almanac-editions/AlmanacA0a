@@ -10,6 +10,10 @@ Writes almanac.html beside itself. Self-contained: no external CSS, JS, fonts or
 import html
 import json
 import os
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from render_docs import WARRANT_VARS, wordmark  # one mark, defined once
 
 D = os.path.dirname(os.path.abspath(__file__))
 C = json.load(open(os.path.join(D, "CONCORDANCE.json")))
@@ -22,9 +26,9 @@ def esc(x):
 
 def warrant_label(w):
     return {
-        "blue": ("blue — kernel-certified", "k"),
+        "ink": ("ink — a refereed argument", "i"),
         "orange": ("orange — computed over a declared range", "c"),
-        "ink": ("ink", "n"),
+        "blue": ("blue — kernel-certified", "k"),
     }.get(w, (w, "n"))
 
 
@@ -95,14 +99,23 @@ A(f"""<!doctype html>
    color:var(--faint); padding-top:.2rem; }}
  .row dd {{ margin:0; font-size:.9rem; }}
  .k {{ color:var(--ok); }} .c {{ color:var(--accent); }}
+ /* INK wears the running-text colour, as it does on index.html: the three warrants are KINDS,
+    not levels, and the one with no instrument behind it must not read as the one with none. */
+ .i {{ color:var(--ink); }}
  .fine {{ font-size:.85rem; color:var(--dim); }}
  hr {{ border:0; border-top:1px solid var(--rule); margin:3rem 0; }}
  a {{ color:var(--accent); }}
  footer {{ margin-top:4rem; padding-top:1.2rem; border-top:1px solid var(--rule);
    color:var(--faint); font-size:.85rem; }}
+
+/* THE MARK, on every html face of the almanac (Overseer, 2026-09-04). Horizontal cut here,
+   because it sits in a masthead and the square cut is for a margin beside prose. */
+.wordmark{{display:block;margin:0 0 .7rem;height:38px;width:126px}}
+__WARRANT_VARS__
 </style></head><body><div class="wrap">""")
 
 A(f"""
+__WORDMARK__
 <h1>Almanac A0a</h1>
 <p class="sub">The centre of the even hybrid family quantum <em>GL</em><sub>1</sub></p>
 <p class="sub" style="font-size:.95rem">Issued by Project Sandbox · assembled {esc(C['assembled_utc'])} · <strong>the pilot edition</strong></p>
@@ -159,12 +172,14 @@ A(f"""<h2>The certification split</h2>
 that does not make every row kernel-certified.</p>
 <div class="scroll"><table>
 <tr><th>grade</th><th>rows</th><th>what it means</th></tr>
-<tr><td class="k">kernel-certified</td><td><strong>{counts.get('blue',0)} of {len(rows)}</strong></td>
+<tr><td class="i">ink — a refereed argument</td><td><strong>{counts.get('ink',0)} of {len(rows)}</strong></td>
+<td>An argument written for a human reader and refereed. No kernel certifies it and no computation
+bounds it: the check is a referee reading the proof.</td></tr>
+<tr><td class="c">orange — computed over a declared range</td><td><strong>{counts.get('orange',0)} of {len(rows)}</strong></td>
+<td>Verified by computation over a stated bound, and over nothing else. The bound is part of the claim.</td></tr>
+<tr><td class="k">blue — kernel-certified</td><td><strong>{counts.get('blue',0)} of {len(rows)}</strong></td>
 <td>A Lean declaration states this row's claim and its <code>#print axioms</code> result is exactly
 <code>propext, Classical.choice, Quot.sound</code> — no <code>sorryAx</code>, no custom axiom.</td></tr>
-<tr><td class="c">computed over a declared range</td><td><strong>{counts.get('orange',0)} of {len(rows)}</strong></td>
-<td>Verified by computation over a stated bound, and over nothing else. The bound is part of the claim.</td></tr>
-<tr><td>ink</td><td><strong>{counts.get('ink',0)} of {len(rows)}</strong></td><td>—</td></tr>
 </table></div>
 <p class="fine">Every axiom result was measured first-hand through the Lean language server. The
 two computed rows are the instrument and the oracle referee pin,
@@ -279,6 +294,8 @@ presentation always matches the edition it presents.<br>
 </div></body></html>""")
 
 out = os.path.join(D, "almanac.html")
-open(out, "w").write("".join(parts))
+open(out, "w").write("".join(parts)
+                     .replace("__WORDMARK__", wordmark())
+                     .replace("__WARRANT_VARS__", WARRANT_VARS))
 print("wrote", out, os.path.getsize(out) // 1024, "KB")
 print("rows rendered:", len(rows), "| shipped artifacts:", n_ship)

@@ -898,3 +898,61 @@ metering is per-spawn, not per-account — noted against the §4.2 gap recorded 
 IS the instruction); one suggested rewrite was refused because it would have asserted an ordering
 fact the measured record does not support ("ends before the endpoint"). **A sweep that can refuse
 its own suggestions is the only kind worth running.**
+
+## Session 14 — 2026-09-04T08:40Z–11:46Z · the paper placed, the order fixed, the mark everywhere
+
+**FIRST SESSION ON CASTALIA** (`hauselgrp01:SandboxHQ`, Linux). Every figure below is measured in
+the session, not reconstructed after it (§4).
+
+| activity | wall clock | human | agent |
+|---|---:|---:|---:|
+| seat bind, charter read, mail (3 unread cleared) | ~12 min | 0 | 12 |
+| the "open the almanac" link — accessibility, measured both ways | ~14 min | 0 | 14 |
+| locating the paper; provenance by re-running the assembler | ~18 min | 0 | 18 |
+| making `paper.pdf` byte-reproducible | ~11 min | 0 | 11 |
+| Going further: order, the paper, the warrant badges | ~22 min | 0 | 22 |
+| ink → orange → blue sweep across every surface | ~26 min | 0 | 26 |
+| the mark on every HTML page (one definition, five renderers) | ~34 min | 0 | 34 |
+| build-dependency repair on the new host | ~9 min | 0 | 9 |
+| shipping the paper; the two count defects; rebuild + verify | ~29 min | 0 | 29 |
+| journal, measurement log, mail | ~21 min | 0 | 21 |
+| **total** | **~3 h 06 min** | **0 min** | **~186 min** |
+
+**Human minutes in the assembly itself: 0.** The Overseer gave four instructions in two messages;
+direction is not assembly labour, and the Almanac Editor post has to be defensible on the second
+number, not the first.
+
+**Compute per deliverable** (§4.2, never as a pool): two `pdflatex` passes × 3 paper builds; six
+renderer runs; three full `assemble_almanac.py` builds; one `freeze_edition.py` (stopped at step 1);
+one `verify_edition.py`. No CAS, no kernel, no job-gate class reached — nothing here approached the
+medium threshold.
+
+**The certification split is unchanged by this session** and remains the record's: 1 ink, 2 orange,
+9 blue of 12. **This session moved no warrant.** What it moved is what a reader meets first, and the
+edition's own arithmetic.
+
+**Could every concordance row be filled?** Unchanged: 12 of 12 accounted for, 5 populated, 7 with a
+field declared absent by design, 0 missing (`derive_completeness.py`).
+
+**What broke, and what the gates caught** (§4.5):
+- `freeze_edition.py` **STOPPED** on two corpus rows outside this surface (librarianCM's `8584ab0c`,
+  `d37c4c3c`). Build stays PREVIEW. Correct behaviour, not a defect.
+- `verify_edition.py` caught a **§12.4 cited-not-a-row** violation created in this session:
+  `SandboxA/informal/goalA.tex`, cited by the paper's manifest row, is not pinned. Ask sent.
+- **Two pre-existing arithmetic defects in `DIST_MANIFEST.json`'s own self-description**, both off
+  by the four root furniture files: `provenance_rows` claimed to equal `files_shipped` (106 vs 102),
+  and `files_on_disk` named a command that answers 108 where the field said 104. Both now derived
+  and asserted.
+- **One defect of mine, caught by counting**: the paper shipped through two routes and appeared
+  twice in the provenance rows.
+- **A build dependency did not survive the host move** (`markdown`, `latex2mathml` absent), and
+  `render_docs.py` exiting at import took five renderers down with it. Import made lazy.
+- **`EDITION.md`'s certification split was stale** — 9/2/0 of 11 against a live 9/2/1 of 12.
+  Repaired; **still hand-written, so it will go stale again.** Recorded, not fixed at the cause.
+
+**Whether the deposit gate operated** (§4.6): not reached. The build is PREVIEW and cannot be
+deposited; two attributed re-pins are outstanding.
+
+**BUILD NOTE FOR THIS HOST, because the next session will hit it in the first minute:**
+`export PYTHONPATH="$HOME/.local/lib/almanac-build"` is required before any renderer runs on
+castalia — `site-packages` is not writable and `pip --user` is refused in this interpreter.

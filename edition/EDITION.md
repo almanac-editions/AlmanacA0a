@@ -97,9 +97,9 @@ The three grades are distinct, and the edition keeps them distinct.
 
 | grade | rows | what it means |
 |---|---:|---|
-| **kernel-certified** | **9 of 11** | A Lean declaration states the row's claim, and its `#print axioms` result is exactly `propext`, `Classical.choice`, `Quot.sound` — no `sorryAx`, no custom axiom |
-| **computed over a declared range** | **2 of 11** | Verified by computation over a stated bound, and over nothing else |
-| **ink** — a refereed argument | **0 of 11** | — |
+| **ink** — a refereed argument | **1 of 12** | An argument written for a human reader and refereed. No kernel certifies it and no computation bounds it: the check is a referee reading the proof |
+| **orange** — computed over a declared range | **2 of 12** | Verified by computation over a stated bound, and over nothing else |
+| **blue** — kernel-certified | **9 of 12** | A Lean declaration states the row's claim, and its `#print axioms` result is exactly `propext`, `Classical.choice`, `Quot.sound` — no `sorryAx`, no custom axiom |
 
 **Every axiom result in this edition was measured first-hand on 2026-08-13**, through the Lean
 language server. That first-hand measurement turned out to matter: see F-E1 below.
@@ -111,7 +111,7 @@ it a row, not a certificate.
 
 ## Was every row fillable?
 
-**Yes — and every row was kept.** 11 rows, 9 fully filled, 2 carrying a named `null`.
+**Yes — and every row was kept.** 12 rows, 9 with all three layers filled, 3 carrying a named absence: the two computed rows have no Lean declaration, and the ink row has neither, because what it claims is not the kind of thing either instrument can check.
 
 The nulls are all of one kind: *this layer has nothing to say about this result.* Two rows are
 formal-side guarantees with no counterpart environment in the manuscript (the non-degeneracy pin and
