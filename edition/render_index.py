@@ -11,7 +11,10 @@ adjacent-pair CVD validation. The local validator (node) is NOT installed on thi
 was NOT re-run here — recorded rather than reported as a pass. Every colour is paired with a text
 label, so identity never rests on colour alone.
 """
-import html, json, os
+import html, json, os, sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from render_docs import pdf_pages  # one measured page count, shared with informal.html
 
 ED = os.path.dirname(os.path.abspath(__file__))
 con = json.load(open(os.path.join(ED, "CONCORDANCE.json")))
@@ -235,14 +238,9 @@ one can be decided from the warrants and the convention frame carried on every r
        its marker, so the colour is taught where it is used rather than only in the legend. -->
   <ul class="plain layers">
     <li class="layer"><span class="badge b-ink">Ink</span>
-      <a href="paper.pdf">The paper</a> (PDF, 12 pp.) &mdash; the mathematics written up to be read:
-      the statement for general <em>n</em>, which this edition does <strong>not</strong> prove, and
-      the case <em>n</em>&nbsp;=&nbsp;1, which it does. It is assembled from the record beneath it,
-      every definition, statement and proof step lifted verbatim.
-      Beneath it: <a href="source/informal/proofv0a.pdf">the informal proof</a> (PDF), which proves
-      <a href="source/informal/goalv0a.pdf">the signed goal</a> (PDF) &mdash; and
-      <a href="source/informal/REFEREE_REPORT_PROOFv0a.html">the referee&rsquo;s report on it</a>,
-      which is what the one ink-warranted row rests on.</li>
+      <a href="informal.html">The informal proof</a> &mdash; headed by the paper (PDF__PAPERPP__) and
+      the explanation, with the signed goal it proves, the referee chain that read it, and the limit
+      stated on its own face.</li>
     <li class="layer"><span class="badge b-range">Orange</span>
       <a href="source/informal/proofv0a.ledger.cas_receipts.html">The proof ledger</a> &mdash;
       which computation backs which step, receipt by receipt. Not a Lean blueprint, and this edition
@@ -355,6 +353,11 @@ out = (TPL
        .replace("__NKERNEL__", str(n_kernel))
        .replace("__NRANGE__", str(n_range))
        .replace("__NINK__", str(n_ink))
+       # THE PAGE COUNT IS MEASURED FROM THE PDF, NEVER TYPED. It was typed as "12 pp." for one
+       # hour on 2026-09-04, in the same sweep that found three other typed counts which had
+       # stopped being true. If the paper is not beside this script the count is simply omitted.
+       .replace("__PAPERPP__", (lambda n: f", {n}&nbsp;pp." if n else "")(
+           pdf_pages(os.path.join(ED, "paper.pdf"))))
        .replace("__HUMANMIN__", str(man["cost"]["human_minutes_total"]))
        .replace("__WALLMIN__", str(man["cost"]["wall_clock_minutes_total"]))
        .replace("__EDITION__", html.escape(con["edition"]))

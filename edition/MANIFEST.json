@@ -248,7 +248,7 @@
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/ACTIVITY.md",
-   "sha256": "b99bb0b2d2f71efbc90cd07866613119af0be8fb45197e8c454344a82a2ddcce",
+   "sha256": "77d9e3b024219531187c9dc562dc247c70783ac5c4a19b8a8128c127d00a693e",
    "role": "edition: the campaign journal — the per-activity timestamps the measurement log is summed from",
    "produced_by": "the Almanac Editor, 2026-08-13 onward",
    "self_reference": "F-E11, 2026-08-14 — a THIRD instance of the §12.3 relation, and it had been UNLISTED while the manifest cited it: `how_to_re_measure` sends a reader here to re-derive the cost figure, and this file was not in the checkable set at all (the F-E7 class). It cannot be pinned before deposit, because the journal records the act of writing the manifest — every entry, including the one recording the pinning, falsifies the pin. Under §12.2 it pins at the deposit re-hash gate, when journalling for this edition stops. STATE.md is deliberately NOT listed: it is this seat's resume header, working state rather than edition content, and nothing in the edition cites it.",
@@ -310,7 +310,7 @@
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/render_docs.py",
-   "sha256": "7849c1ab37804f284b1fcffa6ff3c125aed10ae861e9a90f08d4c5f388eedc7c",
+   "sha256": "dbe512a0c65c0e3cb0e67eedd58ebd2742c11b81a73fd8dcae6915ba4cb223e4",
    "role": "edition: the generator for the guides' HTML pages — renders the markdown guides so a browser shows a page rather than a text file",
    "produced_by": "the Almanac Editor, 2026-09-03",
    "added": "2026-09-03 — the published site served .md as plain text. The markdown files stay; these are siblings. Ships so an unzipped copy can regenerate them, which is the same rule the other four generators travel under."
@@ -339,6 +339,12 @@
    "sha256": "ce0529cc8e68080b170e82c11cc9ec88e84c6850d943ea8bc7619a8e4a61bfbe",
    "role": "edition: the paper's assembler",
    "produced_by": "render_paper.py, assembled from SandboxA/informal/goalA.tex, sandboxA0a/informal/goalv0a.tex and proofv0a.tex; paper.tex reproduces byte-for-byte from those three sources (measured 2026-09-04)"
+  },
+  {
+   "path": "SandboxA/sandboxA0a/almanac/edition/render_informal.py",
+   "sha256": "187805ff9391f362ea41e816f6c602074c6f29089a4cfc55ffd9fab4897fe96c",
+   "role": "edition: the informal layer as a page — the ink layer's renderer",
+   "produced_by": "the Shadow, 2026-09-04, on the Overseer's instruction that the informal layer get a page like the other two"
   }
  ],
  "reproducibility_recipe": {
@@ -610,7 +616,7 @@
    "De Concini-Procesi LNM 1565; Jantzen GSM 6; Lusztig; Habiro-Le; Polya; Polya-Szego; Gauss — referenced only, several not held at all"
   ],
   "why_the_distinction_is_load_bearing": "A reader receives the project's own writing in full — including its writing ABOUT other people's results, with the convention frame under which the project reads them — and obtains the sources themselves as they normally would. Shipping a card is attribution; shipping a source would be redistribution.",
-  "size": "DERIVED by verify_edition.py, 74 rows measured: 2.6 MB; no third-party PDF is included. Never type this number — §12.5."
+  "size": "DERIVED by verify_edition.py, 75 rows measured: 2.6 MB; no third-party PDF is included. Never type this number — §12.5."
  },
  "explanatory_companion": {
   "path": "SandboxA/sandboxA0a/almanac/edition/almanac.explained.html",

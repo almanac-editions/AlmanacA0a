@@ -36,7 +36,14 @@ DOCS = ["FOR_A_HUMAN.md", "FOR_AN_AI_AGENT.md", "EDITION.md",
         "EMBEDDING_NOTE.md", "AUTHORSHIP.md", "ANCESTRY.md",
         # markdown that lives deeper than the root but is still something a reader is sent to
         "source/informal/proofv0a.ledger.cas_receipts.md",
-        "source/informal/REFEREE_REPORT_PROOFv0a.md"]
+        "source/informal/REFEREE_REPORT_PROOFv0a.md",
+        # the rest of the referee chain the ink layer's page walks a reader through. They shipped
+        # as .md only, which a browser hands over as an unstyled wall - the same defect the guides
+        # had before this file existed, left in place for the three documents that carry the
+        # verdicts. Added 2026-09-04 with informal.html, which links them.
+        "source/informal/EDITORIAL_REFEREE_REPORT_2026-08-12.md",
+        "source/informal/EDITION_ACCEPTANCE_2026-08-13.md",
+        "source/informal/CITATION_VERIFICATION_2026-08-09.md"]
 
 
 # ---------------------------------------------------------------------------- THE MARK
@@ -64,6 +71,35 @@ WARRANT_VARS = """
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--w-orange:#d95926;--w-blue:#3987e5}}
 :root[data-theme="dark"]{--w-orange:#d95926;--w-blue:#3987e5}
 """
+
+
+def pdf_pages(path):
+    """How many pages a shipped PDF has, MEASURED — or None, and then nobody prints a number.
+
+    Every reader-facing page-count in this edition has to come from here. "12 pp." was typed into
+    the front page on 2026-09-04 and was correct that hour; the same day's sweep found three other
+    typed counts that had stopped being true when the world moved, which is the whole argument
+    against typing this one. pdfTeX compresses its object streams, so the naive /Type /Page scan
+    finds nothing on our own PDFs — pdfinfo is tried first and the scan is the fallback for a host
+    without poppler.
+    """
+    import shutil
+    import subprocess
+    if shutil.which("pdfinfo"):
+        try:
+            out = subprocess.run(["pdfinfo", path], capture_output=True, text=True, timeout=30)
+            for line in out.stdout.splitlines():
+                if line.startswith("Pages:"):
+                    return int(line.split(":", 1)[1].strip())
+        except (OSError, ValueError, subprocess.SubprocessError):
+            pass
+    try:
+        with open(path, "rb") as fh:
+            data = fh.read()
+    except OSError:
+        return None
+    n = len(re.findall(rb"/Type\s*/Page[^s]", data))
+    return n if 0 < n < 2000 else None
 
 
 def wordmark(fill="var(--ink)", width=126, height=38, klass="wordmark"):
