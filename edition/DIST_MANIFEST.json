@@ -9,17 +9,17 @@
  "assembled_by": "assemble_almanac.py",
  "counts": {
   "note": "THREE DISTINCT NUMBERS DESCRIBE THIS ARTIFACT, each defined below, so the authoritative one is always explicit.",
-  "files_shipped": 107,
+  "files_shipped": 108,
   "files_shipped_means": "every file in the EDITION except the two written last, CHECKSUMS.txt and DIST_MANIFEST.json, which cannot hash themselves. This is the number of lines in CHECKSUMS.txt.",
-  "files_on_disk": 114,
-  "files_on_disk_means": "files_shipped, plus CHECKSUMS.txt and DIST_MANIFEST.json, plus the 5 repository-furniture files at the archive root (.gitignore, .gitlab-ci.yml, AGENTS.md, CITATION.cff, README.md), which ship but sit outside the edition CHECKSUMS.txt certifies. This is what `find . -type f` reports in the unzipped directory.",
-  "provenance_rows": 112,
-  "provenance_rows_means": "rows in files[] below: one per shipped file, edition and root furniture alike, so provenance_rows = files_shipped + 5 root files. (Before 2026-08-26 this was 69 against 80 shipped, because the Palomar layer, the front matter and the renderer were copied without being recorded. hypervisorA caught it at re-acceptance.)"
+  "files_on_disk": 116,
+  "files_on_disk_means": "files_shipped, plus CHECKSUMS.txt and DIST_MANIFEST.json, plus the 6 repository-furniture files at the archive root (.gitignore, .gitlab-ci.yml, AGENTS.md, CITATION.cff, LICENSE, README.md), which ship but sit outside the edition CHECKSUMS.txt certifies. This is what `find . -type f` reports in the unzipped directory.",
+  "provenance_rows": 114,
+  "provenance_rows_means": "rows in files[] below: one per shipped file, edition and root furniture alike, so provenance_rows = files_shipped + 6 root files. (Before 2026-08-26 this was 69 against 80 shipped, because the Palomar layer, the front matter and the renderer were copied without being recorded. hypervisorA caught it at re-acceptance.)"
  },
- "file_count": 107,
+ "file_count": 108,
  "file_count_means": "alias of counts.files_shipped, kept for readers of earlier editions",
  "integrity": {
-  "ok": 99,
+  "ok": 101,
   "drifted": 0,
   "missing": 0,
   "drifted_paths": [],
@@ -460,6 +460,15 @@
    "status": "OK"
   },
   {
+   "group": "substrate",
+   "source_path": "SandboxA/informal/goalA.tex",
+   "dist_path": "edition/source/other/goalA.tex",
+   "sha256_in_manifest": "37b993afae0925497200faf4518f01cf2b77ca3e60f1c18f6c2df7c6cd16f668",
+   "role": "the type-A programme's SIGNED goal \u2014 the source paper.tex's general-n section is assembled from, verbatim. PINNED, NOT SHIPPED.",
+   "sha256_shipped": "37b993afae0925497200faf4518f01cf2b77ca3e60f1c18f6c2df7c6cd16f668",
+   "status": "OK"
+  },
+  {
    "group": "cited",
    "source_path": "corpus/statements/lit-jantzen-6-26-hypothesis-weakening-q-not-root-of-unity.md",
    "dist_path": "edition/sources-cited/statements/lit-jantzen-6-26-hypothesis-weakening-q-not-root-of-unity.md",
@@ -524,9 +533,9 @@
    "group": "cited",
    "source_path": "corpus/literature/transcribed/own-habiro-le-even-hybrid-centers-explicit-torus.md",
    "dist_path": "edition/sources-cited/literature/transcribed/own-habiro-le-even-hybrid-centers-explicit-torus.md",
-   "sha256_in_manifest": "73c81474ca5c87a539dc76dda8d70a32cf7e2adcd60e2c6ce1908729a0ebef40",
+   "sha256_in_manifest": "084a11004ed0059935dc94e18eac4bacc45d8575716d34f67dc9b5d86b71ee33",
    "role": "ancestry: the programme's own transcript cited by ANCESTRY.md and CONCORDANCE.json as the predecessor for the explicit-torus half",
-   "sha256_shipped": "73c81474ca5c87a539dc76dda8d70a32cf7e2adcd60e2c6ce1908729a0ebef40",
+   "sha256_shipped": "084a11004ed0059935dc94e18eac4bacc45d8575716d34f67dc9b5d86b71ee33",
    "status": "OK"
   },
   {
@@ -688,7 +697,7 @@
    "group": "edition",
    "source_path": "MANIFEST.json",
    "dist_path": "edition/MANIFEST.json",
-   "sha256_shipped": "58c42a88bf66e451718ade908c41f0d47132ed51daccd3759f14748571005b16",
+   "sha256_shipped": "14adaba35dedcf4924d0b7e83378c6df0005a7e781f91324d87e366464e77086",
    "status": "OK",
    "role": "the edition's own machine-readable manifest"
   },
@@ -752,10 +761,10 @@
    "group": "front-matter",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/dist_src/index.html",
    "dist_path": "edition/index.html",
-   "sha256_shipped": "adc284295d1bebe103d1aea988809d74ab3c9a70d0a55227dbcd10057b3796bc",
+   "sha256_shipped": "802e5f4f90672be6e874ea65c29604fa68be07061dab5fc76655cf61be648002",
    "status": "OK",
    "role": "interactive reader view, offline",
-   "sha256_source": "95770b0848e6a7a3c1ee06e2cfd84a6a7d4d2d4b239d23a11878fb9f2e9ef0ab",
+   "sha256_source": "daf883593a7fa7223f98c7cec2eea4f83c633ad9ac6ca8d7504b46245f5c1c43",
    "transformed_at_assembly": "The shipped bytes differ from the source: this file is transformed during assembly. Both hashes are given because only one of them is what you downloaded."
   },
   {
@@ -770,10 +779,10 @@
    "group": "front-matter",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/dist_src/README.md",
    "dist_path": "README.md",
-   "sha256_shipped": "bb830d1f35b7ccb329e1497d57faf3648215454a83f7123b8ff92c756543911b",
+   "sha256_shipped": "0c9078b006643a9a9031205ec394b80f34db6ad4a4dc27e842e56f13918e2cf2",
    "status": "OK",
    "role": "repository front page",
-   "sha256_source": "ac5a871c3948322ce7dfe4cf842f7ae1a09493df5a7e4c7586cb1aeb629b45f5",
+   "sha256_source": "f07b69c183674bdaed14599df91e6bc3679b18a39dfdba217aa92d3a6b04657d",
    "transformed_at_assembly": "The shipped bytes differ from the source: this file is transformed during assembly. Both hashes are given because only one of them is what you downloaded."
   },
   {
@@ -889,10 +898,18 @@
    "role": "publishes edition/ as the site root on GitLab Pages; inert elsewhere"
   },
   {
+   "group": "front-matter",
+   "source_path": "SandboxA/sandboxA0a/almanac/edition/dist_src/LICENSE",
+   "dist_path": "LICENSE",
+   "sha256_shipped": "0bd282e1841dca14d1a974c05dd0b9fe370701da7bd9af94a1a738503cf3d5b4",
+   "status": "OK",
+   "role": "the licence: MIT for the software, CC BY 4.0 for the text and data"
+  },
+  {
    "group": "edition",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/render_index.py",
    "dist_path": "edition/render_index.py",
-   "sha256_shipped": "882f74ce1edf74c9d6c31707872396bb828ddd02291a2615f5ea9b775741aaeb",
+   "sha256_shipped": "5c1b8d4e12720ab1526f72798743d07ff212bf8abfd62014378cfaef16c31d5d",
    "status": "OK",
    "role": "regenerates index.html from the record"
   },
@@ -900,7 +917,7 @@
    "group": "repository-furniture",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/dist_src/CITATION.cff",
    "dist_path": "CITATION.cff",
-   "sha256_shipped": "7829bbb6c3d883b378df6de4a21c751fcc941c72c7fbe2ee2ad0562ac370be31",
+   "sha256_shipped": "fbcdee05dcf50740635d8e30248b0f9031da0a452ad2ec1d3368b5b46578e775",
    "status": "OK",
    "role": "citation metadata \u2014 publishable builds only"
   },

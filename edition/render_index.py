@@ -180,6 +180,49 @@ TPL = """<!DOCTYPE html>
 in three layers &mdash; an informal proof, a computer program, and a machine-checked formal proof
 &mdash; together with a per-claim account of <strong>what actually warrants each one</strong>.</p>
 
+<section>
+  <!-- THIS SECTION OPENS THE PAGE (Overseer, 2026-09-08): the reader meets the package - all the
+       files, and the three layers - BEFORE the twelve statements. It was the LAST section until
+       today, under the heading "Going further", which is the right name for a coda and the wrong
+       one for an opening: nobody goes further before they have started. Renamed with the move. -->
+  <h2>What is in this almanac</h2>
+  <p style="color:var(--text-secondary);font-size:14.5px;margin:0 0 12px">Everything below is in
+  this package and works offline. Read the mathematics first if that is what you came for; the
+  three layers and the apparatus that joins them are underneath it, and the twelve statements
+  themselves follow further down.</p>
+  <ul class="plain">
+    <li><a href="almanac.explained.html">The mathematics explained</a> &mdash; at length, for a
+      general reader. Formulas typeset; no renderer, no network.</li>
+  </ul>
+
+  <!-- THE THREE LAYERS, ALWAYS INK -> ORANGE -> BLUE (Overseer, 2026-09-04: "the order everywhere
+       should be ink -> orange -> blue"). The order is the mark's own: the three a's of "almanac"
+       run ink, orange, blue left to right, and a reader who meets the layers in one order here and
+       another order there has to learn the scheme twice. Each row wears its warrant's colour as
+       its marker, so the colour is taught where it is used rather than only in the legend. -->
+  <ul class="plain layers">
+    <li class="layer"><span class="badge b-ink">Ink</span>
+      <a href="informal.html">The informal proof</a> &mdash; headed by the paper (PDF__PAPERPP__) and
+      the explanation, with the signed goal it proves, the referee chain that read it, and the limit
+      stated on its own face.</li>
+    <li class="layer"><span class="badge b-range">Orange</span>
+      <a href="source/informal/proofv0a.ledger.cas_receipts.html">The proof ledger</a> &mdash;
+      which computation backs which step, receipt by receipt. Not a Lean blueprint, and this edition
+      has none: its formal layer is seven files, not a dependency graph.</li>
+    <li class="layer"><span class="badge b-kernel">Blue</span>
+      <a href="formal.html">The formal layer</a> &mdash; what the proof kernel actually certified,
+      row by row, with the axioms measured for each and the sources beside them.</li>
+  </ul>
+
+  <ul class="plain">
+    <li><a href="almanac.html">The edition as one page</a>, the
+      <a href="almanac.artifact.html">reader&rsquo;s edition</a>, and
+      <a href="EDITION.html">the edition&rsquo;s own front matter</a>.</li>
+    <li><a href="FOR_A_HUMAN.html">Checking any of it yourself</a> &mdash; including how to install
+      every piece of software from scratch.</li>
+  </ul>
+</section>
+
 <div class="hero">
   <div class="fig">__NKERNEL__ of __NTOTAL__</div>
   <div class="cap">results carry a proof-kernel certificate. Of the rest, __NINK__ rests on a
@@ -222,42 +265,6 @@ one can be decided from the warrants and the convention frame carried on every r
   <div id="list"></div>
 </section>
 
-<section>
-
-<section>
-  <h2>Going further</h2>
-  <ul class="plain">
-    <li><a href="almanac.explained.html">The mathematics explained</a> &mdash; at length, for a
-      general reader. Formulas typeset; no renderer, no network.</li>
-  </ul>
-
-  <!-- THE THREE LAYERS, ALWAYS INK -> ORANGE -> BLUE (Overseer, 2026-09-04: "the order everywhere
-       should be ink -> orange -> blue"). The order is the mark's own: the three a's of "almanac"
-       run ink, orange, blue left to right, and a reader who meets the layers in one order here and
-       another order there has to learn the scheme twice. Each row wears its warrant's colour as
-       its marker, so the colour is taught where it is used rather than only in the legend. -->
-  <ul class="plain layers">
-    <li class="layer"><span class="badge b-ink">Ink</span>
-      <a href="informal.html">The informal proof</a> &mdash; headed by the paper (PDF__PAPERPP__) and
-      the explanation, with the signed goal it proves, the referee chain that read it, and the limit
-      stated on its own face.</li>
-    <li class="layer"><span class="badge b-range">Orange</span>
-      <a href="source/informal/proofv0a.ledger.cas_receipts.html">The proof ledger</a> &mdash;
-      which computation backs which step, receipt by receipt. Not a Lean blueprint, and this edition
-      has none: its formal layer is seven files, not a dependency graph.</li>
-    <li class="layer"><span class="badge b-kernel">Blue</span>
-      <a href="formal.html">The formal layer</a> &mdash; what the proof kernel actually certified,
-      row by row, with the axioms measured for each and the sources beside them.</li>
-  </ul>
-
-  <ul class="plain">
-    <li><a href="almanac.html">The edition as one page</a>, the
-      <a href="almanac.artifact.html">reader&rsquo;s edition</a>, and
-      <a href="EDITION.html">the edition&rsquo;s own front matter</a>.</li>
-    <li><a href="FOR_A_HUMAN.html">Checking any of it yourself</a> &mdash; including how to install
-      every piece of software from scratch.</li>
-  </ul>
-</section>
 
 <footer>
   __EDITION__<br>

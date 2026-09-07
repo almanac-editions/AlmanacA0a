@@ -8,11 +8,17 @@
 # is PUBLISHABLE.
 #
 # TWO FIELDS ARE DELIBERATELY ABSENT AND MUST NOT BE FILLED HERE:
-#   license  — the project's director decides it; no generator or seat may invent one.
+#   license  — DECIDED 2026-09-07 by the project's director and filled below; it was never a
+#              generator's to invent, and it is not one now: the value here is theirs.
 #   doi      — minted at deposit, with the frozen edition; that is the moment it exists, by design.
 # date-released waits for publication: the release date is the day it is published — a later day
 # than assembly — and CFF 1.2.0 treats the field as optional until then.
 cff-version: 1.2.0
+# MIT for the software, CC BY 4.0 for the text and data — the split is stated file-by-file in
+# LICENSE at the root of this archive. CFF takes a list when a work carries more than one.
+license:
+  - MIT
+  - CC-BY-4.0
 message: "If you use this almanac, cite the edition of record it was deposited as."
 title: "AlmanacA0a — the centre of the even hybrid family quantum GL(1) (PILOT)"
 type: dataset

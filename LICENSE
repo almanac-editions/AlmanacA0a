@@ -1,0 +1,87 @@
+AlmanacA0a — licence
+====================
+
+Copyright (c) 2026 Tamás Hausel and the Institute of Science and Technology
+Austria (ISTA).
+
+This package contains two kinds of material, and they carry two licences. The
+split is by file, and the rule below is meant to be applied mechanically rather
+than interpreted: if you can tell which list a file is in, you know its licence.
+
+--------------------------------------------------------------------------------
+1. SOFTWARE — MIT
+--------------------------------------------------------------------------------
+
+Everything that runs or is compiled:
+
+  edition/*.py                     the assembler, the renderers, the verifier
+  edition/palomar/**               the disclosure layer's scripts
+  edition/source/lean/**           the Lean 4 sources of the formal layer
+  edition/source/julia/**          the computational instrument, where present
+  .gitlab-ci.yml                   the publication job
+
+MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+--------------------------------------------------------------------------------
+2. TEXT, MATHEMATICS AND DATA — CC BY 4.0
+--------------------------------------------------------------------------------
+
+Everything written to be read, and the records that support it:
+
+  edition/paper.pdf, edition/paper.tex          the paper
+  edition/source/informal/**                    the signed goal, the proof,
+                                                the referee reports, the ledger
+  edition/*.html, edition/*.md                  the reader-facing pages and guides
+  edition/CONCORDANCE.json, edition/MANIFEST.json, edition/DIST_MANIFEST.json
+  edition/sources-cited/**                      the statement cards
+  README.md, AGENTS.md, CITATION.cff
+
+Licensed under the Creative Commons Attribution 4.0 International License
+(CC BY 4.0). You may share and adapt this material for any purpose, including
+commercially, provided you give appropriate credit, link to the licence, and
+indicate whether changes were made.
+
+  Licence text:  https://creativecommons.org/licenses/by/4.0/legalcode
+  Summary:       https://creativecommons.org/licenses/by/4.0/
+
+HOW TO ATTRIBUTE: cite the edition as CITATION.cff specifies. An edition is a
+versioned, hash-pinned object; citing it without its version defeats the point
+of pinning it.
+
+--------------------------------------------------------------------------------
+3. WHAT THESE LICENCES DO NOT COVER
+--------------------------------------------------------------------------------
+
+THIRD-PARTY WORK REMAINS ITS AUTHORS'. The statement cards under
+`edition/sources-cited/` are this project's own descriptions of results in the
+published literature; they quote briefly and cite in full, and that quotation is
+the authors' work, not ours to license. No paper by anyone else is redistributed
+in this package — the cards name where each source is held and do not carry it.
+
+TOOLCHAINS ARE NOT REDISTRIBUTED. Lean 4, Mathlib, Julia and their packages carry
+their own licences and are named, with pinned versions, in the reproducibility
+recipe rather than shipped here.
+
+A LICENCE IS NOT A WARRANT. This file says what you may DO with the material. It
+says nothing about what is proved, or how well: that is the concordance's job,
+and every claim in this edition carries its own warrant — refereed argument,
+computation over a stated range, or a proof-kernel certificate. The three are
+kept visibly distinct and a permissive licence does not blur them.

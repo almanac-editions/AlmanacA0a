@@ -1,0 +1,251 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1.1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\emergencystretch=3em
+
+\newtheorem{definition}{Definition}
+\newtheorem*{goal}{Goal}
+
+\newcommand{\At}{\mathbb A_t}
+\newcommand{\Atev}{\mathbb A_t^{\mathrm{ev}}}
+\newcommand{\Ft}{\mathbb F_t}
+\newcommand{\Ftev}{\mathbb F_t^{\mathrm{ev}}}
+\newcommand{\Nat}{\mathcal N_{\mathbb A_t}}
+\newcommand{\Natev}{\mathcal N_{\mathbb A_t^{\mathrm{ev}}}}
+\newcommand{\HC}{\operatorname{HC}}
+\newcommand{\ev}{\operatorname{ev}}
+
+% ============================================================================
+% STATUS: PROPOSED, NOT SIGNED.  Drafted 2026-08-30 by hypervisorA on the
+% Overseer's in-session order; REBUILT the same evening after a six-lens
+% adversarial verification panel (46 findings, 10 BLOCKING) so that every
+% definition below is the adopted manuscripts' own construction, verbatim
+% where possible.  On the Overseer's signature this text is installed as
+% SandboxA/informal/goalA.tex; the 07-18 reductive-group goal.tex is left
+% untouched pending the flagship decision at root.
+%
+% PROVENANCE: this states, and states only, what the adopted pair proves --
+%   SP-2026-036 v3  (flagship, sha256 2c9b5079...3103)
+%   SP-2026-037 v2  (companion, sha256 721e7423...1f4d)
+% typed adoption 2026-08-24 (Established-informal), hash-closed pair,
+% deposits immutable at OID f972b120.  Clause provenance: (i) and the forward
+% half of (ii) are the companion's Theorem 1.2; the reverse half of (ii) is
+% the flagship's Verma-lattice characterization; (iii) is the flagship's
+% Theorem GoalA (whose statement includes the intrinsic-centre identity as a
+% CLAIM, as here); (iv) is the flagship's coefficient-even corollary.  An
+% earlier independent proof of (iii) is SP-2026-010 (unused by the pair).
+% U_{A_t} is defined by the Newton--PBW span (the flagship's presentation);
+% the companion defines it intrinsically and PROVES the two agree -- that
+% agreement is part of the pair's content, not an assumption here.  The
+% root vectors are the manuscripts' INTERVAL RECURSION (not braid vectors:
+% the braid normalization differs by the non-unit (v-v^{-1}) and would
+% change the integral form).  Conventions: q = v^2, base ring A_t (the
+% Overseer's 2026-08-29 default ruling); no square roots of the family
+% parameters (the cover A_z is proof-technique only in both manuscripts).
+% Panel record: informal/ACTIVITY.md 2026-08-30, workflow wf_eac43831-081.
+% ============================================================================
+
+\title{\textbf{goal A} --- the centre of the even hybrid family quantum group of $GL_n$}
+\date{}
+
+\begin{document}
+\maketitle
+
+Fix $n\ge 1$ and put
+\[
+  q=v^{2},\qquad
+  \At=\mathbb Z[v,v^{-1}][t_1^{\pm1},\ldots,t_n^{\pm1}],\qquad
+  \Ft=\mathbb Q(v)[t_1^{\pm1},\ldots,t_n^{\pm1}],
+\]
+\[
+  \Atev=\mathbb Z[q,q^{-1}][t_1^{\pm1},\ldots,t_n^{\pm1}],\qquad
+  \Ftev=\mathbb Q(q)[t_1^{\pm1},\ldots,t_n^{\pm1}],
+\]
+with $v$ an indeterminate and $t_1,\ldots,t_n$ algebraically independent.
+Let $\varepsilon_1,\ldots,\varepsilon_n$ be the standard basis of
+$\mathbb Z^{n}$, equipped with $(\varepsilon_a,\varepsilon_b)=\delta_{ab}$;
+put $\alpha_i=\varepsilon_i-\varepsilon_{i+1}$ ($1\le i<n$) and
+$\beta_{ab}=\varepsilon_a-\varepsilon_b$ ($1\le a<b\le n$), and let
+$\Phi^{+}=\{\beta_{ab}:1\le a<b\le n\}\subset\mathbb Z^{n}$ be the set of
+positive roots, listed from left to right in the order
+\[
+  (1,2),\,(1,3),\ldots,(1,n),\,(2,3),\ldots,(n-1,n).
+\]
+Arrays are written $\mathbf a=(a_{ab})_{a<b}\in\mathbb Z_{\ge0}^{\Phi^{+}}$,
+with $\mathbf 0$ the zero array.  For $Z$ the centre of an algebra we write
+$Z(-)$.  Quantum integers and factorials are
+\[
+  [r]_v=\frac{v^{r}-v^{-r}}{v-v^{-1}},\qquad
+  [r]_v!=\prod_{j=1}^{r}[j]_v,\qquad
+  [0]_v!=1 .
+\]
+
+\begin{definition}[Reduced double of family quantum $GL_n$]\label{def:utilde}
+$\widetilde U_{\Ft}$ is the $\Ft$-algebra with invertible pairwise commuting
+generators $K_a^{+},K_a^{-}$ ($1\le a\le n$) and generators $e_i,F_i$
+($1\le i<n$), subject to
+\[
+  K_a^{+}K_a^{-}=t_a,\qquad
+  K_a^{\pm}\,e_i\,(K_a^{\pm})^{-1}=v^{\pm(\varepsilon_a,\alpha_i)}e_i,\qquad
+  K_a^{\pm}\,F_i\,(K_a^{\pm})^{-1}=v^{\mp(\varepsilon_a,\alpha_i)}F_i,
+\]
+\[
+  e_iF_j-F_je_i=\delta_{ij}\bigl(K_i^{+}K_{i+1}^{-}-K_i^{-}K_{i+1}^{+}\bigr),
+\]
+\[
+  e_ie_j=e_je_i,\qquad F_iF_j=F_jF_i\qquad(|i-j|>1),
+\]
+\[
+  e_i^{2}e_j-(v+v^{-1})e_ie_je_i+e_je_i^{2}=0,\qquad
+  F_i^{2}F_j-(v+v^{-1})F_iF_jF_i+F_jF_i^{2}=0\qquad(|i-j|=1).
+\]
+Define interval root vectors by $e_{a,a+1}=e_a$, $F_{a,a+1}=F_a$ and, for
+$b>a+1$,
+\[
+  e_{ab}=\frac{e_{a,b-1}\,e_{b-1,b}-v^{-1}e_{b-1,b}\,e_{a,b-1}}{v-v^{-1}},
+  \qquad
+  F_{ab}=F_{b-1,b}\,F_{a,b-1}-v\,F_{a,b-1}\,F_{b-1,b}.
+\]
+For $\mathbf a\in\mathbb Z_{\ge0}^{\Phi^{+}}$ the divided and ordinary PBW
+words are
+\[
+  F^{(\mathbf a)}=\prod_{a<b}^{\longleftarrow}\frac{F_{ab}^{\,a_{ab}}}{[a_{ab}]_v!},
+  \qquad
+  e^{\mathbf a}=\prod_{a<b}^{\longrightarrow}e_{ab}^{\,a_{ab}},
+\]
+where the arrows read the displayed root list backwards and forwards.  Put
+$\nu(\mathbf a)=\sum_{a<b}a_{ab}\,\beta_{ab}\in\mathbb Z^{n}$, and for
+$\mu=\sum_a\mu_a\varepsilon_a\in\mathbb Z^{n}$ put
+$K^{+}_{\mu}=\prod_a (K_a^{+})^{\mu_a}$.
+\end{definition}
+
+\begin{definition}[Torally even part]\label{def:even}
+$\widetilde U_{\Ft}$ carries the $\mathbb Z^{n}/2\mathbb Z^{n}$-grading
+determined on generators by
+\[
+  \deg K_a^{+}=\varepsilon_a,\qquad
+  \deg K_a^{-}=-\varepsilon_a,\qquad
+  \deg K^{+}_{\mu}=\mu,\qquad
+  \deg e_i=0,\qquad
+  \deg F_i=-\alpha_i,\qquad
+  \deg t_a=0;
+\]
+every defining relation is homogeneous modulo $2\mathbb Z^{n}$ (in the mixed
+relation both toral terms have degree $-\alpha_i\equiv\alpha_i$, the degree
+of its left side), so the grading is well defined, and the degree-zero part
+is a subalgebra.  The interval vectors are homogeneous with
+$\deg e_{ab}=0$ and $\deg F_{ab}=-\beta_{ab}$, so
+$\deg F^{(\mathbf a)}=-\nu(\mathbf a)$.  $U_{\Ft}$ is the degree-zero part
+of $\widetilde U_{\Ft}$.
+\end{definition}
+
+\begin{definition}[Newton lattice; the hybrid form]\label{def:newton}
+Put
+\[
+  Y_a=q^{\,n-a}\,t_a^{-1}\,(K_a^{+})^{2}\in\widetilde U_{\Ft},
+  \qquad\text{equivalently}\qquad
+  (K_a^{+})^{2}=q^{\,a-n}\,t_a\,Y_a .
+\]
+Granting the basis in clause (i) below, the $Y_a$ are algebraically
+independent invertible elements of $U_{\Ft}$, so
+$\Ft[Y_1^{\pm1},\ldots,Y_n^{\pm1}]$ is a Laurent polynomial ring; for
+$\lambda\in\mathbb Z^{n}$ let
+\[
+  \ev_\lambda:\Ft[Y_1^{\pm1},\ldots,Y_n^{\pm1}]\longrightarrow\Ft,
+  \qquad
+  \ev_\lambda(Y_a)=q^{\lambda_a+n-a}\,t_a^{-1},
+\]
+be the $\Ft$-algebra map.  The \emph{Newton lattice} is
+\[
+  \Nat=\bigl\{\,f\in\Ft[Y_1^{\pm1},\ldots,Y_n^{\pm1}]:
+  \ev_\lambda(f)\in\At\ \text{for every }\lambda\in\mathbb Z^{n}\,\bigr\},
+\]
+and the \emph{even hybrid form} is the $\At$-submodule
+\[
+  U_{\At}\;=\;\sum_{\mathbf a,\mathbf b\in\mathbb Z_{\ge0}^{\Phi^{+}}}
+  F^{(\mathbf a)}\,K^{+}_{\nu(\mathbf a)}\,\Nat\,e^{\mathbf b}
+  \;\subset\;U_{\Ft},
+\]
+each summand torally even since
+$\deg\bigl(F^{(\mathbf a)}K^{+}_{\nu(\mathbf a)}\bigr)=0$; only finite sums
+occur.  The symmetric group $S_n$ fixes $\Ft$ and permutes the variables
+$Y_1,\ldots,Y_n$; the invariant Newton lattice is
+$(\Nat)^{S_n}=\{f\in\Nat: wf=f\ \text{for every }w\in S_n\}$.
+\end{definition}
+
+\begin{definition}[Integral Verma lattices; Harish--Chandra
+projection]\label{def:verma-hc}
+Let $\widetilde U_{\Ft}^{\ge0}\subset\widetilde U_{\Ft}$ be the subalgebra
+generated by all $K_a^{\pm}$ and all $e_i$.  For $\lambda\in\mathbb Z^{n}$
+let $\chi_\lambda:\widetilde U_{\Ft}^{\ge0}\to\Ft$ be the $\Ft$-algebra map
+with
+\[
+  \chi_\lambda(K_a^{+})=v^{\lambda_a},\qquad
+  \chi_\lambda(K_a^{-})=t_a\,v^{-\lambda_a},\qquad
+  \chi_\lambda(e_i)=0,
+\]
+writing $\Ft^{\chi_\lambda}$ for $\Ft$ viewed as a
+$\widetilde U_{\Ft}^{\ge0}$-module through $\chi_\lambda$, let
+$M_{\Ft}(\lambda)
+=\widetilde U_{\Ft}\otimes_{\smash{\widetilde U_{\Ft}^{\ge0}}}\Ft^{\chi_\lambda}$
+be the induced module, with highest vector $m_\lambda=1\otimes1$; its
+integral lattice is
+\[
+  M_{\At}(\lambda)\;=\;\sum_{\mathbf a\in\mathbb Z_{\ge0}^{\Phi^{+}}}
+  \At\,F^{(\mathbf a)}\,K^{+}_{\nu(\mathbf a)}\,m_\lambda .
+\]
+Granting the basis in clause (i) below, every element of $U_{\Ft}$ has a
+unique PBW coefficient on the row $\mathbf a=\mathbf b=\mathbf 0$, and that
+coefficient lies in $\Ft[Y_1^{\pm1},\ldots,Y_n^{\pm1}]$; the
+\emph{Harish--Chandra projection} is the $\Ft$-linear map
+\[
+  \HC:U_{\Ft}\longrightarrow\Ft[Y_1^{\pm1},\ldots,Y_n^{\pm1}]
+\]
+retaining that coefficient.
+\end{definition}
+
+\begin{goal}\begin{enumerate}
+  \item[(i)] The PBW sums are direct: the monomials
+  $F^{(\mathbf a)}(K_1^{+})^{\eta_1}\cdots(K_n^{+})^{\eta_n}e^{\mathbf b}$,
+  for $\mathbf a,\mathbf b\in\mathbb Z_{\ge0}^{\Phi^{+}}$ and
+  $\eta\in\mathbb Z^{n}$, form an $\Ft$-basis of $\widetilde U_{\Ft}$; the
+  degree-zero part decomposes as
+  \[
+    U_{\Ft}\;=\;\bigoplus_{\mathbf a,\mathbf b\in\mathbb Z_{\ge0}^{\Phi^{+}}}
+    F^{(\mathbf a)}\,K^{+}_{\nu(\mathbf a)}\,
+    \Ft[Y_1^{\pm1},\ldots,Y_n^{\pm1}]\,e^{\mathbf b};
+  \]
+  the sum defining $U_{\At}$ is direct, $U_{\At}$ is an $\At$-subalgebra of
+  $U_{\Ft}$ with $\Ft\otimes_{\At}U_{\At}\simeq U_{\Ft}$, and each sum
+  defining $M_{\At}(\lambda)$ is direct.
+  \item[(ii)] The even hybrid form is the common preserver of the integral
+  Verma lattices:
+  \[
+    U_{\At}\;=\;\bigl\{\,x\in U_{\Ft}:
+    x\,M_{\At}(\lambda)\subseteq M_{\At}(\lambda)\ \text{for every }
+    \lambda\in\mathbb Z^{n}\,\bigr\}.
+  \]
+  \item[(iii)] The intrinsic centre satisfies
+  $Z(U_{\At})=Z(\widetilde U_{\Ft})\cap U_{\At}$, and Harish--Chandra
+  projection restricts to an isomorphism of $\At$-algebras
+  \[
+    \HC:\;Z\bigl(U_{\At}\bigr)\;\xrightarrow{\ \sim\ }\;
+    \bigl(\Nat\bigr)^{S_n}.
+  \]
+  \item[(iv)] With
+  \[
+    \Natev=\bigl\{\,f\in\Ftev[Y_1^{\pm1},\ldots,Y_n^{\pm1}]:
+    \ev_\lambda(f)\in\Atev\ \text{for every }\lambda\in\mathbb Z^{n}\,\bigr\}
+  \]
+  and $\mathfrak Z_{\Atev}=\{C\in Z(U_{\At}):\HC(C)\in(\Natev)^{S_n}\}$ the
+  coefficient-even central form, $\HC$ restricts to an isomorphism of
+  $\Atev$-algebras
+  $\mathfrak Z_{\Atev}\xrightarrow{\ \sim\ }(\Natev)^{S_n}$, and
+  multiplication induces
+  $\At\otimes_{\Atev}\mathfrak Z_{\Atev}\xrightarrow{\ \sim\ }Z(U_{\At})$.
+\end{enumerate}
+\end{goal}
+
+\end{document}

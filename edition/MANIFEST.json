@@ -199,6 +199,16 @@
    "sha256": "5ca55e936cf175a70614b232d567baf5c5009e036942a93bc35bd526970a480d",
    "role": "instrument: the acceptance battery",
    "produced_by": "extracted from HybridQuantum at commit 7ddb2e8f, 2026-08-10; a pinned snapshot, not independently developed"
+  },
+  {
+   "path": "SandboxA/informal/goalA.tex",
+   "sha256": "37b993afae0925497200faf4518f01cf2b77ca3e60f1c18f6c2df7c6cd16f668",
+   "role": "the type-A programme's SIGNED goal — the source paper.tex's general-n section is assembled from, verbatim. PINNED, NOT SHIPPED.",
+   "produced_by": "hypervisorA; signed by the Overseer at 37b993af, installed by commit e32e085b",
+   "shipped": false,
+   "why_pinned_not_shipped": "12.4 closes the checkable set under CITATION: paper.tex is assembled from this file, so the edition cites it and must therefore pin it. It is NOT shipped because putting SandboxA's signed goal inside an artifact that leaves the estate is an EXTERNAL-SHARE decision about another tree's record, and that authorisation is the Overseer's signature, not a tree owner's and not this seat's (golden rule 6).",
+   "authority": "hypervisorA, ruling of 2026-09-05, mail 20260905T222732Z-hypervisorA-1309697-e8d2 — option (a) of three I put to them. They declined (b) ship-it as not theirs to choose, and (c) reword-the-citation as 'a row that hides its source to quiet a verifier'.",
+   "fails_loudly": "The pin carries the HASH, not the path alone, at their instruction: if a future goalA revision moves the file this row must FAIL, not follow."
   }
  ],
  "edition_artifacts": [
@@ -248,7 +258,7 @@
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/ACTIVITY.md",
-   "sha256": "77d9e3b024219531187c9dc562dc247c70783ac5c4a19b8a8128c127d00a693e",
+   "sha256": "a3a80a6ad70a2d6bc684dd32035d5b66fd670be930812463baf90e84629c38a2",
    "role": "edition: the campaign journal — the per-activity timestamps the measurement log is summed from",
    "produced_by": "the Almanac Editor, 2026-08-13 onward",
    "self_reference": "F-E11, 2026-08-14 — a THIRD instance of the §12.3 relation, and it had been UNLISTED while the manifest cited it: `how_to_re_measure` sends a reader here to re-derive the cost figure, and this file was not in the checkable set at all (the F-E7 class). It cannot be pinned before deposit, because the journal records the act of writing the manifest — every entry, including the one recording the pinning, falsifies the pin. Under §12.2 it pins at the deposit re-hash gate, when journalling for this edition stops. STATE.md is deliberately NOT listed: it is this seat's resume header, working state rather than edition content, and nothing in the edition cites it.",
@@ -482,7 +492,7 @@
   },
   {
    "path": "corpus/literature/transcribed/own-habiro-le-even-hybrid-centers-explicit-torus.md",
-   "sha256": "73c81474ca5c87a539dc76dda8d70a32cf7e2adcd60e2c6ce1908729a0ebef40",
+   "sha256": "084a11004ed0059935dc94e18eac4bacc45d8575716d34f67dc9b5d86b71ee33",
    "role": "ancestry: the programme's own transcript cited by ANCESTRY.md and CONCORDANCE.json as the predecessor for the explicit-torus half",
    "produced_by": "the programme",
    "added": "2026-08-14 under §12.4, THIRD instance — found by running the Librarian's derived-vs-citable shape over this edition's own prose. Cited as evidence by two shipped files and never a row."
@@ -616,7 +626,7 @@
    "De Concini-Procesi LNM 1565; Jantzen GSM 6; Lusztig; Habiro-Le; Polya; Polya-Szego; Gauss — referenced only, several not held at all"
   ],
   "why_the_distinction_is_load_bearing": "A reader receives the project's own writing in full — including its writing ABOUT other people's results, with the convention frame under which the project reads them — and obtains the sources themselves as they normally would. Shipping a card is attribution; shipping a source would be redistribution.",
-  "size": "DERIVED by verify_edition.py, 75 rows measured: 2.6 MB; no third-party PDF is included. Never type this number — §12.5."
+  "size": "DERIVED by verify_edition.py, 76 rows measured: 2.6 MB; no third-party PDF is included. Never type this number — §12.5."
  },
  "explanatory_companion": {
   "path": "SandboxA/sandboxA0a/almanac/edition/almanac.explained.html",
@@ -639,7 +649,7 @@
  "repository": {
   "url": "https://github.com/almanac-editions/AlmanacA0a",
   "visibility": "private",
-  "visibility_note": "Ruled PUBLIC BY 17 SEPTEMBER by the Overseer, 2026-08-30, on the patent colleagues' view. Until that lands the URL answers 404 to a reader without access, which is indistinguishable from a broken link.",
+  "visibility_note": "Ruled PUBLIC BY 17 SEPTEMBER by the Overseer, 2026-08-30, on the patent colleagues' view. THE LICENCE IT GOES PUBLIC UNDER WAS CHOSEN 2026-09-07 by the project's director: MIT for the software, CC BY 4.0 for the text and data, copyright Tamás Hausel and ISTA, shipped as LICENSE at the archive root and hashed in CHECKSUMS.txt like every other file. THE FLIP ITSELF HAS NOT HAPPENED as this manifest was written: 'visibility' above records the measured state, not the intention, and it changes when the repository does — measured, never assumed.",
   "remote_head_as_of": {
    "commit": "ce1b556",
    "measured_utc": "2026-08-30T08:26Z",
@@ -648,7 +658,15 @@
   "currency_caveat": "This records a measurement at a moment, not a standing claim. The remote moves when the Overseer pushes; nothing here re-measures it.",
   "why_this_field_exists": "dashboard carried the URL as a hardcoded constant in monitor.py, sourced from this seat's STATE.md prose. A location that lives only in another seat's prose is one their page cannot follow when it moves. Requested by dashboard 2026-08-30 (…26608-3d0f); this is the field.",
   "url_note": "Moved to the almanac-editions organisation 2026-08-30 (the Overseer created it; the previous personal path read as improvised in a printed proposal). The old path redirects to the same HEAD — verified here over SSH, both resolving to ce1b556.",
-  "previous_url": "https://github.com/krutkov-beep/AlmanacA0a"
+  "previous_url": "https://github.com/krutkov-beep/AlmanacA0a",
+  "licence": {
+   "software": "MIT",
+   "text_and_data": "CC-BY-4.0",
+   "copyright": "Tamás Hausel and the Institute of Science and Technology Austria (ISTA)",
+   "decided": "2026-09-07, by the project's director",
+   "file": "LICENSE, at the archive root",
+   "note": "The split is by file and stated in LICENSE. Third-party work is NOT covered and none is redistributed: the statement cards describe the literature and name where each source is held, rather than carrying it."
+  }
  },
  "substrate_repin_authority": [
   {
@@ -669,6 +687,13 @@
     "corpus/statements/lit-jantzen-harish-chandra-even-torus.md"
    ],
    "settled_by": "librarianCM, 20260904T114913Z-shadow-471917-c59f",
+   "note": "Rows outside this seat's write surface, re-pinned on a named authority rather than absorbed. The attribution is the record of who read the bytes."
+  },
+  {
+   "rows": [
+    "corpus/literature/transcribed/own-habiro-le-even-hybrid-centers-explicit-torus.md"
+   ],
+   "settled_by": "librarianCM, 20260907T234738Z-librarianCM-2784683-41b0 (committed b77717b9)",
    "note": "Rows outside this seat's write surface, re-pinned on a named authority rather than absorbed. The attribution is the record of who read the bytes."
   }
  ]

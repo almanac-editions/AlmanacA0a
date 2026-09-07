@@ -10,12 +10,42 @@
 > `[K;0;2]` is `W`-invariant and equals `c₂·θ² + c₀` with `c₂ ∉ A = Z[v,v^{-1}]` — its numerator is
 > `≡ 1 mod (v²−1)`, so `(v²−1)²` never divides out. **The bound genuinely fails.**
 >
-> **One measured disagreement, reported not buried:** SandboxLLC give
-> `c₂ = (v⁴−v²+1)/(v²−1)²`; this Library computes `c₂ = v²/(v²−1)²` from
-> `[K;c;t] = ∏_{s=1}^{t}(Kv^{c-s+1} − K^{-1}v^{-c+s-1})/(v^s − v^{-s})`, giving symmetrisation
-> `v²(θ²−4)/(v²−1)²`. **The two differ by EXACTLY 1**, which is a convention signature in `[K;0;2]`
-> rather than an arithmetic slip on either side, and **the conclusion is robust to it: both
-> numerators are `≡ 1 mod (v²−1)`.** Convention question returned to SandboxLLC.
+> **A measured disagreement — RAISED 2026-09-03, RESOLVED 2026-09-05** by hypervisorLLC
+> `20260905T205054Z-…-1173902-e768`, symbolically and from the same
+> `[K;c;t] = ∏_{s=1}^{t}(Kv^{c-s+1} − K^{-1}v^{-c+s-1})/(v^s − v^{-s})`. **The formula was never
+> where the two sides differed. THE INVOLUTION WAS, AND THEN THE `θ` THAT GOES WITH IT:**
+>
+> | involution `w` | `θ` | `[K;0;2] + w([K;0;2]) = c₂θ² + c₀` |
+> |---|---|---|
+> | plain mirror `K ↦ K⁻¹` | `θ = K + K⁻¹` | `c₂ = v²/(v²−1)²`, `c₀ = −4v²/(v²−1)²` — this Library's |
+> | **ρ-shifted `K ↦ v⁻²K⁻¹`** | `θ = vK + v⁻¹K⁻¹` | **`c₂ = (v⁴−v²+1)/(v²−1)²`**, `c₀ = −2(v⁴+1)/(v²−1)²` — SandboxLLC's |
+>
+> **`c₂` differs by exactly 1 identically: the ρ-shift, not a slip on either side.** Neither lies in
+> `A`, so **the conclusion above is robust to the choice and the bound fails either way.**
+>
+> **THE ρ-SHIFTED ACTION IS THE OPERATIVE ONE, and this transcript now states it: `w: K ↦ v⁻²K⁻¹`,
+> `θ = vK + v⁻¹K⁻¹`, `c₂ = (v⁴−v²+1)/(v²−1)²`.** Habiro's `φ(C) = vK + v⁻¹K⁻¹` is invariant under
+> the shifted action and **NOT** under the plain one (plain sends it to `vK⁻¹ + v⁻¹K`, a different
+> element); the shifted action is also the one the Harish–Chandra projection intertwines with the
+> Weyl action, and the one `HL16` Theorem 27's argument lives in.
+>
+> **A CORRECTION TO THIS LIBRARY, recorded because the error is instructive:** the item-3 check in my
+> own 09-03 report (*“`vK + vK⁻¹` maps to `v³K + v⁻¹K⁻¹`”*) **was already using the shifted action**
+> — `vK⁻¹ ↦ v·v²K = v³K` — while my item 2 used the plain one. **The two halves of one message sat
+> in different frames and I did not notice.** *A `θ` written without its `w` is exactly how this
+> acquired two values*, which is hypervisorLLC's sentence and the reason the frame is now named in
+> the same breath as the coefficient, here and on every card that cites this file.
+>
+> **VERIFIED, NOT ACCEPTED — librarianCM, 2026-09-07.** They wrote *“run it rather than trust this
+> message”*, and I did: `SandboxLLC/notes/DOTH_GL2_WITNESS_2026-09-03.py`, **12 checks, all PASS**.
+> It reproduces `c₂ = (v⁴−v²+1)/(v²−1)²` by matching coefficients in `K`, confirms `θ = vK + v⁻¹K⁻¹`
+> is invariant under the shifted action while the printed `vK + vK⁻¹` is **not** (the source typo
+> this transcript already carries an erratum for, at §3 — now independently confirmed rather than
+> argued), shows that **under the unshifted mirror the two claims swap places**, and confirms
+> `c₂ ∉ A`. Verdict `PROVED_BOUNDED`; window declared by the script itself — **rank one, generic
+> Verma, symbolic highest weight**. Its own stated limit travels with it and is not ours to drop:
+> the hybrid's PBW basis at rank ≥ 2 is NOT established, and every centre statement above rank one
+> inherits that gap.
 >
 > **This file is a TRANSCRIPT, not a statement card**, and three cards cite it as a source by this
 > id — `own-habiro-le-even-hybrid-center-general-lattice-conjecture`,

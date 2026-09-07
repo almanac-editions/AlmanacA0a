@@ -1,7 +1,7 @@
 # sha256 of every file in this almanac, computed at assembly.
 # Run it from THIS directory:  cd edition && shasum -a 256 -c CHECKSUMS.txt
 # (Linux: sha256sum -c). These files at the repository root:
-#   .gitignore, .gitlab-ci.yml, AGENTS.md, CITATION.cff, README.md
+#   .gitignore, .gitlab-ci.yml, AGENTS.md, CITATION.cff, LICENSE, README.md
 # are repository furniture, outside the edition this list certifies.
 9409e30d917bc8dd1b9d1b43f465bfb97c10b3c9a7f2d9f990920db9fa90fa55  ANCESTRY.html
 426be6b5bf7a130cfc80f3147c751be79e6d589225bb805bf00bd7a894836838  ANCESTRY.md
@@ -16,7 +16,7 @@ e54788b8d41c183528ae734d3301161162d39c5c316ff1cf702bc34cf060ae8d  EMBEDDING_NOTE
 78ba5322853335c2322bdb9e182a8eaa1be8316e62285671bc51481d82d27a1b  FOR_AN_AI_AGENT.md
 2c6a165c4063ed9062fe00ae0c6fd88534f4204bf4385f0ba329fb4a42f87939  FOR_A_HUMAN.html
 8f8097e1f9efafa26a7cdf0b08851140c7b01f60b78d0d64563acc39ae043c25  FOR_A_HUMAN.md
-58c42a88bf66e451718ade908c41f0d47132ed51daccd3759f14748571005b16  MANIFEST.json
+14adaba35dedcf4924d0b7e83378c6df0005a7e781f91324d87e366464e77086  MANIFEST.json
 2f9d2516dc6df26862eed50435c4d185842c5e61b3d69d950756a9106375f6f0  MEASUREMENT_LOG.md
 85b402eb2dbebedc98680a65672fd3c3fb2324b9ea7cdeefa5c2d209a64d8ee5  almanac-logo-dark.svg
 f4c89dd3221e95e38af391e6d5511be7fc8ef3e1bf6cc3ed109fe9ada75fcecc  almanac-logo.svg
@@ -26,7 +26,7 @@ fafba17cc1c48308085242f2815bd4223cd777130065a7138c2774d66893b369  almanac.artifa
 9891a7dd93997ee0ee49e5139654f821b2cdb28b709f893c37805263e613681c  almanac.explained.html
 7dab67c0297bf3716e9b7744b2ae0ddeb2e3b6ad8549abc3e1c34a26a342caf3  almanac.html
 ea56a966d2fec72fbaffb691e0d13de79ad7e4ebac1e58800a8c715fe35dae61  formal.html
-adc284295d1bebe103d1aea988809d74ab3c9a70d0a55227dbcd10057b3796bc  index.html
+802e5f4f90672be6e874ea65c29604fa68be07061dab5fc76655cf61be648002  index.html
 1bdecf5e839cc07780f79b5fa1409a0481b9cfbf4b96f2c04c61406010ef9ec7  informal.html
 8c1d7586b512c341563d52e131a2f9c3ee216b5d27d088ff4b4d6a2e73ffac63  palomar/README.md
 301ddc11d5c3acec2d4c58ed4bf2d7f34ddd4811ea0f33758670819e8b0238a8  palomar/emit_formalization.py
@@ -42,7 +42,7 @@ f421b7ec729bb75ec259e671984555a09e6828dcba4028079d838806ce46ca5e  paper.tex
 dbe512a0c65c0e3cb0e67eedd58ebd2742c11b81a73fd8dcae6915ba4cb223e4  render_docs.py
 4b0d9e998ef6fbe0a81db14df614d6e86b74f19a2f2fe4957c7251341b544d44  render_explained.py
 6ebb152013eb38912b7cdea0ec2f0733f2e0ba7ccc65e6027db518dde5c1bf39  render_formal.py
-882f74ce1edf74c9d6c31707872396bb828ddd02291a2615f5ea9b775741aaeb  render_index.py
+5c1b8d4e12720ab1526f72798743d07ff212bf8abfd62014378cfaef16c31d5d  render_index.py
 187805ff9391f362ea41e816f6c602074c6f29089a4cfc55ffd9fab4897fe96c  render_informal.py
 ce0529cc8e68080b170e82c11cc9ec88e84c6850d943ea8bc7619a8e4a61bfbe  render_paper.py
 040c7de7c2ffdb6ebc71f8517bb671a5af5908a53b258f468af1526274c3652b  source/informal/CITATION_VERIFICATION_2026-08-09.html
@@ -74,6 +74,7 @@ f1b03d86c5851fbd8aac6fe81a859374d2da5a2d2c387f359aaecbf23e438896  source/instrum
 69160c8b53a5c260d7d7754d2d8f2cc4dd3d4e55bdce1f336a62b7487e976835  source/lean/NonDegeneracy.lean
 5a5a7e68e8da1479efaf89ce3bfcb8eb4b412a70b4f969a7305f9e5e333b74d4  source/lean/PresentedU.lean
 4e00a21022373d2ad5d0b04346e8e435b79738fd6264d7532f15b66fd938a9be  source/other/Sandbox.lean.slice.txt
+37b993afae0925497200faf4518f01cf2b77ca3e60f1c18f6c2df7c6cd16f668  source/other/goalA.tex
 0c72a746499b1798502b3407d12d229d3f469f3ebb751629399434cbb413daf9  source/record/CLOSURE_SIGNATURE.json
 ef3a23212773c999cfded3db98fb15643294825a8bb5d73629dd39bbe4a57dce  source/record/cow/COW_FAITHFULNESS_PANEL.md
 0fd29a50dc3666bb6be47032db7c0c450a097f8a503423e9541bdea3456c61fc  source/record/formal/RELEASE_20260721_source_all_clean.log
@@ -84,7 +85,7 @@ fbfcb22a015155adb26628c9316102f450dffb27e06e3fe4c9cca52a1d1cd2c5  source/record/
 99868c262cb75898763eee9d3830f700480b2de36d06122d84b1ba3e80d55f29  sources-cited/CARD_ROUTING_2026-07-17.md
 308693545e2c23f523f28fc9c86850c21e0a9ef3d5fe6922987d79b03a90c396  sources-cited/MINING_LOG.md
 c08400d82b1ba2be82b2d24fb93bdc02653a21cb51a8e66506a9c513d7ab9bc2  sources-cited/literature/refmine/mined_cards/collab-notes/lit-v2.jantzen-dilated-linkage-blocks.md
-73c81474ca5c87a539dc76dda8d70a32cf7e2adcd60e2c6ce1908729a0ebef40  sources-cited/literature/transcribed/own-habiro-le-even-hybrid-centers-explicit-torus.md
+084a11004ed0059935dc94e18eac4bacc45d8575716d34f67dc9b5d86b71ee33  sources-cited/literature/transcribed/own-habiro-le-even-hybrid-centers-explicit-torus.md
 d2197c9da70961906cec663d7aa2b7a33bee888628cbd000894b9e54b51b5d31  sources-cited/objects/gl4.coordinate-split-torus.md
 93175757cf9f63b1bd7bb5c490c2d90ef670500e8ad09f455911afe1f0a5a276  sources-cited/reports/HARMAN-HOPKINS-C1-REFEREE-PASS-2026-08-13.md
 13ead43adaa3ec0aa01bc7c4eb5f9d658c85536d1643d47de6c86196b9bc62aa  sources-cited/requests/LR-20260809T093836Z-hypervisorA-quantum-harish-chandra-source.md

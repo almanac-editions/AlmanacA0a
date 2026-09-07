@@ -52,6 +52,25 @@ can be decided from the warrants above and the convention frame carried on every
 | see what warrants what | **`edition/CONCORDANCE.json`**, and `edition/EDITION.md` for the whole |
 | confirm every file is intact | **`edition/CHECKSUMS.txt`** (`cd edition && shasum -a 256 -c CHECKSUMS.txt`) |
 
+**One file needs a word of warning about what it is.** `edition/sources-cited/MINING_LOG.md` is the
+Library's **internal working journal** — 5,600 lines, written for the next person doing the work, not
+for a reader of this edition. It travels because `ANCESTRY.md` cites it as the **second home** of
+every literature search behind a *no predecessor found* verdict, and a cited home that does not
+travel is not a home. It is candid about what went wrong and who got it wrong, including its own
+author. **That candour is the point rather than a lapse**: an estate that records its defects is the
+only kind that can show you them.
+
+## Licence
+
+**MIT for everything that runs; CC BY 4.0 for everything written to be read.** Copyright &copy; 2026
+Tamás Hausel and the Institute of Science and Technology Austria (ISTA). The split is stated
+file-by-file in [`LICENSE`](LICENSE), and it is meant to be applied mechanically: the renderers, the
+verifier and the Lean sources are MIT; the paper, the proofs, the guides, the concordance and the
+statement cards are CC BY 4.0.
+
+**A licence is not a warrant.** This says what you may *do* with the material, and nothing about
+what is proved or how well — that is the concordance's job, and every claim carries its own warrant.
+
 ## Reproducing it
 
 The toolchain is pinned **to exact versions** — a proof that compiles today compiles against
