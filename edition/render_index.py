@@ -31,6 +31,102 @@ DATA = json.dumps({
     "edition": con["edition"],
 }, ensure_ascii=False)
 
+LINKS_BLOCK = """<section>
+  <!-- THIS SECTION OPENS THE PAGE (Overseer, 2026-09-08): the reader meets the package - all the
+       files, and the three layers - BEFORE the twelve statements. It was the LAST section until
+       today, under the heading "Going further", which is the right name for a coda and the wrong
+       one for an opening: nobody goes further before they have started. Renamed with the move. -->
+  <h2>What is in this almanac</h2>
+  <p style="color:var(--text-secondary);font-size:14.5px;margin:0 0 12px">Everything below is in
+  this package and works offline. Read the mathematics first if that is what you came for; the
+  three layers and the apparatus that joins them are underneath it, and the twelve statements
+  themselves follow further down.</p>
+  <ul class="plain">
+    <li><a href="almanac.explained.html">The mathematics explained</a> &mdash; at length, for a
+      general reader. Formulas typeset; no renderer, no network.</li>
+  </ul>
+
+  <!-- THE THREE LAYERS, ALWAYS INK -> ORANGE -> BLUE (Overseer, 2026-09-04: "the order everywhere
+       should be ink -> orange -> blue"). The order is the mark's own: the three a's of "almanac"
+       run ink, orange, blue left to right, and a reader who meets the layers in one order here and
+       another order there has to learn the scheme twice. Each row wears its warrant's colour as
+       its marker, so the colour is taught where it is used rather than only in the legend. -->
+  <ul class="plain layers">
+    <li class="layer"><span class="badge b-ink">Ink</span>
+      <a href="informal.html">The informal proof</a> &mdash; headed by the paper (PDF__PAPERPP__) and
+      the explanation, with the signed goal it proves, the referee chain that read it, and the limit
+      stated on its own face.</li>
+    <li class="layer"><span class="badge b-range">Orange</span>
+      <a href="source/informal/proofv0a.ledger.cas_receipts.html">The proof ledger</a> &mdash;
+      which computation backs which step, receipt by receipt. Not a Lean blueprint, and this edition
+      has none: its formal layer is seven files, not a dependency graph.</li>
+    <li class="layer"><span class="badge b-kernel">Blue</span>
+      <a href="formal.html">The formal layer</a> &mdash; what the proof kernel actually certified,
+      row by row, with the axioms measured for each and the sources beside them.</li>
+  </ul>
+
+  <ul class="plain">
+    <li><a href="statements.html"><strong>The twelve statements, with their warrants</strong></a>
+      &mdash; every result in the edition, one row each, joined across the three layers: what it
+      says, which warrant it carries, the axioms measured for it, and the convention frame it is
+      read in. Filter by warrant, search, open any row.</li>
+  </ul>
+
+  <ul class="plain">
+    <li><a href="almanac.html">The edition as one page</a>, the
+      <a href="almanac.artifact.html">reader&rsquo;s edition</a>, and
+      <a href="EDITION.html">the edition&rsquo;s own front matter</a>.</li>
+    <li><a href="FOR_A_HUMAN.html">Checking any of it yourself</a> &mdash; including how to install
+      every piece of software from scratch.</li>
+  </ul>
+</section>
+"""
+
+BACK_LINK = """<p style="margin:24px 0 0"><a href="index.html">&larr; the almanac</a></p>"""
+
+ROWS_BLOCK = """<div class="hero">
+  <div class="fig">__NKERNEL__ of __NTOTAL__</div>
+  <div class="cap">results carry a proof-kernel certificate. Of the rest, __NINK__ rests on a
+  refereed written argument and __NRANGE__ on computation over a stated range &mdash; three different
+  kinds of check, kept visibly different, and always named in that order: ink, orange, blue.</div>
+</div>
+
+<div class="kpis">
+  <div class="kpi"><div class="l">Results recorded</div><div class="v">__NTOTAL__</div>
+    <div class="n">one row each, joined across three layers</div></div>
+  <div class="kpi"><div class="l">Refereed argument</div><div class="v">__NINK__</div>
+    <div class="n">read adversarially, recorded per row</div></div>
+  <div class="kpi"><div class="l">Computed over a range</div><div class="v">__NRANGE__</div>
+    <div class="n">the bound is part of the claim</div></div>
+  <div class="kpi"><div class="l">Kernel-certified</div><div class="v">__NKERNEL__</div>
+    <div class="n">axioms measured, no gaps admitted</div></div>
+  <div class="kpi"><div class="l">Peer review to date</div><div class="v">Internal</div>
+    <div class="n">external refereeing is a step still ahead</div></div>
+  <div class="kpi"><div class="l">Human minutes</div><div class="v">__HUMANMIN__</div>
+    <div class="n">in the assembly itself</div></div>
+  <div class="kpi"><div class="l">Machine minutes</div><div class="v">__WALLMIN__</div>
+    <div class="n">wall clock, one session</div></div>
+</div>
+
+<div class="note"><p><strong>Three kinds of check.</strong> A proof kernel checking a proof, a program
+checking ten thousand cases, and a referee reading an argument are not the same evidence, and
+this almanac never lets them blur into &ldquo;we showed&rdquo;. Every result below states which one it has &mdash; and a
+kernel certifies <em>the formal statement</em>. Whether that statement is faithful to the informal
+one can be decided from the warrants and the convention frame carried on every row.</p></div>
+
+<section>
+  <h2>The results</h2>
+  <div class="controls">
+    <button class="chip" data-f="all" aria-pressed="true">All __NTOTAL__</button>
+    <button class="chip" data-f="ink" aria-pressed="false">Ink __NINK__</button>
+    <button class="chip" data-f="orange" aria-pressed="false">Orange __NRANGE__</button>
+    <button class="chip" data-f="blue" aria-pressed="false">Blue __NKERNEL__</button>
+    <input type="search" id="q" placeholder="Search statements, declarations, sources&hellip;" aria-label="Search results">
+  </div>
+  <div id="list"></div>
+</section>
+"""
+
 TPL = """<!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -180,91 +276,9 @@ TPL = """<!DOCTYPE html>
 in three layers &mdash; an informal proof, a computer program, and a machine-checked formal proof
 &mdash; together with a per-claim account of <strong>what actually warrants each one</strong>.</p>
 
-<section>
-  <!-- THIS SECTION OPENS THE PAGE (Overseer, 2026-09-08): the reader meets the package - all the
-       files, and the three layers - BEFORE the twelve statements. It was the LAST section until
-       today, under the heading "Going further", which is the right name for a coda and the wrong
-       one for an opening: nobody goes further before they have started. Renamed with the move. -->
-  <h2>What is in this almanac</h2>
-  <p style="color:var(--text-secondary);font-size:14.5px;margin:0 0 12px">Everything below is in
-  this package and works offline. Read the mathematics first if that is what you came for; the
-  three layers and the apparatus that joins them are underneath it, and the twelve statements
-  themselves follow further down.</p>
-  <ul class="plain">
-    <li><a href="almanac.explained.html">The mathematics explained</a> &mdash; at length, for a
-      general reader. Formulas typeset; no renderer, no network.</li>
-  </ul>
+__LINKS__
 
-  <!-- THE THREE LAYERS, ALWAYS INK -> ORANGE -> BLUE (Overseer, 2026-09-04: "the order everywhere
-       should be ink -> orange -> blue"). The order is the mark's own: the three a's of "almanac"
-       run ink, orange, blue left to right, and a reader who meets the layers in one order here and
-       another order there has to learn the scheme twice. Each row wears its warrant's colour as
-       its marker, so the colour is taught where it is used rather than only in the legend. -->
-  <ul class="plain layers">
-    <li class="layer"><span class="badge b-ink">Ink</span>
-      <a href="informal.html">The informal proof</a> &mdash; headed by the paper (PDF__PAPERPP__) and
-      the explanation, with the signed goal it proves, the referee chain that read it, and the limit
-      stated on its own face.</li>
-    <li class="layer"><span class="badge b-range">Orange</span>
-      <a href="source/informal/proofv0a.ledger.cas_receipts.html">The proof ledger</a> &mdash;
-      which computation backs which step, receipt by receipt. Not a Lean blueprint, and this edition
-      has none: its formal layer is seven files, not a dependency graph.</li>
-    <li class="layer"><span class="badge b-kernel">Blue</span>
-      <a href="formal.html">The formal layer</a> &mdash; what the proof kernel actually certified,
-      row by row, with the axioms measured for each and the sources beside them.</li>
-  </ul>
-
-  <ul class="plain">
-    <li><a href="almanac.html">The edition as one page</a>, the
-      <a href="almanac.artifact.html">reader&rsquo;s edition</a>, and
-      <a href="EDITION.html">the edition&rsquo;s own front matter</a>.</li>
-    <li><a href="FOR_A_HUMAN.html">Checking any of it yourself</a> &mdash; including how to install
-      every piece of software from scratch.</li>
-  </ul>
-</section>
-
-<div class="hero">
-  <div class="fig">__NKERNEL__ of __NTOTAL__</div>
-  <div class="cap">results carry a proof-kernel certificate. Of the rest, __NINK__ rests on a
-  refereed written argument and __NRANGE__ on computation over a stated range &mdash; three different
-  kinds of check, kept visibly different, and always named in that order: ink, orange, blue.</div>
-</div>
-
-<div class="kpis">
-  <div class="kpi"><div class="l">Results recorded</div><div class="v">__NTOTAL__</div>
-    <div class="n">one row each, joined across three layers</div></div>
-  <div class="kpi"><div class="l">Refereed argument</div><div class="v">__NINK__</div>
-    <div class="n">read adversarially, recorded per row</div></div>
-  <div class="kpi"><div class="l">Computed over a range</div><div class="v">__NRANGE__</div>
-    <div class="n">the bound is part of the claim</div></div>
-  <div class="kpi"><div class="l">Kernel-certified</div><div class="v">__NKERNEL__</div>
-    <div class="n">axioms measured, no gaps admitted</div></div>
-  <div class="kpi"><div class="l">Peer review to date</div><div class="v">Internal</div>
-    <div class="n">external refereeing is a step still ahead</div></div>
-  <div class="kpi"><div class="l">Human minutes</div><div class="v">__HUMANMIN__</div>
-    <div class="n">in the assembly itself</div></div>
-  <div class="kpi"><div class="l">Machine minutes</div><div class="v">__WALLMIN__</div>
-    <div class="n">wall clock, one session</div></div>
-</div>
-
-<div class="note"><p><strong>Three kinds of check.</strong> A proof kernel checking a proof, a program
-checking ten thousand cases, and a referee reading an argument are not the same evidence, and
-this almanac never lets them blur into &ldquo;we showed&rdquo;. Every result below states which one it has &mdash; and a
-kernel certifies <em>the formal statement</em>. Whether that statement is faithful to the informal
-one can be decided from the warrants and the convention frame carried on every row.</p></div>
-
-<section>
-  <h2>The results</h2>
-  <div class="controls">
-    <button class="chip" data-f="all" aria-pressed="true">All __NTOTAL__</button>
-    <button class="chip" data-f="ink" aria-pressed="false">Ink __NINK__</button>
-    <button class="chip" data-f="orange" aria-pressed="false">Orange __NRANGE__</button>
-    <button class="chip" data-f="blue" aria-pressed="false">Blue __NKERNEL__</button>
-    <input type="search" id="q" placeholder="Search statements, declarations, sources&hellip;" aria-label="Search results">
-  </div>
-  <div id="list"></div>
-</section>
-
+__ROWS__
 
 <footer>
   __EDITION__<br>
@@ -274,13 +288,17 @@ one can be decided from the warrants and the convention frame carried on every r
 </div>
 
 <script>
-const DATA = __DATA__;
+// THE THEME TOGGLE IS ON BOTH PAGES; EVERYTHING BELOW THE MARKER IS ONLY ON THE STATEMENTS PAGE.
+// The button exists in the shared header, so a front page that dropped this whole block would
+// ship a control that does nothing - which looks like a broken page rather than a simpler one.
 const root = document.documentElement;
 document.getElementById('tt').onclick = () => {
   const cur = root.getAttribute('data-theme')
     || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   root.setAttribute('data-theme', cur === 'dark' ? 'light' : 'dark');
 };
+/*__ROWSJS__*/
+const DATA = __DATA__;
 const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c =>
   ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const LABEL = { ink:'Ink — refereed argument', orange:'Orange — computed over a range',
@@ -373,8 +391,29 @@ out = (TPL
 # In the SOURCE TREE the page is staged in dist_src/ and the assembler copies it in.
 # Inside an UNZIPPED ALMANAC there is no dist_src/, and the page belongs beside this script.
 # Getting this wrong is silent: the command succeeds and the page the reader opens is stale.
+# TWO PAGES OUT OF ONE FILL (Overseer, 2026-09-08): "create a separate html file for Statements
+# with their warrants and put everything now below there … so this page only contains links."
+# index.html is the door: a lead sentence and links, nothing else. statements.html carries the
+# figures, the note and the twelve rows with their filters and search. ONE template, one set of
+# CSS, one header and one mark, so the two cannot drift into looking like different publications.
+_i = out.index("/*__ROWSJS__*/")
+_head, _rowsjs = out[:_i], out[_i + len("/*__ROWSJS__*/"):]
+
+index_html = (_head.replace("__LINKS__", LINKS_BLOCK).replace("__ROWS__", "")
+              + "</script>\n</body></html>\n")
+
+statements_html = (_head.replace("__LINKS__", BACK_LINK).replace("__ROWS__", ROWS_BLOCK)
+                   .replace("Almanac A0a — the centre of the even hybrid family quantum GL(1)",
+                            "Statements with their warrants")
+                   .replace("The pilot edition · a closed record in three layers",
+                            "Almanac A0a · every result, one row each, joined across the three layers")
+                   + _rowsjs)
+
 staging = os.path.join(ED, "dist_src")
-dest = os.path.join(staging, "index.html") if os.path.isdir(staging) else os.path.join(ED, "index.html")
-with open(dest, "w", encoding="utf-8") as f:
-    f.write(out)
-print(f"wrote {os.path.relpath(dest, ED)} ({len(out):,} bytes) — {len(rows)} rows embedded, no network calls")
+base = staging if os.path.isdir(staging) else ED
+for name, text in (("index.html", index_html), ("statements.html", statements_html)):
+    with open(os.path.join(base, name), "w", encoding="utf-8") as f:
+        f.write(text)
+    print(f"wrote {os.path.relpath(os.path.join(base, name), ED)} ({len(text):,} bytes)"
+          + (f" — {len(rows)} rows embedded, no network calls" if name == "statements.html"
+             else " — links only"))

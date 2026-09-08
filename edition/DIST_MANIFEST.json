@@ -9,17 +9,17 @@
  "assembled_by": "assemble_almanac.py",
  "counts": {
   "note": "THREE DISTINCT NUMBERS DESCRIBE THIS ARTIFACT, each defined below, so the authoritative one is always explicit.",
-  "files_shipped": 108,
+  "files_shipped": 109,
   "files_shipped_means": "every file in the EDITION except the two written last, CHECKSUMS.txt and DIST_MANIFEST.json, which cannot hash themselves. This is the number of lines in CHECKSUMS.txt.",
-  "files_on_disk": 116,
+  "files_on_disk": 117,
   "files_on_disk_means": "files_shipped, plus CHECKSUMS.txt and DIST_MANIFEST.json, plus the 6 repository-furniture files at the archive root (.gitignore, .gitlab-ci.yml, AGENTS.md, CITATION.cff, LICENSE, README.md), which ship but sit outside the edition CHECKSUMS.txt certifies. This is what `find . -type f` reports in the unzipped directory.",
-  "provenance_rows": 114,
+  "provenance_rows": 115,
   "provenance_rows_means": "rows in files[] below: one per shipped file, edition and root furniture alike, so provenance_rows = files_shipped + 6 root files. (Before 2026-08-26 this was 69 against 80 shipped, because the Palomar layer, the front matter and the renderer were copied without being recorded. hypervisorA caught it at re-acceptance.)"
  },
- "file_count": 108,
+ "file_count": 109,
  "file_count_means": "alias of counts.files_shipped, kept for readers of earlier editions",
  "integrity": {
-  "ok": 101,
+  "ok": 102,
   "drifted": 0,
   "missing": 0,
   "drifted_paths": [],
@@ -697,7 +697,7 @@
    "group": "edition",
    "source_path": "MANIFEST.json",
    "dist_path": "edition/MANIFEST.json",
-   "sha256_shipped": "14adaba35dedcf4924d0b7e83378c6df0005a7e781f91324d87e366464e77086",
+   "sha256_shipped": "33a1d4d5f03197bd00ebfd925f9b6e781ad69aadc0655cb26342834b23b3c9c0",
    "status": "OK",
    "role": "the edition's own machine-readable manifest"
   },
@@ -761,10 +761,20 @@
    "group": "front-matter",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/dist_src/index.html",
    "dist_path": "edition/index.html",
-   "sha256_shipped": "802e5f4f90672be6e874ea65c29604fa68be07061dab5fc76655cf61be648002",
+   "sha256_shipped": "da4a7592aa84b0be4e999438c63c87776fdedda21fb1ebadca19c0bafb218cdc",
    "status": "OK",
-   "role": "interactive reader view, offline",
-   "sha256_source": "daf883593a7fa7223f98c7cec2eea4f83c633ad9ac6ca8d7504b46245f5c1c43",
+   "role": "the door: a lead sentence and links, nothing else",
+   "sha256_source": "b972af2e950c20d546fd00f81ff80be0d1c20aadd6194f836516123b86b53f15",
+   "transformed_at_assembly": "The shipped bytes differ from the source: this file is transformed during assembly. Both hashes are given because only one of them is what you downloaded."
+  },
+  {
+   "group": "front-matter",
+   "source_path": "SandboxA/sandboxA0a/almanac/edition/dist_src/statements.html",
+   "dist_path": "edition/statements.html",
+   "sha256_shipped": "461b5cf9234b9dd9662380eb14e02905b6af159ed7c343154e370349626dcedc",
+   "status": "OK",
+   "role": "the twelve statements with their warrants \u2014 filters, search, one row each, offline",
+   "sha256_source": "1574d71093b321c45b5fa09578e41d1c02b18c9ade09a4b2a48a75b0ea2f76e1",
    "transformed_at_assembly": "The shipped bytes differ from the source: this file is transformed during assembly. Both hashes are given because only one of them is what you downloaded."
   },
   {
@@ -909,7 +919,7 @@
    "group": "edition",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/render_index.py",
    "dist_path": "edition/render_index.py",
-   "sha256_shipped": "5c1b8d4e12720ab1526f72798743d07ff212bf8abfd62014378cfaef16c31d5d",
+   "sha256_shipped": "51783569ddfb297f809ec3a4322f47d3a01aeb3d94a5d1bf1f194c93d5067208",
    "status": "OK",
    "role": "regenerates index.html from the record"
   },
