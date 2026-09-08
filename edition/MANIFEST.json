@@ -199,16 +199,6 @@
    "sha256": "5ca55e936cf175a70614b232d567baf5c5009e036942a93bc35bd526970a480d",
    "role": "instrument: the acceptance battery",
    "produced_by": "extracted from HybridQuantum at commit 7ddb2e8f, 2026-08-10; a pinned snapshot, not independently developed"
-  },
-  {
-   "path": "SandboxA/informal/goalA.tex",
-   "sha256": "37b993afae0925497200faf4518f01cf2b77ca3e60f1c18f6c2df7c6cd16f668",
-   "role": "the type-A programme's SIGNED goal — the source paper.tex's general-n section is assembled from, verbatim. PINNED, NOT SHIPPED.",
-   "produced_by": "hypervisorA; signed by the Overseer at 37b993af, installed by commit e32e085b",
-   "shipped": false,
-   "why_pinned_not_shipped": "12.4 closes the checkable set under CITATION: paper.tex is assembled from this file, so the edition cites it and must therefore pin it. It is NOT shipped because putting SandboxA's signed goal inside an artifact that leaves the estate is an EXTERNAL-SHARE decision about another tree's record, and that authorisation is the Overseer's signature, not a tree owner's and not this seat's (golden rule 6).",
-   "authority": "hypervisorA, ruling of 2026-09-05, mail 20260905T222732Z-hypervisorA-1309697-e8d2 — option (a) of three I put to them. They declined (b) ship-it as not theirs to choose, and (c) reword-the-citation as 'a row that hides its source to quiet a verifier'.",
-   "fails_loudly": "The pin carries the HASH, not the path alone, at their instruction: if a future goalA revision moves the file this row must FAIL, not follow."
   }
  ],
  "edition_artifacts": [
@@ -258,7 +248,7 @@
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/ACTIVITY.md",
-   "sha256": "02118fe73fef96d26850f49ceb37d0baaf3d37271b7938201228f130d0174a9f",
+   "sha256": "005fd76b4f0355ecc34daf0a47f19670c34eba60a22a27733f4ec12441c03343",
    "role": "edition: the campaign journal — the per-activity timestamps the measurement log is summed from",
    "produced_by": "the Almanac Editor, 2026-08-13 onward",
    "self_reference": "F-E11, 2026-08-14 — a THIRD instance of the §12.3 relation, and it had been UNLISTED while the manifest cited it: `how_to_re_measure` sends a reader here to re-derive the cost figure, and this file was not in the checkable set at all (the F-E7 class). It cannot be pinned before deposit, because the journal records the act of writing the manifest — every entry, including the one recording the pinning, falsifies the pin. Under §12.2 it pins at the deposit re-hash gate, when journalling for this edition stops. STATE.md is deliberately NOT listed: it is this seat's resume header, working state rather than edition content, and nothing in the edition cites it.",
@@ -334,21 +324,21 @@
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/paper.pdf",
-   "sha256": "84a0b57c9ffea1b5170b32fc00eafd82397ed4efb76e20a1e6a46a0d231d22d5",
+   "sha256": "d0064c746ea87e5af92e4bf76775bc42ac8df9be8a0d93a65bd4b943c0f9dc3e",
    "role": "edition: the paper, the edition's reading document",
-   "produced_by": "render_paper.py, assembled from SandboxA/informal/goalA.tex, sandboxA0a/informal/goalv0a.tex and proofv0a.tex; paper.tex reproduces byte-for-byte from those three sources (measured 2026-09-04)"
+   "produced_by": "render_paper.py, assembled from sandboxA0a/informal/goalv0a.tex and proofv0a.tex; paper.tex reproduces byte-for-byte from those two sources. The type-A programme's signed goal was a third source until 2026-09-08, when the GL_n section was removed on the Overseer's instruction; the paper no longer reads it, and its path is deliberately not written here because §12.4 reads a path in this manifest as a CITATION and would require a row for a file this edition no longer uses."
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/paper.tex",
-   "sha256": "bd167bbf5267c2d605eeee1c60dba306b8112044a126bcb4b1cbcec05b30739c",
+   "sha256": "fea48b076cbdd2b3b34885df6aa8e4eee988942fb9fcbfcc632dd2538b68213f",
    "role": "edition: the paper's LaTeX source",
-   "produced_by": "render_paper.py, assembled from SandboxA/informal/goalA.tex, sandboxA0a/informal/goalv0a.tex and proofv0a.tex; paper.tex reproduces byte-for-byte from those three sources (measured 2026-09-04)"
+   "produced_by": "render_paper.py, assembled from sandboxA0a/informal/goalv0a.tex and proofv0a.tex; paper.tex reproduces byte-for-byte from those two sources. The type-A programme's signed goal was a third source until 2026-09-08, when the GL_n section was removed on the Overseer's instruction; the paper no longer reads it, and its path is deliberately not written here because §12.4 reads a path in this manifest as a CITATION and would require a row for a file this edition no longer uses."
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/render_paper.py",
-   "sha256": "cf77ae06cc00c6cb9d76e9211a9e145f89a1b318213c031e75d20517b59f5fd6",
+   "sha256": "8cd2d3e8481b42fd30c70a20a71704e330deaa07a5cb1974e027d5f253e46de3",
    "role": "edition: the paper's assembler",
-   "produced_by": "render_paper.py, assembled from SandboxA/informal/goalA.tex, sandboxA0a/informal/goalv0a.tex and proofv0a.tex; paper.tex reproduces byte-for-byte from those three sources (measured 2026-09-04)"
+   "produced_by": "render_paper.py, assembled from sandboxA0a/informal/goalv0a.tex and proofv0a.tex; paper.tex reproduces byte-for-byte from those two sources. The type-A programme's signed goal was a third source until 2026-09-08, when the GL_n section was removed on the Overseer's instruction; the paper no longer reads it, and its path is deliberately not written here because §12.4 reads a path in this manifest as a CITATION and would require a row for a file this edition no longer uses."
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/render_informal.py",
@@ -626,7 +616,7 @@
    "De Concini-Procesi LNM 1565; Jantzen GSM 6; Lusztig; Habiro-Le; Polya; Polya-Szego; Gauss — referenced only, several not held at all"
   ],
   "why_the_distinction_is_load_bearing": "A reader receives the project's own writing in full — including its writing ABOUT other people's results, with the convention frame under which the project reads them — and obtains the sources themselves as they normally would. Shipping a card is attribution; shipping a source would be redistribution.",
-  "size": "DERIVED by verify_edition.py, 76 rows measured: 2.6 MB; no third-party PDF is included. Never type this number — §12.5."
+  "size": "DERIVED by verify_edition.py, 75 rows measured: 2.6 MB; no third-party PDF is included. Never type this number — §12.5."
  },
  "explanatory_companion": {
   "path": "SandboxA/sandboxA0a/almanac/edition/almanac.explained.html",

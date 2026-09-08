@@ -16,9 +16,10 @@ Pólya's classical theorem has NO bibliography entry, deliberately: the original
 shelf, and this project does not cite what it does not hold — the theorem is reached through the
 held quotation in Harman--Hopkins, and the text says so.
 
-MACROS COLLIDE AND THAT IS HANDLED EXPLICITLY: goalA.tex writes \\At for \\mathbb A_t, while
-goalv0a.tex and proofv0a.tex write \\At for A_t. The rank-n section redefines them and the
-rank-one section restores them, because a silent collision here would typeset a different ring.
+SCOPE: RANK ONE ONLY (Overseer, 2026-09-08). The GL_n statement is the subject of work in progress
+and is mentioned, never formulated. The macro-collision handling that used to live here went with
+it: goalA.tex wrote \\At for \\mathbb A_t where goalv0a.tex and proofv0a.tex write \\At for A_t, and
+with the flagship section gone there is one convention in the document and nothing to reconcile.
 """
 import os
 import re
@@ -28,8 +29,10 @@ import sys
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)),
                                     "..", "..", "..", ".."))
+# goalA.tex WAS a source until 2026-09-08 and is not one now: the section that lifted from it -
+# the GL_n statement - was removed on the Overseer's instruction, and a source list naming a file
+# nothing reads is the kind of stale self-report this build keeps finding in other people's files.
 SRC = {
-    "flagship": os.path.join(ROOT, "SandboxA/informal/goalA.tex"),
     "goal1":    os.path.join(ROOT, "SandboxA/sandboxA0a/informal/goalv0a.tex"),
     "proof1":   os.path.join(ROOT, "SandboxA/sandboxA0a/informal/proofv0a.tex"),
 }
@@ -88,8 +91,7 @@ PREAMBLE = r"""\documentclass[11pt]{article}
 \newcommand{\Nat}{\mathcal N_{\mathbb A_t}}
 \newcommand{\Natev}{\mathcal N_{\mathbb A_t^{\mathrm{ev}}}}
 
-\title{\textbf{The centre of the even hybrid family quantum $GL_n$}\\[2pt]
-\large the statement for general $n$, and the case $n=1$ proved\thanks{The statement for
+\title{\textbf{The centre of the even hybrid family quantum $GL_1$}\thanks{The statement for
 $n=1$ was fixed and signed before any proof was attempted, and the proof was checked against the
 signed text; this document was assembled from those two records by the Almanac Editor of Project
 Sandbox --- for the pilot edition, a software agent. The full record, including per-claim warrants
@@ -106,13 +108,14 @@ def build(outdir):
     A(r"""\begin{abstract}\noindent
 A family quantum group carries, alongside the deformation parameter, independent toral parameters
 $t_1,\dots,t_n$. Its \emph{even hybrid integral form} is the part of it that preserves every
-integral Verma lattice; the question this paper is about is what the centre of that form looks like.
-The answer proposed here is that the Harish--Chandra projection carries it isomorphically onto the
-Weyl-invariant part of a \emph{Newton lattice} --- the functions on the multiplicative grid that take
-integral values at every weight. Section 2 states this for $GL_n$. Sections 3 and 4 state and prove
-it for $n=1$, where the root system is empty, the Weyl group is trivial, and the whole content is a
-statement about integer-valued Laurent polynomials on a geometric grid: a bilateral form of the
-quantum P\'olya theorem of Harman and Hopkins \cite{HarmanHopkins}. Section 5 is a short history.
+integral Verma lattice. This paper determines the centre of that form in rank one. With the root
+system empty the Harish--Chandra projection is the identity, and the content is a statement about
+Laurent polynomials on a geometric grid: the centre is exactly the \emph{even Newton lattice} of
+those taking values in $\At$ at every weight, and it is spanned over $\At$ by the shifted divided
+classes $\Yc^{u}\nu_r(\Yc)$. This is a bilateral form of the quantum P\'olya theorem of Harman and
+Hopkins \cite{HarmanHopkins}. The rank-one case is the first instance of a corresponding statement
+for $GL_n$, which is the subject of work in progress and is not formulated here. Sections 2 and 3
+state and prove the rank-one theorem; Section 4 is a short history.
 \end{abstract}""")
 
     A(r"\section{Introduction}")
@@ -124,12 +127,11 @@ every integral Verma lattice --- and inside that, the torally even part. The cen
 the object of study.
 
 \medskip\noindent
-The shape of the answer is the same in every rank, and it is worth saying before any notation. A
-central element is determined by what it does to a highest-weight vector, weight by weight; that
-assignment is a function on a grid of weights; and the condition of being \emph{integral} --- of
-landing in $\At$ at every weight rather than merely in the fraction field --- cuts out a lattice of
-such functions. \emph{The theorem is that the centre is exactly that lattice of integer-valued
-functions, cut down by the Weyl symmetry.} Nothing is lost and nothing extra appears.
+The mechanism is worth saying before any notation. A central element is determined by what it does
+to a highest-weight vector, weight by weight; that assignment is a function on a grid of weights;
+and the condition of being \emph{integral} --- of landing in $\At$ at every weight rather than
+merely in the fraction field --- cuts out a lattice of such functions. \emph{The theorem below is
+that in rank one the centre is exactly that lattice.} Nothing is lost and nothing extra appears.
 
 \medskip\noindent
 The lattice in question has a long classical ancestry. That the integer-valued polynomials on
@@ -138,17 +140,15 @@ $\mathbb Z$ are free on the binomial coefficients is P\'olya's basis theorem
 \cite{CahenChabert}. On a \emph{geometric} progression --- the grid that appears here --- the
 corresponding basis is Gramain's \cite[Prop.~2.2]{Gramain}, for $q$ a natural number; the
 $q$-analogue on the additive grid, with $q$ an indeterminate, is Harman--Hopkins
-\cite{HarmanHopkins}. Section~5 places the present setting among them.
+\cite{HarmanHopkins}. Section~4 places the present setting among them.
 
 \medskip\noindent
-Section~2 states the result for $GL_n$ in four clauses: a PBW basis, an intrinsic characterisation
-of the integral form, the Harish--Chandra isomorphism onto the invariant Newton lattice, and a
-coefficient-even refinement. \textbf{This general statement is not proved here.} It is the
-programme's flagship, and it is stated so the rank-one case can be seen for what it is: not a
-curiosity, but the first instance, with the root system empty.
+There is a corresponding statement for $GL_n$, of which the theorem below is the first instance ---
+the case where the root system is empty. \textbf{It is the subject of work in progress and is
+neither formulated nor used here}, and nothing in what follows depends on it.
 
 \medskip\noindent
-Sections~3 and~4 are the case $n=1$, stated and then proved in full. With $\Phi=\emptyset$ and
+Sections~2 and~3 state and then prove the theorem in full. With $\Phi=\emptyset$ and
 $W=\{1\}$ the algebra is a torus, the Harish--Chandra projection is the identity, and the three
 clauses reduce to one substantial assertion: the even Newton lattice is spanned over $\At$ by the
 shifted divided classes $\Yc^{u}\nu_r(\Yc)$.
@@ -159,31 +159,22 @@ formalisation so that the cost and the failure modes of doing so could be measur
 twelve results in the accompanying edition carry a proof-kernel certificate. That apparatus is not
 the subject of this paper and is not described here.""")
 
-    # ---------------------------------------------------------------- rank n
-    A(r"\section{The statement for $GL_n$}")
-    A(r"""\noindent
-\emph{What follows is the programme's flagship statement. It is stated, not proved.} Its
-individual ingredients are classical: the triangular decomposition and the freeness of the toral
-part go back to Lusztig \cite[\S3.2]{Lusztig}; quantum Verma modules and their contravariant forms
-are treated in De Concini--Procesi \cite[\S\S17.1--17.4]{DCP}; and over the fraction field the
-Harish--Chandra map is an isomorphism onto the invariants by De Concini--Procesi
-\cite[\S18.3]{DCP} and Jantzen \cite[Thm.~6.25 and \S6.26]{Jantzen} --- Jantzen's \S6.6 already
-placing the image inside the \emph{even} toral invariants. Integral forms assembled, as here, from
-a divided-power negative part and a toral lattice appear in Habiro--L\^e \cite[\S8G]{HabiroLe}.
-What is new in the statement is the family parameter, the hybrid (Verma-preserving)
-characterisation, and above all the assertion that over $\At$ the centre is the full
-\emph{integer-valued} lattice --- not the monomial ring the generic statement would suggest.
-\renewcommand{\At}{\mathbb A_t}\renewcommand{\Ft}{\mathbb F_t}""")
-    A(body(SRC["flagship"], r"\maketitle"))
-    A(r"\renewcommand{\At}{A_t}\renewcommand{\Ft}{F_t}")
+    # THE GL_n STATEMENT IS NOT IN THIS PAPER (Overseer, 2026-09-08): "we cannot formulate the
+    # GL_n conjecture, because that is what we are proving in a joint project ... so rewrite the
+    # beginning only talking about the GL_1 case, and only mention that there is a GL_n version
+    # where this comes from." The section that stated the flagship in four clauses is gone, and
+    # with it the ONLY read of SandboxA/informal/goalA.tex: this paper no longer lifts a line from
+    # the signed type-A goal. The literature context that section carried was not lost - Lusztig,
+    # De Concini--Procesi, Jantzen and Habiro--Le are cited in the History section, which is where
+    # a reader looks for them.
 
     # ------------------------------------------------------------- rank one
     A(r"\section{The case $n=1$}")
     A(r"""\noindent
-Here $\Phi=\emptyset$, $W=\{1\}$, and the cocharacter lattice is $\Lambda=\mathbb Z$. The four
-clauses above collapse: there are no root vectors, so the PBW basis is the toral monomials alone;
-the Harish--Chandra projection is the identity; and the Weyl invariance is vacuous. What remains is
-clause~(iii), and it is not vacuous at all.""")
+Here $\Phi=\emptyset$, $W=\{1\}$, and the cocharacter lattice is $\Lambda=\mathbb Z$. Much of the
+general apparatus is vacuous in this case: there are no root vectors, so the PBW basis is the toral
+monomials alone; the Harish--Chandra projection is the identity; and Weyl invariance imposes
+nothing. What survives is the integrality condition, and it is not vacuous at all.""")
     A(body(SRC["goal1"], r"\medskip"))
 
     # ------------------------------------------------------------- the proof
@@ -203,7 +194,7 @@ clause~(iii), and it is not vacuous at all.""")
     # machinery that made it a search report is gone. Every mathematical distinction the old
     # section carried is kept; what left was the account of HOW the reading was done.
     A(r"""\noindent
-The lattice of Section~4 is the last term of a line that is additive before it is multiplicative
+The lattice of Section~3 is the last term of a line that is additive before it is multiplicative
 and classical before it is quantum.
 
 \medskip\noindent
@@ -229,7 +220,7 @@ consequence drawn here from the free parameter $t$ is new with it.
 \medskip\noindent
 \textbf{The $q$-analogue.} Harman--Hopkins \cite[\S1, Props.~1.1--1.2]{HarmanHopkins} deform the
 classical case: one variable, the additive grid $[n]_q$, coefficients in $\mathbb Z[q^{\pm1}]$, no
-family parameter. The forward inclusion and the windowed reverse interpolation of Section~4 follow
+family parameter. The forward inclusion and the windowed reverse interpolation of Section~3 follow
 their~\S1. What is added here is the passage to the multiplicative grid $\Yc=q^{\chi}$ and to
 bilateral exponents $u\in\mathbb Z$, together with the Laurent clearing that derives the two-sided
 statement from the one-sided one. Their substitution $\Yc=1+(q-1)x$ --- which their \S4 connects to
@@ -237,13 +228,17 @@ the Cartan part of Lusztig's integral form --- carries their grid node $x=[n]_q$
 their basis term to $\nu_k(\Yc)$ term by term.
 
 \medskip\noindent
-\textbf{The quantum side.} For the $GL_n$ statement of Section~2 the ancestors are Lusztig
-\cite[\S3.2]{Lusztig}, De Concini--Procesi \cite[\S\S17--18]{DCP}, Jantzen \cite[\S6]{Jantzen} and
-Habiro--L\^e \cite[\S8G]{HabiroLe}; clause~(ii) rests on the corresponding $GL_2$ statement proved
-earlier in this programme \cite{SandboxGL2}. Over the fraction field the centre is the invariant
-\emph{monomial} ring. None of these treats the family parameter or the integer-valued lattice, and
-the content of the flagship is precisely that over $\At$ the centre is the strictly larger Newton
-lattice.""")
+\textbf{The quantum side.} The ingredients are classical. The triangular decomposition and the
+freeness of the toral part go back to Lusztig \cite[\S3.2]{Lusztig}; quantum Verma modules and
+their contravariant forms are treated in De Concini--Procesi \cite[\S\S17.1--17.4]{DCP}; over the
+fraction field the Harish--Chandra map is an isomorphism onto the invariants by De Concini--Procesi
+\cite[\S18.3]{DCP} and Jantzen \cite[Thm.~6.25 and \S6.26]{Jantzen}, with Jantzen's \S6.6 already
+placing the image inside the \emph{even} toral invariants; and integral forms assembled, as here,
+from a divided-power negative part and a toral lattice appear in Habiro--L\^e \cite[\S8G]{HabiroLe}.
+Clause~(ii) rests on the corresponding $GL_2$ statement proved earlier in this programme
+\cite{SandboxGL2}. What none of them carries is the family parameter together with the integral
+condition: over the fraction field the centre is the invariant \emph{monomial} ring, and the
+content of the theorem here is that over $\At$ it is the strictly larger Newton lattice.""")
 
 
     A(body(SRC["proof1"], r"\section{Attribution}", r"\begin{thebibliography}"))

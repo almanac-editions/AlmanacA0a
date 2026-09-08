@@ -9,17 +9,17 @@
  "assembled_by": "assemble_almanac.py",
  "counts": {
   "note": "THREE DISTINCT NUMBERS DESCRIBE THIS ARTIFACT, each defined below, so the authoritative one is always explicit.",
-  "files_shipped": 109,
+  "files_shipped": 108,
   "files_shipped_means": "every file in the EDITION except the two written last, CHECKSUMS.txt and DIST_MANIFEST.json, which cannot hash themselves. This is the number of lines in CHECKSUMS.txt.",
-  "files_on_disk": 117,
+  "files_on_disk": 116,
   "files_on_disk_means": "files_shipped, plus CHECKSUMS.txt and DIST_MANIFEST.json, plus the 6 repository-furniture files at the archive root (.gitignore, .gitlab-ci.yml, AGENTS.md, CITATION.cff, LICENSE, README.md), which ship but sit outside the edition CHECKSUMS.txt certifies. This is what `find . -type f` reports in the unzipped directory.",
-  "provenance_rows": 115,
+  "provenance_rows": 114,
   "provenance_rows_means": "rows in files[] below: one per shipped file, edition and root furniture alike, so provenance_rows = files_shipped + 6 root files. (Before 2026-08-26 this was 69 against 80 shipped, because the Palomar layer, the front matter and the renderer were copied without being recorded. hypervisorA caught it at re-acceptance.)"
  },
- "file_count": 109,
+ "file_count": 108,
  "file_count_means": "alias of counts.files_shipped, kept for readers of earlier editions",
  "integrity": {
-  "ok": 102,
+  "ok": 101,
   "drifted": 0,
   "missing": 0,
   "drifted_paths": [],
@@ -166,27 +166,27 @@
    "group": "edition",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/paper.pdf",
    "dist_path": "edition/paper.pdf",
-   "sha256_in_manifest": "84a0b57c9ffea1b5170b32fc00eafd82397ed4efb76e20a1e6a46a0d231d22d5",
+   "sha256_in_manifest": "d0064c746ea87e5af92e4bf76775bc42ac8df9be8a0d93a65bd4b943c0f9dc3e",
    "role": "edition: the paper, the edition's reading document",
-   "sha256_shipped": "84a0b57c9ffea1b5170b32fc00eafd82397ed4efb76e20a1e6a46a0d231d22d5",
+   "sha256_shipped": "d0064c746ea87e5af92e4bf76775bc42ac8df9be8a0d93a65bd4b943c0f9dc3e",
    "status": "OK"
   },
   {
    "group": "edition",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/paper.tex",
    "dist_path": "edition/paper.tex",
-   "sha256_in_manifest": "bd167bbf5267c2d605eeee1c60dba306b8112044a126bcb4b1cbcec05b30739c",
+   "sha256_in_manifest": "fea48b076cbdd2b3b34885df6aa8e4eee988942fb9fcbfcc632dd2538b68213f",
    "role": "edition: the paper's LaTeX source",
-   "sha256_shipped": "bd167bbf5267c2d605eeee1c60dba306b8112044a126bcb4b1cbcec05b30739c",
+   "sha256_shipped": "fea48b076cbdd2b3b34885df6aa8e4eee988942fb9fcbfcc632dd2538b68213f",
    "status": "OK"
   },
   {
    "group": "edition",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/render_paper.py",
    "dist_path": "edition/render_paper.py",
-   "sha256_in_manifest": "cf77ae06cc00c6cb9d76e9211a9e145f89a1b318213c031e75d20517b59f5fd6",
+   "sha256_in_manifest": "8cd2d3e8481b42fd30c70a20a71704e330deaa07a5cb1974e027d5f253e46de3",
    "role": "edition: the paper's assembler",
-   "sha256_shipped": "cf77ae06cc00c6cb9d76e9211a9e145f89a1b318213c031e75d20517b59f5fd6",
+   "sha256_shipped": "8cd2d3e8481b42fd30c70a20a71704e330deaa07a5cb1974e027d5f253e46de3",
    "status": "OK"
   },
   {
@@ -460,15 +460,6 @@
    "status": "OK"
   },
   {
-   "group": "substrate",
-   "source_path": "SandboxA/informal/goalA.tex",
-   "dist_path": "edition/source/other/goalA.tex",
-   "sha256_in_manifest": "37b993afae0925497200faf4518f01cf2b77ca3e60f1c18f6c2df7c6cd16f668",
-   "role": "the type-A programme's SIGNED goal \u2014 the source paper.tex's general-n section is assembled from, verbatim. PINNED, NOT SHIPPED.",
-   "sha256_shipped": "37b993afae0925497200faf4518f01cf2b77ca3e60f1c18f6c2df7c6cd16f668",
-   "status": "OK"
-  },
-  {
    "group": "cited",
    "source_path": "corpus/statements/lit-jantzen-6-26-hypothesis-weakening-q-not-root-of-unity.md",
    "dist_path": "edition/sources-cited/statements/lit-jantzen-6-26-hypothesis-weakening-q-not-root-of-unity.md",
@@ -697,7 +688,7 @@
    "group": "edition",
    "source_path": "MANIFEST.json",
    "dist_path": "edition/MANIFEST.json",
-   "sha256_shipped": "22f2763499b6cf823ea2071e21f712401848c4cf98e1125fae944cd6777b4b4c",
+   "sha256_shipped": "704579ec83e9c7cac3aef9b24d9464e56dd4a5f9cfc38591c43ff3bef4b04e08",
    "status": "OK",
    "role": "the edition's own machine-readable manifest"
   },
@@ -945,7 +936,7 @@
    "source_path": "(generated) informal.html",
    "dist_path": "edition/informal.html",
    "sha256_in_manifest": null,
-   "sha256_shipped": "e1789d4810ed91376adf7f291c77a61cf08741a949bd95b5fcb416ef0b086c9e",
+   "sha256_shipped": "b1719c29ac130e67aa5b0ff4b0aa3f91ccabb11e8e1889cf618da76401d3d271",
    "status": "GENERATED \u2014 assembled from CONCORDANCE.json's ink row",
    "role": "edition: the informal layer as a page"
   },

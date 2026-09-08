@@ -28,8 +28,7 @@
 \newcommand{\Nat}{\mathcal N_{\mathbb A_t}}
 \newcommand{\Natev}{\mathcal N_{\mathbb A_t^{\mathrm{ev}}}}
 
-\title{\textbf{The centre of the even hybrid family quantum $GL_n$}\\[2pt]
-\large the statement for general $n$, and the case $n=1$ proved\thanks{The statement for
+\title{\textbf{The centre of the even hybrid family quantum $GL_1$}\thanks{The statement for
 $n=1$ was fixed and signed before any proof was attempted, and the proof was checked against the
 signed text; this document was assembled from those two records by the Almanac Editor of Project
 Sandbox --- for the pilot edition, a software agent. The full record, including per-claim warrants
@@ -47,13 +46,14 @@ and machine verification, is the accompanying almanac edition.}}
 \begin{abstract}\noindent
 A family quantum group carries, alongside the deformation parameter, independent toral parameters
 $t_1,\dots,t_n$. Its \emph{even hybrid integral form} is the part of it that preserves every
-integral Verma lattice; the question this paper is about is what the centre of that form looks like.
-The answer proposed here is that the Harish--Chandra projection carries it isomorphically onto the
-Weyl-invariant part of a \emph{Newton lattice} --- the functions on the multiplicative grid that take
-integral values at every weight. Section 2 states this for $GL_n$. Sections 3 and 4 state and prove
-it for $n=1$, where the root system is empty, the Weyl group is trivial, and the whole content is a
-statement about integer-valued Laurent polynomials on a geometric grid: a bilateral form of the
-quantum P\'olya theorem of Harman and Hopkins \cite{HarmanHopkins}. Section 5 is a short history.
+integral Verma lattice. This paper determines the centre of that form in rank one. With the root
+system empty the Harish--Chandra projection is the identity, and the content is a statement about
+Laurent polynomials on a geometric grid: the centre is exactly the \emph{even Newton lattice} of
+those taking values in $\At$ at every weight, and it is spanned over $\At$ by the shifted divided
+classes $\Yc^{u}\nu_r(\Yc)$. This is a bilateral form of the quantum P\'olya theorem of Harman and
+Hopkins \cite{HarmanHopkins}. The rank-one case is the first instance of a corresponding statement
+for $GL_n$, which is the subject of work in progress and is not formulated here. Sections 2 and 3
+state and prove the rank-one theorem; Section 4 is a short history.
 \end{abstract}
 
 \section{Introduction}
@@ -66,12 +66,11 @@ every integral Verma lattice --- and inside that, the torally even part. The cen
 the object of study.
 
 \medskip\noindent
-The shape of the answer is the same in every rank, and it is worth saying before any notation. A
-central element is determined by what it does to a highest-weight vector, weight by weight; that
-assignment is a function on a grid of weights; and the condition of being \emph{integral} --- of
-landing in $\At$ at every weight rather than merely in the fraction field --- cuts out a lattice of
-such functions. \emph{The theorem is that the centre is exactly that lattice of integer-valued
-functions, cut down by the Weyl symmetry.} Nothing is lost and nothing extra appears.
+The mechanism is worth saying before any notation. A central element is determined by what it does
+to a highest-weight vector, weight by weight; that assignment is a function on a grid of weights;
+and the condition of being \emph{integral} --- of landing in $\At$ at every weight rather than
+merely in the fraction field --- cuts out a lattice of such functions. \emph{The theorem below is
+that in rank one the centre is exactly that lattice.} Nothing is lost and nothing extra appears.
 
 \medskip\noindent
 The lattice in question has a long classical ancestry. That the integer-valued polynomials on
@@ -80,17 +79,15 @@ $\mathbb Z$ are free on the binomial coefficients is P\'olya's basis theorem
 \cite{CahenChabert}. On a \emph{geometric} progression --- the grid that appears here --- the
 corresponding basis is Gramain's \cite[Prop.~2.2]{Gramain}, for $q$ a natural number; the
 $q$-analogue on the additive grid, with $q$ an indeterminate, is Harman--Hopkins
-\cite{HarmanHopkins}. Section~5 places the present setting among them.
+\cite{HarmanHopkins}. Section~4 places the present setting among them.
 
 \medskip\noindent
-Section~2 states the result for $GL_n$ in four clauses: a PBW basis, an intrinsic characterisation
-of the integral form, the Harish--Chandra isomorphism onto the invariant Newton lattice, and a
-coefficient-even refinement. \textbf{This general statement is not proved here.} It is the
-programme's flagship, and it is stated so the rank-one case can be seen for what it is: not a
-curiosity, but the first instance, with the root system empty.
+There is a corresponding statement for $GL_n$, of which the theorem below is the first instance ---
+the case where the root system is empty. \textbf{It is the subject of work in progress and is
+neither formulated nor used here}, and nothing in what follows depends on it.
 
 \medskip\noindent
-Sections~3 and~4 are the case $n=1$, stated and then proved in full. With $\Phi=\emptyset$ and
+Sections~2 and~3 state and then prove the theorem in full. With $\Phi=\emptyset$ and
 $W=\{1\}$ the algebra is a torus, the Harish--Chandra projection is the identity, and the three
 clauses reduce to one substantial assertion: the even Newton lattice is spanned over $\At$ by the
 shifted divided classes $\Yc^{u}\nu_r(\Yc)$.
@@ -101,226 +98,13 @@ formalisation so that the cost and the failure modes of doing so could be measur
 twelve results in the accompanying edition carry a proof-kernel certificate. That apparatus is not
 the subject of this paper and is not described here.
 
-\section{The statement for $GL_n$}
-
-\noindent
-\emph{What follows is the programme's flagship statement. It is stated, not proved.} Its
-individual ingredients are classical: the triangular decomposition and the freeness of the toral
-part go back to Lusztig \cite[\S3.2]{Lusztig}; quantum Verma modules and their contravariant forms
-are treated in De Concini--Procesi \cite[\S\S17.1--17.4]{DCP}; and over the fraction field the
-Harish--Chandra map is an isomorphism onto the invariants by De Concini--Procesi
-\cite[\S18.3]{DCP} and Jantzen \cite[Thm.~6.25 and \S6.26]{Jantzen} --- Jantzen's \S6.6 already
-placing the image inside the \emph{even} toral invariants. Integral forms assembled, as here, from
-a divided-power negative part and a toral lattice appear in Habiro--L\^e \cite[\S8G]{HabiroLe}.
-What is new in the statement is the family parameter, the hybrid (Verma-preserving)
-characterisation, and above all the assertion that over $\At$ the centre is the full
-\emph{integer-valued} lattice --- not the monomial ring the generic statement would suggest.
-\renewcommand{\At}{\mathbb A_t}\renewcommand{\Ft}{\mathbb F_t}
-
-Fix $n\ge 1$ and put
-\[
-  q=v^{2},\qquad
-  \At=\mathbb Z[v,v^{-1}][t_1^{\pm1},\ldots,t_n^{\pm1}],\qquad
-  \Ft=\mathbb Q(v)[t_1^{\pm1},\ldots,t_n^{\pm1}],
-\]
-\[
-  \Atev=\mathbb Z[q,q^{-1}][t_1^{\pm1},\ldots,t_n^{\pm1}],\qquad
-  \Ftev=\mathbb Q(q)[t_1^{\pm1},\ldots,t_n^{\pm1}],
-\]
-with $v$ an indeterminate and $t_1,\ldots,t_n$ algebraically independent.
-Let $\varepsilon_1,\ldots,\varepsilon_n$ be the standard basis of
-$\mathbb Z^{n}$, equipped with $(\varepsilon_a,\varepsilon_b)=\delta_{ab}$;
-put $\alpha_i=\varepsilon_i-\varepsilon_{i+1}$ ($1\le i<n$) and
-$\beta_{ab}=\varepsilon_a-\varepsilon_b$ ($1\le a<b\le n$), and let
-$\Phi^{+}=\{\beta_{ab}:1\le a<b\le n\}\subset\mathbb Z^{n}$ be the set of
-positive roots, listed from left to right in the order
-\[
-  (1,2),\,(1,3),\ldots,(1,n),\,(2,3),\ldots,(n-1,n).
-\]
-Arrays are written $\mathbf a=(a_{ab})_{a<b}\in\mathbb Z_{\ge0}^{\Phi^{+}}$,
-with $\mathbf 0$ the zero array.  For $Z$ the centre of an algebra we write
-$Z(-)$.  Quantum integers and factorials are
-\[
-  [r]_v=\frac{v^{r}-v^{-r}}{v-v^{-1}},\qquad
-  [r]_v!=\prod_{j=1}^{r}[j]_v,\qquad
-  [0]_v!=1 .
-\]
-
-\begin{definition}[Reduced double of family quantum $GL_n$]\label{def:utilde}
-$\widetilde U_{\Ft}$ is the $\Ft$-algebra with invertible pairwise commuting
-generators $K_a^{+},K_a^{-}$ ($1\le a\le n$) and generators $e_i,F_i$
-($1\le i<n$), subject to
-\[
-  K_a^{+}K_a^{-}=t_a,\qquad
-  K_a^{\pm}\,e_i\,(K_a^{\pm})^{-1}=v^{\pm(\varepsilon_a,\alpha_i)}e_i,\qquad
-  K_a^{\pm}\,F_i\,(K_a^{\pm})^{-1}=v^{\mp(\varepsilon_a,\alpha_i)}F_i,
-\]
-\[
-  e_iF_j-F_je_i=\delta_{ij}\bigl(K_i^{+}K_{i+1}^{-}-K_i^{-}K_{i+1}^{+}\bigr),
-\]
-\[
-  e_ie_j=e_je_i,\qquad F_iF_j=F_jF_i\qquad(|i-j|>1),
-\]
-\[
-  e_i^{2}e_j-(v+v^{-1})e_ie_je_i+e_je_i^{2}=0,\qquad
-  F_i^{2}F_j-(v+v^{-1})F_iF_jF_i+F_jF_i^{2}=0\qquad(|i-j|=1).
-\]
-Define interval root vectors by $e_{a,a+1}=e_a$, $F_{a,a+1}=F_a$ and, for
-$b>a+1$,
-\[
-  e_{ab}=\frac{e_{a,b-1}\,e_{b-1,b}-v^{-1}e_{b-1,b}\,e_{a,b-1}}{v-v^{-1}},
-  \qquad
-  F_{ab}=F_{b-1,b}\,F_{a,b-1}-v\,F_{a,b-1}\,F_{b-1,b}.
-\]
-For $\mathbf a\in\mathbb Z_{\ge0}^{\Phi^{+}}$ the divided and ordinary PBW
-words are
-\[
-  F^{(\mathbf a)}=\prod_{a<b}^{\longleftarrow}\frac{F_{ab}^{\,a_{ab}}}{[a_{ab}]_v!},
-  \qquad
-  e^{\mathbf a}=\prod_{a<b}^{\longrightarrow}e_{ab}^{\,a_{ab}},
-\]
-where the arrows read the displayed root list backwards and forwards.  Put
-$\nu(\mathbf a)=\sum_{a<b}a_{ab}\,\beta_{ab}\in\mathbb Z^{n}$, and for
-$\mu=\sum_a\mu_a\varepsilon_a\in\mathbb Z^{n}$ put
-$K^{+}_{\mu}=\prod_a (K_a^{+})^{\mu_a}$.
-\end{definition}
-
-\begin{definition}[Torally even part]\label{def:even}
-$\widetilde U_{\Ft}$ carries the $\mathbb Z^{n}/2\mathbb Z^{n}$-grading
-determined on generators by
-\[
-  \deg K_a^{+}=\varepsilon_a,\qquad
-  \deg K_a^{-}=-\varepsilon_a,\qquad
-  \deg K^{+}_{\mu}=\mu,\qquad
-  \deg e_i=0,\qquad
-  \deg F_i=-\alpha_i,\qquad
-  \deg t_a=0;
-\]
-every defining relation is homogeneous modulo $2\mathbb Z^{n}$ (in the mixed
-relation both toral terms have degree $-\alpha_i\equiv\alpha_i$, the degree
-of its left side), so the grading is well defined, and the degree-zero part
-is a subalgebra.  The interval vectors are homogeneous with
-$\deg e_{ab}=0$ and $\deg F_{ab}=-\beta_{ab}$, so
-$\deg F^{(\mathbf a)}=-\nu(\mathbf a)$.  $U_{\Ft}$ is the degree-zero part
-of $\widetilde U_{\Ft}$.
-\end{definition}
-
-\begin{definition}[Newton lattice; the hybrid form]\label{def:newton}
-Put
-\[
-  Y_a=q^{\,n-a}\,t_a^{-1}\,(K_a^{+})^{2}\in\widetilde U_{\Ft},
-  \qquad\text{equivalently}\qquad
-  (K_a^{+})^{2}=q^{\,a-n}\,t_a\,Y_a .
-\]
-Granting the basis in clause (i) below, the $Y_a$ are algebraically
-independent invertible elements of $U_{\Ft}$, so
-$\Ft[Y_1^{\pm1},\ldots,Y_n^{\pm1}]$ is a Laurent polynomial ring; for
-$\lambda\in\mathbb Z^{n}$ let
-\[
-  \ev_\lambda:\Ft[Y_1^{\pm1},\ldots,Y_n^{\pm1}]\longrightarrow\Ft,
-  \qquad
-  \ev_\lambda(Y_a)=q^{\lambda_a+n-a}\,t_a^{-1},
-\]
-be the $\Ft$-algebra map.  The \emph{Newton lattice} is
-\[
-  \Nat=\bigl\{\,f\in\Ft[Y_1^{\pm1},\ldots,Y_n^{\pm1}]:
-  \ev_\lambda(f)\in\At\ \text{for every }\lambda\in\mathbb Z^{n}\,\bigr\},
-\]
-and the \emph{even hybrid form} is the $\At$-submodule
-\[
-  U_{\At}\;=\;\sum_{\mathbf a,\mathbf b\in\mathbb Z_{\ge0}^{\Phi^{+}}}
-  F^{(\mathbf a)}\,K^{+}_{\nu(\mathbf a)}\,\Nat\,e^{\mathbf b}
-  \;\subset\;U_{\Ft},
-\]
-each summand torally even since
-$\deg\bigl(F^{(\mathbf a)}K^{+}_{\nu(\mathbf a)}\bigr)=0$; only finite sums
-occur.  The symmetric group $S_n$ fixes $\Ft$ and permutes the variables
-$Y_1,\ldots,Y_n$; the invariant Newton lattice is
-$(\Nat)^{S_n}=\{f\in\Nat: wf=f\ \text{for every }w\in S_n\}$.
-\end{definition}
-
-\begin{definition}[Integral Verma lattices; Harish--Chandra
-projection]\label{def:verma-hc}
-Let $\widetilde U_{\Ft}^{\ge0}\subset\widetilde U_{\Ft}$ be the subalgebra
-generated by all $K_a^{\pm}$ and all $e_i$.  For $\lambda\in\mathbb Z^{n}$
-let $\chi_\lambda:\widetilde U_{\Ft}^{\ge0}\to\Ft$ be the $\Ft$-algebra map
-with
-\[
-  \chi_\lambda(K_a^{+})=v^{\lambda_a},\qquad
-  \chi_\lambda(K_a^{-})=t_a\,v^{-\lambda_a},\qquad
-  \chi_\lambda(e_i)=0,
-\]
-writing $\Ft^{\chi_\lambda}$ for $\Ft$ viewed as a
-$\widetilde U_{\Ft}^{\ge0}$-module through $\chi_\lambda$, let
-$M_{\Ft}(\lambda)
-=\widetilde U_{\Ft}\otimes_{\smash{\widetilde U_{\Ft}^{\ge0}}}\Ft^{\chi_\lambda}$
-be the induced module, with highest vector $m_\lambda=1\otimes1$; its
-integral lattice is
-\[
-  M_{\At}(\lambda)\;=\;\sum_{\mathbf a\in\mathbb Z_{\ge0}^{\Phi^{+}}}
-  \At\,F^{(\mathbf a)}\,K^{+}_{\nu(\mathbf a)}\,m_\lambda .
-\]
-Granting the basis in clause (i) below, every element of $U_{\Ft}$ has a
-unique PBW coefficient on the row $\mathbf a=\mathbf b=\mathbf 0$, and that
-coefficient lies in $\Ft[Y_1^{\pm1},\ldots,Y_n^{\pm1}]$; the
-\emph{Harish--Chandra projection} is the $\Ft$-linear map
-\[
-  \HC:U_{\Ft}\longrightarrow\Ft[Y_1^{\pm1},\ldots,Y_n^{\pm1}]
-\]
-retaining that coefficient.
-\end{definition}
-
-\begin{goal}\begin{enumerate}
-  \item[(i)] The PBW sums are direct: the monomials
-  $F^{(\mathbf a)}(K_1^{+})^{\eta_1}\cdots(K_n^{+})^{\eta_n}e^{\mathbf b}$,
-  for $\mathbf a,\mathbf b\in\mathbb Z_{\ge0}^{\Phi^{+}}$ and
-  $\eta\in\mathbb Z^{n}$, form an $\Ft$-basis of $\widetilde U_{\Ft}$; the
-  degree-zero part decomposes as
-  \[
-    U_{\Ft}\;=\;\bigoplus_{\mathbf a,\mathbf b\in\mathbb Z_{\ge0}^{\Phi^{+}}}
-    F^{(\mathbf a)}\,K^{+}_{\nu(\mathbf a)}\,
-    \Ft[Y_1^{\pm1},\ldots,Y_n^{\pm1}]\,e^{\mathbf b};
-  \]
-  the sum defining $U_{\At}$ is direct, $U_{\At}$ is an $\At$-subalgebra of
-  $U_{\Ft}$ with $\Ft\otimes_{\At}U_{\At}\simeq U_{\Ft}$, and each sum
-  defining $M_{\At}(\lambda)$ is direct.
-  \item[(ii)] The even hybrid form is the common preserver of the integral
-  Verma lattices:
-  \[
-    U_{\At}\;=\;\bigl\{\,x\in U_{\Ft}:
-    x\,M_{\At}(\lambda)\subseteq M_{\At}(\lambda)\ \text{for every }
-    \lambda\in\mathbb Z^{n}\,\bigr\}.
-  \]
-  \item[(iii)] The intrinsic centre satisfies
-  $Z(U_{\At})=Z(\widetilde U_{\Ft})\cap U_{\At}$, and Harish--Chandra
-  projection restricts to an isomorphism of $\At$-algebras
-  \[
-    \HC:\;Z\bigl(U_{\At}\bigr)\;\xrightarrow{\ \sim\ }\;
-    \bigl(\Nat\bigr)^{S_n}.
-  \]
-  \item[(iv)] With
-  \[
-    \Natev=\bigl\{\,f\in\Ftev[Y_1^{\pm1},\ldots,Y_n^{\pm1}]:
-    \ev_\lambda(f)\in\Atev\ \text{for every }\lambda\in\mathbb Z^{n}\,\bigr\}
-  \]
-  and $\mathfrak Z_{\Atev}=\{C\in Z(U_{\At}):\HC(C)\in(\Natev)^{S_n}\}$ the
-  coefficient-even central form, $\HC$ restricts to an isomorphism of
-  $\Atev$-algebras
-  $\mathfrak Z_{\Atev}\xrightarrow{\ \sim\ }(\Natev)^{S_n}$, and
-  multiplication induces
-  $\At\otimes_{\Atev}\mathfrak Z_{\Atev}\xrightarrow{\ \sim\ }Z(U_{\At})$.
-\end{enumerate}
-\end{goal}
-
-\renewcommand{\At}{A_t}\renewcommand{\Ft}{F_t}
-
 \section{The case $n=1$}
 
 \noindent
-Here $\Phi=\emptyset$, $W=\{1\}$, and the cocharacter lattice is $\Lambda=\mathbb Z$. The four
-clauses above collapse: there are no root vectors, so the PBW basis is the toral monomials alone;
-the Harish--Chandra projection is the identity; and the Weyl invariance is vacuous. What remains is
-clause~(iii), and it is not vacuous at all.
+Here $\Phi=\emptyset$, $W=\{1\}$, and the cocharacter lattice is $\Lambda=\mathbb Z$. Much of the
+general apparatus is vacuous in this case: there are no root vectors, so the PBW basis is the toral
+monomials alone; the Harish--Chandra projection is the identity; and Weyl invariance imposes
+nothing. What survives is the integrality condition, and it is not vacuous at all.
 
 Let $G=GL_1$: the root system is $\Phi=\emptyset$, the Weyl group is
 $W=\{1\}$, the cocharacter lattice is $\Lambda=\mathbb Z$, and
@@ -730,7 +514,7 @@ $u=-N$. Hence $\Nev\subseteq S$, and with Lemma~\ref{lem:fwd}, $\Nev=S$.
 \section{History}
 
 \noindent
-The lattice of Section~4 is the last term of a line that is additive before it is multiplicative
+The lattice of Section~3 is the last term of a line that is additive before it is multiplicative
 and classical before it is quantum.
 
 \medskip\noindent
@@ -756,7 +540,7 @@ consequence drawn here from the free parameter $t$ is new with it.
 \medskip\noindent
 \textbf{The $q$-analogue.} Harman--Hopkins \cite[\S1, Props.~1.1--1.2]{HarmanHopkins} deform the
 classical case: one variable, the additive grid $[n]_q$, coefficients in $\mathbb Z[q^{\pm1}]$, no
-family parameter. The forward inclusion and the windowed reverse interpolation of Section~4 follow
+family parameter. The forward inclusion and the windowed reverse interpolation of Section~3 follow
 their~\S1. What is added here is the passage to the multiplicative grid $\Yc=q^{\chi}$ and to
 bilateral exponents $u\in\mathbb Z$, together with the Laurent clearing that derives the two-sided
 statement from the one-sided one. Their substitution $\Yc=1+(q-1)x$ --- which their \S4 connects to
@@ -764,13 +548,17 @@ the Cartan part of Lusztig's integral form --- carries their grid node $x=[n]_q$
 their basis term to $\nu_k(\Yc)$ term by term.
 
 \medskip\noindent
-\textbf{The quantum side.} For the $GL_n$ statement of Section~2 the ancestors are Lusztig
-\cite[\S3.2]{Lusztig}, De Concini--Procesi \cite[\S\S17--18]{DCP}, Jantzen \cite[\S6]{Jantzen} and
-Habiro--L\^e \cite[\S8G]{HabiroLe}; clause~(ii) rests on the corresponding $GL_2$ statement proved
-earlier in this programme \cite{SandboxGL2}. Over the fraction field the centre is the invariant
-\emph{monomial} ring. None of these treats the family parameter or the integer-valued lattice, and
-the content of the flagship is precisely that over $\At$ the centre is the strictly larger Newton
-lattice.
+\textbf{The quantum side.} The ingredients are classical. The triangular decomposition and the
+freeness of the toral part go back to Lusztig \cite[\S3.2]{Lusztig}; quantum Verma modules and
+their contravariant forms are treated in De Concini--Procesi \cite[\S\S17.1--17.4]{DCP}; over the
+fraction field the Harish--Chandra map is an isomorphism onto the invariants by De Concini--Procesi
+\cite[\S18.3]{DCP} and Jantzen \cite[Thm.~6.25 and \S6.26]{Jantzen}, with Jantzen's \S6.6 already
+placing the image inside the \emph{even} toral invariants; and integral forms assembled, as here,
+from a divided-power negative part and a toral lattice appear in Habiro--L\^e \cite[\S8G]{HabiroLe}.
+Clause~(ii) rests on the corresponding $GL_2$ statement proved earlier in this programme
+\cite{SandboxGL2}. What none of them carries is the family parameter together with the integral
+condition: over the fraction field the centre is the invariant \emph{monomial} ring, and the
+content of the theorem here is that over $\At$ it is the strictly larger Newton lattice.
 
 \begin{remark}
 Clause~(iii) is the quantum P\'olya theorem of Harman and Hopkins,
