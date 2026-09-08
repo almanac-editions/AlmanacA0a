@@ -334,19 +334,19 @@
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/paper.pdf",
-   "sha256": "538ca21f957d20d47a54ef26d6bd3aeb603a5753abe086ded04ba9ced0c234d4",
+   "sha256": "84a0b57c9ffea1b5170b32fc00eafd82397ed4efb76e20a1e6a46a0d231d22d5",
    "role": "edition: the paper, the edition's reading document",
    "produced_by": "render_paper.py, assembled from SandboxA/informal/goalA.tex, sandboxA0a/informal/goalv0a.tex and proofv0a.tex; paper.tex reproduces byte-for-byte from those three sources (measured 2026-09-04)"
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/paper.tex",
-   "sha256": "fdf1c0553b4d5a6ff1d38458a5671760bb3c11113f074cf16a2cb9f1ef380d06",
+   "sha256": "bd167bbf5267c2d605eeee1c60dba306b8112044a126bcb4b1cbcec05b30739c",
    "role": "edition: the paper's LaTeX source",
    "produced_by": "render_paper.py, assembled from SandboxA/informal/goalA.tex, sandboxA0a/informal/goalv0a.tex and proofv0a.tex; paper.tex reproduces byte-for-byte from those three sources (measured 2026-09-04)"
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/render_paper.py",
-   "sha256": "8d8356572984b18a89b9a417f37cfa04be3041e3fb10a7107b59c4665e4c6e91",
+   "sha256": "cf77ae06cc00c6cb9d76e9211a9e145f89a1b318213c031e75d20517b59f5fd6",
    "role": "edition: the paper's assembler",
    "produced_by": "render_paper.py, assembled from SandboxA/informal/goalA.tex, sandboxA0a/informal/goalv0a.tex and proofv0a.tex; paper.tex reproduces byte-for-byte from those three sources (measured 2026-09-04)"
   },

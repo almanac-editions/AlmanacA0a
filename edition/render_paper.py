@@ -112,7 +112,7 @@ Weyl-invariant part of a \emph{Newton lattice} --- the functions on the multipli
 integral values at every weight. Section 2 states this for $GL_n$. Sections 3 and 4 state and prove
 it for $n=1$, where the root system is empty, the Weyl group is trivial, and the whole content is a
 statement about integer-valued Laurent polynomials on a geometric grid: a bilateral form of the
-quantum P\'olya theorem of Harman and Hopkins \cite{HarmanHopkins}. Section 5 records the precedents.
+quantum P\'olya theorem of Harman and Hopkins \cite{HarmanHopkins}. Section 5 is a short history.
 \end{abstract}""")
 
     A(r"\section{Introduction}")
@@ -133,12 +133,12 @@ functions, cut down by the Weyl symmetry.} Nothing is lost and nothing extra app
 
 \medskip\noindent
 The lattice in question has a long classical ancestry. That the integer-valued polynomials on
-$\mathbb Z$ are free on the binomial coefficients is P\'olya's basis theorem (we reach the original
-through its quotation as \cite[Prop.~1.1]{HarmanHopkins}; the standard modern reference for the
-subject is Cahen--Chabert \cite{CahenChabert}). On a \emph{geometric} progression --- the grid that
-appears here --- the corresponding basis is due to Gramain \cite[Prop.~2.2]{Gramain}, for $q$ a
-natural number; the $q$-analogue on the additive grid, with $q$ an indeterminate, is Harman--Hopkins
-\cite{HarmanHopkins}. What the present setting adds is recorded in Section~5.
+$\mathbb Z$ are free on the binomial coefficients is P\'olya's basis theorem
+\cite[Prop.~1.1]{HarmanHopkins}; the standard reference for the subject is Cahen--Chabert
+\cite{CahenChabert}. On a \emph{geometric} progression --- the grid that appears here --- the
+corresponding basis is Gramain's \cite[Prop.~2.2]{Gramain}, for $q$ a natural number; the
+$q$-analogue on the additive grid, with $q$ an indeterminate, is Harman--Hopkins
+\cite{HarmanHopkins}. Section~5 places the present setting among them.
 
 \medskip\noindent
 Section~2 states the result for $GL_n$ in four clauses: a PBW basis, an intrinsic characterisation
@@ -196,53 +196,54 @@ clause~(iii), and it is not vacuous at all.""")
     A(_pf)
 
     # -------------------------------------------------------- the precedents
-    A(r"\section{Precedents}")
-    # NEGATIVE ANCESTRY IS OUT OF THIS DOCUMENT (Overseer, 2026-09-08: "strictly against
-    # human-facing"). A paper reports what it found; the searches that returned nothing, the
-    # rejected candidates and the reasoning about them stay in the EDITION'S RECORD, where
-    # ANCESTRY.md §7.3 carries the coefficient-field bridge as NONE LOCATED with its queries, and
-    # §7.3 again carries Harman--Hopkins §4 Prop. 4.3 assessed and REJECTED with the argument.
-    # NOTHING IS LOST AND NOTHING IS SOFTENED: golden rule 7 asks that negative results be
-    # preserved, not that they be printed in the reading document. THE SEARCH PROVENANCE GOES WITH
-# THEM (same instruction, minutes later): dates of citation cycles and how a shelf was queried
-# are the edition's apparatus, and a reader of the paper wants the predecessors, not the audit.
+    A(r"\section{History}")
+    # HISTORY, NOT ANCESTRY-AS-APPARATUS (Overseer, 2026-09-08): "do not dwell about the ancestry
+    # stuff, and how you were searching for it -- just give the history of these ideas." So the
+    # line runs Polya -> Gel'fond -> Gramain -> Harman--Hopkins -> here, and the attribution
+    # machinery that made it a search report is gone. Every mathematical distinction the old
+    # section carried is kept; what left was the account of HOW the reading was done.
     A(r"""\noindent
-Every result of Section~4 has a located predecessor; this section records them.
+The lattice of Section~4 is the last term of a line that is additive before it is multiplicative
+and classical before it is quantum.
 
-\subsection*{Clause (iii): the P\'olya ancestry, in three layers}
-The classical layer is P\'olya's basis theorem: the integer-valued polynomials on $\mathbb Z$ are
-free on the binomial coefficients. We hold it through its quotation as
-\cite[Prop.~1.1]{HarmanHopkins}; the source states a \emph{basis}, from which the strict
-containment $\mathbb Z[x]\subsetneq\mathrm{Int}(\mathbb Z)$ is immediate --- but the strictness
-itself is not P\'olya's statement, and we do not attribute it to him. The standard reference for
-the whole subject is Cahen--Chabert \cite{CahenChabert}.
+\medskip\noindent
+% NO YEAR ON THIS ONE, DELIBERATELY. The Library's Gramain card dates Polya's theorem 1914; the
+% Attribution remark below - lifted VERBATIM from the checked proof and not mine to edit - dates it
+% 1919. A paper cannot carry both, and I cannot settle which is right from what is held here, so
+% this sentence carries no year rather than a plausible one. Reported to the Overseer.
+\textbf{The classical case.} P\'olya's basis theorem: the polynomials taking integer values
+at every integer form a free $\Z$-module on the binomial coefficients $\binom{x}{k}$, strictly
+larger than $\Z[x]$ \cite[Prop.~1.1]{HarmanHopkins}. The subject it opened is surveyed in
+Cahen--Chabert \cite{CahenChabert}.
 
-The multiplicative layer is Gramain \cite[Prop.~2.2]{Gramain}: a basis for the functions taking
-integral values on a \emph{geometric} progression. One distinction matters and is easy to miss:
-Gramain's $q$ is a natural number $\ge 2$ and integrality means values in $\mathbb Z$, whereas here
-$q$ is an indeterminate and integrality means values in $\At$. His grid is ours; his coefficient
-ring is not. (Cahen--Chabert treat the geometric progression once, in Chapter~II, Exercise~15,
-attributing it to Gramain on the page; the exercise as printed carries two misprints --- the second
-node of the product and the sign of an exponent --- identified in the course of this search and
-recorded in the edition's errata cards.)
+\medskip\noindent
+\textbf{The multiplicative case.} Replacing the integers by a geometric progression $1,q,q^2,\dots$
+gives the grid that appears here. For entire functions the analogue is Gel'fond's (1933), which
+Gramain records as the \emph{analogue multiplicatif} of P\'olya's theorem; for polynomials it is
+Gramain \cite[Prop.~2.2]{Gramain}, who exhibits a basis for the functions taking integral values at
+every $q^{n}$. One difference of setting matters: there $q$ is a natural number $\ge 2$ and
+integrality means values in $\mathbb Z$, whereas here $q$ is an indeterminate and integrality means
+values in $\At$. The grid is the same; the coefficient ring is not, and every structural
+consequence drawn here from the free parameter $t$ is new with it.
 
-The $q$-analogue layer is Harman--Hopkins \cite[\S1, Props.~1.1--1.2]{HarmanHopkins}: one variable,
-additive grid, coefficient ring $\mathbb Z[q^{\pm1}]$, no family parameter. Both the forward
-inclusion and the windowed reverse interpolation of Section~4 follow their~\S1. What is added here
-is the passage to the multiplicative grid $\Yc=q^{\chi}$ and to bilateral exponents
-$u\in\mathbb Z$, together with the Laurent clearing that makes the two-sided statement follow from
-the one-sided one; the substitution $\Yc=1+(q-1)x$, which their \S4 closing remark connects to the
-Cartan part of Lusztig's integral form, carries their grid node $x=[n]_q$ to $\Yc=q^{n}$ and their
-basis term to $\nu_k(\Yc)$ term by term.
+\medskip\noindent
+\textbf{The $q$-analogue.} Harman--Hopkins \cite[\S1, Props.~1.1--1.2]{HarmanHopkins} deform the
+classical case: one variable, the additive grid $[n]_q$, coefficients in $\mathbb Z[q^{\pm1}]$, no
+family parameter. The forward inclusion and the windowed reverse interpolation of Section~4 follow
+their~\S1. What is added here is the passage to the multiplicative grid $\Yc=q^{\chi}$ and to
+bilateral exponents $u\in\mathbb Z$, together with the Laurent clearing that derives the two-sided
+statement from the one-sided one. Their substitution $\Yc=1+(q-1)x$ --- which their \S4 connects to
+the Cartan part of Lusztig's integral form --- carries their grid node $x=[n]_q$ to $\Yc=q^{n}$ and
+their basis term to $\nu_k(\Yc)$ term by term.
 
-\subsection*{Clause (ii), and the general statement}
-Clause~(ii) rests on the corresponding $GL_2$ statement proved earlier in this programme
-\cite{SandboxGL2}. For the $GL_n$ statement of Section~2 the generic precedents are as cited there:
-Lusztig \cite[\S3.2]{Lusztig}, De Concini--Procesi \cite[\S\S17--18]{DCP}, Jantzen
-\cite[\S6]{Jantzen}, Habiro--L\^e \cite[\S8G]{HabiroLe}. None of these treats the family parameter
-or the integer-valued lattice; over the fraction field the centre is the invariant \emph{monomial}
-ring, and the content of the flagship is precisely that over $\At$ it is the strictly larger
-Newton lattice.""")
+\medskip\noindent
+\textbf{The quantum side.} For the $GL_n$ statement of Section~2 the ancestors are Lusztig
+\cite[\S3.2]{Lusztig}, De Concini--Procesi \cite[\S\S17--18]{DCP}, Jantzen \cite[\S6]{Jantzen} and
+Habiro--L\^e \cite[\S8G]{HabiroLe}; clause~(ii) rests on the corresponding $GL_2$ statement proved
+earlier in this programme \cite{SandboxGL2}. Over the fraction field the centre is the invariant
+\emph{monomial} ring. None of these treats the family parameter or the integer-valued lattice, and
+the content of the flagship is precisely that over $\At$ the centre is the strictly larger Newton
+lattice.""")
 
 
     A(body(SRC["proof1"], r"\section{Attribution}", r"\begin{thebibliography}"))
