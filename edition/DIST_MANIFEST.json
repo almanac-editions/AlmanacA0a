@@ -166,27 +166,27 @@
    "group": "edition",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/paper.pdf",
    "dist_path": "edition/paper.pdf",
-   "sha256_in_manifest": "c5edc72fd0c16da984b875deeddde067969e3caae7bc5038f7c63e009e76fe3a",
+   "sha256_in_manifest": "538ca21f957d20d47a54ef26d6bd3aeb603a5753abe086ded04ba9ced0c234d4",
    "role": "edition: the paper, the edition's reading document",
-   "sha256_shipped": "c5edc72fd0c16da984b875deeddde067969e3caae7bc5038f7c63e009e76fe3a",
+   "sha256_shipped": "538ca21f957d20d47a54ef26d6bd3aeb603a5753abe086ded04ba9ced0c234d4",
    "status": "OK"
   },
   {
    "group": "edition",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/paper.tex",
    "dist_path": "edition/paper.tex",
-   "sha256_in_manifest": "f421b7ec729bb75ec259e671984555a09e6828dcba4028079d838806ce46ca5e",
+   "sha256_in_manifest": "fdf1c0553b4d5a6ff1d38458a5671760bb3c11113f074cf16a2cb9f1ef380d06",
    "role": "edition: the paper's LaTeX source",
-   "sha256_shipped": "f421b7ec729bb75ec259e671984555a09e6828dcba4028079d838806ce46ca5e",
+   "sha256_shipped": "fdf1c0553b4d5a6ff1d38458a5671760bb3c11113f074cf16a2cb9f1ef380d06",
    "status": "OK"
   },
   {
    "group": "edition",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/render_paper.py",
    "dist_path": "edition/render_paper.py",
-   "sha256_in_manifest": "ce0529cc8e68080b170e82c11cc9ec88e84c6850d943ea8bc7619a8e4a61bfbe",
+   "sha256_in_manifest": "8d8356572984b18a89b9a417f37cfa04be3041e3fb10a7107b59c4665e4c6e91",
    "role": "edition: the paper's assembler",
-   "sha256_shipped": "ce0529cc8e68080b170e82c11cc9ec88e84c6850d943ea8bc7619a8e4a61bfbe",
+   "sha256_shipped": "8d8356572984b18a89b9a417f37cfa04be3041e3fb10a7107b59c4665e4c6e91",
    "status": "OK"
   },
   {
@@ -697,7 +697,7 @@
    "group": "edition",
    "source_path": "MANIFEST.json",
    "dist_path": "edition/MANIFEST.json",
-   "sha256_shipped": "33a1d4d5f03197bd00ebfd925f9b6e781ad69aadc0655cb26342834b23b3c9c0",
+   "sha256_shipped": "8da751929bce9598173aa88b4ef2ce7a4f39d4f50aaf1ab541d450d7ac8f1771",
    "status": "OK",
    "role": "the edition's own machine-readable manifest"
   },
@@ -945,7 +945,7 @@
    "source_path": "(generated) informal.html",
    "dist_path": "edition/informal.html",
    "sha256_in_manifest": null,
-   "sha256_shipped": "1bdecf5e839cc07780f79b5fa1409a0481b9cfbf4b96f2c04c61406010ef9ec7",
+   "sha256_shipped": "e1789d4810ed91376adf7f291c77a61cf08741a949bd95b5fcb416ef0b086c9e",
    "status": "GENERATED \u2014 assembled from CONCORDANCE.json's ink row",
    "role": "edition: the informal layer as a page"
   },

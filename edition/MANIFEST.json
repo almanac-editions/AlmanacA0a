@@ -258,7 +258,7 @@
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/ACTIVITY.md",
-   "sha256": "ba8f9f220ab8d094283755add1fcdb3d4788569bb173c8ae648a29b84e6b8ac5",
+   "sha256": "02118fe73fef96d26850f49ceb37d0baaf3d37271b7938201228f130d0174a9f",
    "role": "edition: the campaign journal — the per-activity timestamps the measurement log is summed from",
    "produced_by": "the Almanac Editor, 2026-08-13 onward",
    "self_reference": "F-E11, 2026-08-14 — a THIRD instance of the §12.3 relation, and it had been UNLISTED while the manifest cited it: `how_to_re_measure` sends a reader here to re-derive the cost figure, and this file was not in the checkable set at all (the F-E7 class). It cannot be pinned before deposit, because the journal records the act of writing the manifest — every entry, including the one recording the pinning, falsifies the pin. Under §12.2 it pins at the deposit re-hash gate, when journalling for this edition stops. STATE.md is deliberately NOT listed: it is this seat's resume header, working state rather than edition content, and nothing in the edition cites it.",
@@ -334,19 +334,19 @@
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/paper.pdf",
-   "sha256": "c5edc72fd0c16da984b875deeddde067969e3caae7bc5038f7c63e009e76fe3a",
+   "sha256": "538ca21f957d20d47a54ef26d6bd3aeb603a5753abe086ded04ba9ced0c234d4",
    "role": "edition: the paper, the edition's reading document",
    "produced_by": "render_paper.py, assembled from SandboxA/informal/goalA.tex, sandboxA0a/informal/goalv0a.tex and proofv0a.tex; paper.tex reproduces byte-for-byte from those three sources (measured 2026-09-04)"
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/paper.tex",
-   "sha256": "f421b7ec729bb75ec259e671984555a09e6828dcba4028079d838806ce46ca5e",
+   "sha256": "fdf1c0553b4d5a6ff1d38458a5671760bb3c11113f074cf16a2cb9f1ef380d06",
    "role": "edition: the paper's LaTeX source",
    "produced_by": "render_paper.py, assembled from SandboxA/informal/goalA.tex, sandboxA0a/informal/goalv0a.tex and proofv0a.tex; paper.tex reproduces byte-for-byte from those three sources (measured 2026-09-04)"
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/render_paper.py",
-   "sha256": "ce0529cc8e68080b170e82c11cc9ec88e84c6850d943ea8bc7619a8e4a61bfbe",
+   "sha256": "8d8356572984b18a89b9a417f37cfa04be3041e3fb10a7107b59c4665e4c6e91",
    "role": "edition: the paper's assembler",
    "produced_by": "render_paper.py, assembled from SandboxA/informal/goalA.tex, sandboxA0a/informal/goalv0a.tex and proofv0a.tex; paper.tex reproduces byte-for-byte from those three sources (measured 2026-09-04)"
   },

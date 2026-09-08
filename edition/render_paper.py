@@ -112,8 +112,7 @@ Weyl-invariant part of a \emph{Newton lattice} --- the functions on the multipli
 integral values at every weight. Section 2 states this for $GL_n$. Sections 3 and 4 state and prove
 it for $n=1$, where the root system is empty, the Weyl group is trivial, and the whole content is a
 statement about integer-valued Laurent polynomials on a geometric grid: a bilateral form of the
-quantum P\'olya theorem of Harman and Hopkins \cite{HarmanHopkins}. Section 5 records what was
-searched for in the literature and what was found.
+quantum P\'olya theorem of Harman and Hopkins \cite{HarmanHopkins}. Section 5 records the precedents.
 \end{abstract}""")
 
     A(r"\section{Introduction}")
@@ -198,10 +197,17 @@ clause~(iii), and it is not vacuous at all.""")
 
     # -------------------------------------------------------- the precedents
     A(r"\section{Precedents}")
+    # NEGATIVE ANCESTRY IS OUT OF THIS DOCUMENT (Overseer, 2026-09-08: "strictly against
+    # human-facing"). A paper reports what it found; the searches that returned nothing, the
+    # rejected candidates and the reasoning about them stay in the EDITION'S RECORD, where
+    # ANCESTRY.md §7.3 carries the coefficient-field bridge as NONE LOCATED with its queries, and
+    # §7.3 again carries Harman--Hopkins §4 Prop. 4.3 assessed and REJECTED with the argument.
+    # NOTHING IS LOST AND NOTHING IS SOFTENED: golden rule 7 asks that negative results be
+    # preserved, not that they be printed in the reading document. THE SEARCH PROVENANCE GOES WITH
+# THEM (same instruction, minutes later): dates of citation cycles and how a shelf was queried
+# are the edition's apparatus, and a reader of the paper wants the predecessors, not the audit.
     A(r"""\noindent
-This section records what was looked for in the literature, what was found, and what was not. It is
-included because a claim of novelty is only as good as the search behind it; one search returned
-nothing, which is a result, and is stated as one.
+Every result of Section~4 has a located predecessor; this section records them.
 
 \subsection*{Clause (iii): the P\'olya ancestry, in three layers}
 The classical layer is P\'olya's basis theorem: the integer-valued polynomials on $\mathbb Z$ are
@@ -236,31 +242,8 @@ Lusztig \cite[\S3.2]{Lusztig}, De Concini--Procesi \cite[\S\S17--18]{DCP}, Jantz
 \cite[\S6]{Jantzen}, Habiro--L\^e \cite[\S8G]{HabiroLe}. None of these treats the family parameter
 or the integer-valued lattice; over the fraction field the centre is the invariant \emph{monomial}
 ring, and the content of the flagship is precisely that over $\At$ it is the strictly larger
-Newton lattice.
+Newton lattice.""")
 
-\subsection*{What was searched, and how}
-The citation cycle over the manuscript was run on 2026-08-09 and re-run over the whole library on
-2026-08-13. Every result of Section~4 carries a citation; no result claims to have no predecessor.
-One methodological finding is worth repeating, because it changed an answer: the first query run
---- the exact phrase \emph{Harish--Chandra isomorphism} against the statement shelf --- returned two
-entries, both irrelevant, where the shelf in fact held twelve. \textbf{A hit count over a phrase
-reports the shape of the query, not the shape of the shelf}, and a ``none located'' finding is
-worth only as much as the surface it was run against.
-
-\subsection*{What was not found}
-For the coefficient-field bridge --- the assertion that enlarging the ambient coefficient ring from
-$\Ft$ to $\operatorname{Frac}(\At)$ adds no new elements to the Newton lattice --- \textbf{no
-predecessor was located}. The queries were \emph{base change}, \emph{faithfully flat},
-\emph{extension of scalars} and \emph{localization}; every hit was unrelated. The nearest published
-statement, Vandermonde coefficient descent in Cahen--Chabert \cite[Prop.~I.3.1]{CahenChabert}, was
-located on the later pass and is the closest thing to a predecessor this claim has.
-Harman--Hopkins \cite[\S4, Prop.~4.3]{HarmanHopkins} was assessed as a candidate and
-\textbf{rejected}, and the reason is worth stating because the two look alike: their proposition
-says the object \emph{grows} under localization and identifies the enlargement exactly, while the
-claim here is that it does \emph{not} grow. ``Bigger, and here is how much bigger'' is not
-evidence for ``not bigger at all'', however much both statements wear the word \emph{localization};
-their localization also inverts the deformation parameter, where this one enlarges the coefficient
-field of the toral parameter. Adjacent, and adjacency is not ancestry.""")
 
     A(body(SRC["proof1"], r"\section{Attribution}", r"\begin{thebibliography}"))
 
