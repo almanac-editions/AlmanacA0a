@@ -114,8 +114,8 @@ Laurent polynomials on a geometric grid: the centre is exactly the \emph{even Ne
 those taking values in $\At$ at every weight, and it is spanned over $\At$ by the shifted divided
 classes $\Yc^{u}\nu_r(\Yc)$. This is a bilateral form of the quantum P\'olya theorem of Harman and
 Hopkins \cite{HarmanHopkins}. The rank-one case is the first instance of a corresponding statement
-for $GL_n$, which is the subject of work in progress and is not formulated here. Sections 2 and 3
-state and prove the rank-one theorem; Section 4 is a short history.
+for $GL_n$, which is the subject of work in progress. Sections 2 and 3 state and prove the
+rank-one theorem; Section 4 is a short history.
 \end{abstract}""")
 
     A(r"\section{Introduction}")
@@ -144,8 +144,7 @@ $q$-analogue on the additive grid, with $q$ an indeterminate, is Harman--Hopkins
 
 \medskip\noindent
 There is a corresponding statement for $GL_n$, of which the theorem below is the first instance ---
-the case where the root system is empty. \textbf{It is the subject of work in progress and is
-neither formulated nor used here}, and nothing in what follows depends on it.
+the case where the root system is empty. It is the subject of work in progress.
 
 \medskip\noindent
 Sections~2 and~3 state and then prove the theorem in full. With $\Phi=\emptyset$ and
@@ -156,8 +155,8 @@ shifted divided classes $\Yc^{u}\nu_r(\Yc)$.
 \medskip\noindent
 The rank-one case is small on purpose. It was carried from statement to proof to machine-checked
 formalisation so that the cost and the failure modes of doing so could be measured; nine of the
-twelve results in the accompanying edition carry a proof-kernel certificate. That apparatus is not
-the subject of this paper and is not described here.""")
+twelve results in the accompanying edition carry a proof-kernel certificate, which the edition
+records claim by claim.""")
 
     # THE GL_n STATEMENT IS NOT IN THIS PAPER (Overseer, 2026-09-08): "we cannot formulate the
     # GL_n conjecture, because that is what we are proving in a joint project ... so rewrite the
