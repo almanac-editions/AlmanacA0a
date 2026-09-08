@@ -11,7 +11,7 @@ adjacent-pair CVD validation. The local validator (node) is NOT installed on thi
 was NOT re-run here — recorded rather than reported as a pass. Every colour is paired with a text
 label, so identity never rests on colour alone.
 """
-import html, json, os, sys
+import html, json, os, re, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from render_docs import pdf_pages  # one measured page count, shared with informal.html
@@ -371,47 +371,63 @@ render();
 </body></html>
 """
 
-out = (TPL
-       .replace("__TITLE__", "Almanac A0a — the centre of the even hybrid family quantum GL(1)")
-       .replace("__SUB__", "The pilot edition · a closed record in three layers")
-       .replace("__NTOTAL__", str(len(rows)))
-       .replace("__NKERNEL__", str(n_kernel))
-       .replace("__NRANGE__", str(n_range))
-       .replace("__NINK__", str(n_ink))
-       # THE PAGE COUNT IS MEASURED FROM THE PDF, NEVER TYPED. It was typed as "12 pp." for one
-       # hour on 2026-09-04, in the same sweep that found three other typed counts which had
-       # stopped being true. If the paper is not beside this script the count is simply omitted.
-       .replace("__PAPERPP__", (lambda n: f", {n}&nbsp;pp." if n else "")(
-           pdf_pages(os.path.join(ED, "paper.pdf"))))
-       .replace("__HUMANMIN__", str(man["cost"]["human_minutes_total"]))
-       .replace("__WALLMIN__", str(man["cost"]["wall_clock_minutes_total"]))
-       .replace("__EDITION__", html.escape(con["edition"]))
-       .replace("__DATA__", DATA))
+# ASSEMBLE FIRST, FILL SECOND, THEN REFUSE ON ANY SURVIVOR.
+#
+# THE DEFECT THIS REPLACES SHIPPED, AND IT SHIPPED BECAUSE I CHECKED THE WRONG THINGS. The
+# two-page split ran the placeholder substitutions over TPL and only afterwards inserted
+# LINKS_BLOCK and ROWS_BLOCK - which are separate constants, so every count inside the hero, the
+# KPI row and the filter chips was never substituted. The statements page went to the reader
+# reading "__NKERNEL__ of __NTOTAL__". I verified headings, links, the embedded data, the banner
+# and the word counts after the split, and not one of those checks can see an unfilled
+# placeholder. The README already had exactly this guard (`assert "__N" not in _t`) in the
+# assembler, written after the same class of miss; the pages did not.
+def fill(text, title, sub):
+    return (text
+            .replace("__TITLE__", title)
+            .replace("__SUB__", sub)
+            .replace("__NTOTAL__", str(len(rows)))
+            .replace("__NKERNEL__", str(n_kernel))
+            .replace("__NRANGE__", str(n_range))
+            .replace("__NINK__", str(n_ink))
+            # THE PAGE COUNT IS MEASURED FROM THE PDF, NEVER TYPED. It was typed as "12 pp." for
+            # one hour on 2026-09-04, in the same sweep that found three other typed counts which
+            # had stopped being true. If the paper is not beside this script the count is omitted.
+            .replace("__PAPERPP__", (lambda n: f", {n}&nbsp;pp." if n else "")(
+                pdf_pages(os.path.join(ED, "paper.pdf"))))
+            .replace("__HUMANMIN__", str(man["cost"]["human_minutes_total"]))
+            .replace("__WALLMIN__", str(man["cost"]["wall_clock_minutes_total"]))
+            .replace("__EDITION__", html.escape(con["edition"]))
+            .replace("__DATA__", DATA))
 
-# In the SOURCE TREE the page is staged in dist_src/ and the assembler copies it in.
-# Inside an UNZIPPED ALMANAC there is no dist_src/, and the page belongs beside this script.
-# Getting this wrong is silent: the command succeeds and the page the reader opens is stale.
-# TWO PAGES OUT OF ONE FILL (Overseer, 2026-09-08): "create a separate html file for Statements
-# with their warrants and put everything now below there … so this page only contains links."
-# index.html is the door: a lead sentence and links, nothing else. statements.html carries the
-# figures, the note and the twelve rows with their filters and search. ONE template, one set of
-# CSS, one header and one mark, so the two cannot drift into looking like different publications.
-_i = out.index("/*__ROWSJS__*/")
-_head, _rowsjs = out[:_i], out[_i + len("/*__ROWSJS__*/"):]
 
-index_html = (_head.replace("__LINKS__", LINKS_BLOCK).replace("__ROWS__", "")
-              + "</script>\n</body></html>\n")
+# In the SOURCE TREE the pages are staged in dist_src/ and the assembler copies them in.
+# Inside an UNZIPPED ALMANAC there is no dist_src/, and they belong beside this script.
+#
+# TWO PAGES OUT OF ONE TEMPLATE (Overseer, 2026-09-08): index.html is the door - a lead sentence
+# and links, nothing else; statements.html carries the figures, the note and the twelve rows with
+# their filters and search. One template, one set of CSS, one header and one mark, so the two
+# cannot drift into looking like different publications.
+_i = TPL.index("/*__ROWSJS__*/")
+_head, _rowsjs = TPL[:_i], TPL[_i + len("/*__ROWSJS__*/"):]
 
-statements_html = (_head.replace("__LINKS__", BACK_LINK).replace("__ROWS__", ROWS_BLOCK)
-                   .replace("Almanac A0a — the centre of the even hybrid family quantum GL(1)",
-                            "Statements with their warrants")
-                   .replace("The pilot edition · a closed record in three layers",
-                            "Almanac A0a · every result, one row each, joined across the three layers")
-                   + _rowsjs)
+index_html = fill(_head.replace("__LINKS__", LINKS_BLOCK).replace("__ROWS__", "")
+                  + "</script>\n</body></html>\n",
+                  "Almanac A0a — the centre of the even hybrid family quantum GL(1)",
+                  "The pilot edition · a closed record in three layers")
+
+statements_html = fill(_head.replace("__LINKS__", BACK_LINK).replace("__ROWS__", ROWS_BLOCK)
+                       + _rowsjs,
+                       "Statements with their warrants",
+                       "Almanac A0a · every result, one row each, joined across the three layers")
 
 staging = os.path.join(ED, "dist_src")
 base = staging if os.path.isdir(staging) else ED
 for name, text in (("index.html", index_html), ("statements.html", statements_html)):
+    # THE GUARD. A page that reaches a reader with "__NKERNEL__" on it is worse than a build that
+    # fails: the build failing costs a minute, and the page shipped for a day.
+    left = sorted(set(re.findall(r"__[A-Z][A-Z0-9_]*__", text)))
+    if left:
+        raise SystemExit(f"render_index: {name} still carries unfilled placeholders: {left}")
     with open(os.path.join(base, name), "w", encoding="utf-8") as f:
         f.write(text)
     print(f"wrote {os.path.relpath(os.path.join(base, name), ED)} ({len(text):,} bytes)"

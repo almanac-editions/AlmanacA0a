@@ -688,7 +688,7 @@
    "group": "edition",
    "source_path": "MANIFEST.json",
    "dist_path": "edition/MANIFEST.json",
-   "sha256_shipped": "9141eb2bb41f256663de4527118c3e3ec8d27c395f7f2fa9f2345b1401f1c5c3",
+   "sha256_shipped": "a8c96bd37ed2dcee49bdd70c292f5b92ac0ebd60371ca041701784df0fcfdf13",
    "status": "OK",
    "role": "the edition's own machine-readable manifest"
   },
@@ -752,20 +752,20 @@
    "group": "front-matter",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/dist_src/index.html",
    "dist_path": "edition/index.html",
-   "sha256_shipped": "da4a7592aa84b0be4e999438c63c87776fdedda21fb1ebadca19c0bafb218cdc",
+   "sha256_shipped": "62911b4672e34e2ef93fef9887f457a92e522753fadbc8be886a2ca1b8d07965",
    "status": "OK",
    "role": "the door: a lead sentence and links, nothing else",
-   "sha256_source": "b972af2e950c20d546fd00f81ff80be0d1c20aadd6194f836516123b86b53f15",
+   "sha256_source": "2dce52477051593bca7e531833f57f5c12e3efa294896bea6f41525a3af325e3",
    "transformed_at_assembly": "The shipped bytes differ from the source: this file is transformed during assembly. Both hashes are given because only one of them is what you downloaded."
   },
   {
    "group": "front-matter",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/dist_src/statements.html",
    "dist_path": "edition/statements.html",
-   "sha256_shipped": "461b5cf9234b9dd9662380eb14e02905b6af159ed7c343154e370349626dcedc",
+   "sha256_shipped": "70847e9701ed052372f7e1623b3533cfc42337517c08e8c25e6f11604636570e",
    "status": "OK",
    "role": "the twelve statements with their warrants \u2014 filters, search, one row each, offline",
-   "sha256_source": "1574d71093b321c45b5fa09578e41d1c02b18c9ade09a4b2a48a75b0ea2f76e1",
+   "sha256_source": "7628bede92eb089613487fdd2b32c959aa6056784d9c504f859ef287e3d93786",
    "transformed_at_assembly": "The shipped bytes differ from the source: this file is transformed during assembly. Both hashes are given because only one of them is what you downloaded."
   },
   {
@@ -910,7 +910,7 @@
    "group": "edition",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/render_index.py",
    "dist_path": "edition/render_index.py",
-   "sha256_shipped": "51783569ddfb297f809ec3a4322f47d3a01aeb3d94a5d1bf1f194c93d5067208",
+   "sha256_shipped": "a0fbdeabf8249e0ec161edb7e9d7c4dd0540e331d52e27823264d5f4a199ef37",
    "status": "OK",
    "role": "regenerates index.html from the record"
   },
