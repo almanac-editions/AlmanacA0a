@@ -166,27 +166,27 @@
    "group": "edition",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/paper.pdf",
    "dist_path": "edition/paper.pdf",
-   "sha256_in_manifest": "10b2ea6d4b730e5bba9aa02519e6ba13b896d983a67e8aec6bb8b7b9971c6882",
+   "sha256_in_manifest": "26de7386ecee37cae444978a0c22b732e8f19834b5efef3173f9df45d8a85cac",
    "role": "edition: the paper, the edition's reading document",
-   "sha256_shipped": "10b2ea6d4b730e5bba9aa02519e6ba13b896d983a67e8aec6bb8b7b9971c6882",
+   "sha256_shipped": "26de7386ecee37cae444978a0c22b732e8f19834b5efef3173f9df45d8a85cac",
    "status": "OK"
   },
   {
    "group": "edition",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/paper.tex",
    "dist_path": "edition/paper.tex",
-   "sha256_in_manifest": "15411c66a3f2c75eb94960010362206e2d1d9871b6193d1f4576e8b822c3bacd",
+   "sha256_in_manifest": "3f0eb6bdf8f4a723f32d87573a770d5e7822bf115beedf655be043e33bb7d450",
    "role": "edition: the paper's LaTeX source",
-   "sha256_shipped": "15411c66a3f2c75eb94960010362206e2d1d9871b6193d1f4576e8b822c3bacd",
+   "sha256_shipped": "3f0eb6bdf8f4a723f32d87573a770d5e7822bf115beedf655be043e33bb7d450",
    "status": "OK"
   },
   {
    "group": "edition",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/render_paper.py",
    "dist_path": "edition/render_paper.py",
-   "sha256_in_manifest": "6de44f589c38bbbede038cfdce0698fb01048a24c12ac2092ab7783274a33dc8",
+   "sha256_in_manifest": "c29ef3dd2c96887d9fa4817c72cc915644cec648e8684783e126ecf96e16c026",
    "role": "edition: the paper's assembler",
-   "sha256_shipped": "6de44f589c38bbbede038cfdce0698fb01048a24c12ac2092ab7783274a33dc8",
+   "sha256_shipped": "c29ef3dd2c96887d9fa4817c72cc915644cec648e8684783e126ecf96e16c026",
    "status": "OK"
   },
   {
@@ -688,7 +688,7 @@
    "group": "edition",
    "source_path": "MANIFEST.json",
    "dist_path": "edition/MANIFEST.json",
-   "sha256_shipped": "a8c96bd37ed2dcee49bdd70c292f5b92ac0ebd60371ca041701784df0fcfdf13",
+   "sha256_shipped": "c536a4763d17f8b923d9c17f76d51f83e476cf25901bf7e46e48352a24bd2fb7",
    "status": "OK",
    "role": "the edition's own machine-readable manifest"
   },

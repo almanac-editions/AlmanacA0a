@@ -324,19 +324,19 @@
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/paper.pdf",
-   "sha256": "10b2ea6d4b730e5bba9aa02519e6ba13b896d983a67e8aec6bb8b7b9971c6882",
+   "sha256": "26de7386ecee37cae444978a0c22b732e8f19834b5efef3173f9df45d8a85cac",
    "role": "edition: the paper, the edition's reading document",
    "produced_by": "render_paper.py, assembled from sandboxA0a/informal/goalv0a.tex and proofv0a.tex; paper.tex reproduces byte-for-byte from those two sources. The type-A programme's signed goal was a third source until 2026-09-08, when the GL_n section was removed on the Overseer's instruction; the paper no longer reads it, and its path is deliberately not written here because §12.4 reads a path in this manifest as a CITATION and would require a row for a file this edition no longer uses."
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/paper.tex",
-   "sha256": "15411c66a3f2c75eb94960010362206e2d1d9871b6193d1f4576e8b822c3bacd",
+   "sha256": "3f0eb6bdf8f4a723f32d87573a770d5e7822bf115beedf655be043e33bb7d450",
    "role": "edition: the paper's LaTeX source",
    "produced_by": "render_paper.py, assembled from sandboxA0a/informal/goalv0a.tex and proofv0a.tex; paper.tex reproduces byte-for-byte from those two sources. The type-A programme's signed goal was a third source until 2026-09-08, when the GL_n section was removed on the Overseer's instruction; the paper no longer reads it, and its path is deliberately not written here because §12.4 reads a path in this manifest as a CITATION and would require a row for a file this edition no longer uses."
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/render_paper.py",
-   "sha256": "6de44f589c38bbbede038cfdce0698fb01048a24c12ac2092ab7783274a33dc8",
+   "sha256": "c29ef3dd2c96887d9fa4817c72cc915644cec648e8684783e126ecf96e16c026",
    "role": "edition: the paper's assembler",
    "produced_by": "render_paper.py, assembled from sandboxA0a/informal/goalv0a.tex and proofv0a.tex; paper.tex reproduces byte-for-byte from those two sources. The type-A programme's signed goal was a third source until 2026-09-08, when the GL_n section was removed on the Overseer's instruction; the paper no longer reads it, and its path is deliberately not written here because §12.4 reads a path in this manifest as a CITATION and would require a row for a file this edition no longer uses."
   },
