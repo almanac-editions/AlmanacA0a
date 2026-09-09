@@ -52,7 +52,7 @@ manuscript name.** Names that look equal across layers frequently are not.
 ## 1. The layout
 
 ```
-AlmanacA0a/
+almanacA0a/
   index.html              interactive reader view; fully offline and self-contained
   FOR_A_HUMAN.md          the human's guide (install instructions live there)
   FOR_AN_AI_AGENT.md      this file
@@ -87,7 +87,7 @@ prefer one.**
 ### 2.1 Integrity — seconds, no dependencies
 
 ```sh
-cd AlmanacA0a
+cd almanacA0a
 shasum -a 256 -c CHECKSUMS.txt          # Linux: sha256sum -c CHECKSUMS.txt
 echo "exit=$?"
 ```

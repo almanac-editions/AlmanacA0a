@@ -1,10 +1,10 @@
 {
  "schema": "almanac-distribution/v1",
- "name": "AlmanacA0a",
+ "name": "almanacA0a",
  "build_class": "PUBLISHABLE",
  "build_class_reason": "every shipped file matches its manifest hash",
  "build_class_rule": "ALMANAC_EDITION_MANIFEST \u00a712.7: a distributable is PUBLISHABLE only with zero DRIFT rows. Any DRIFT means the zip would freeze bytes the tree has not frozen, so the build is a PREVIEW and declares itself one on its own face. The \u00a712.2 cold re-hash at deposit is what turns a preview into a publishable build.",
- "edition": "AlmanacA0a \u2014 the centre of the even hybrid family quantum GL1 (PILOT)",
+ "edition": "almanacA0a \u2014 the centre of the even hybrid family quantum GL1 (PILOT)",
  "assembled_from_manifest": "2026-08-13",
  "assembled_by": "assemble_almanac.py",
  "counts": {
@@ -40,9 +40,9 @@
    "group": "edition",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/CONCORDANCE.json",
    "dist_path": "edition/CONCORDANCE.json",
-   "sha256_in_manifest": "bb154149eecdeb9a4f60e06dfcdab09457f7d789b852bf6bc161fc37b0dafccb",
+   "sha256_in_manifest": "daca22bc302e662a2cae853ed7f365389e2e3b1f59cf0d94ea8376d7f24fe591",
    "role": "edition: assembled by the Editor",
-   "sha256_shipped": "bb154149eecdeb9a4f60e06dfcdab09457f7d789b852bf6bc161fc37b0dafccb",
+   "sha256_shipped": "daca22bc302e662a2cae853ed7f365389e2e3b1f59cf0d94ea8376d7f24fe591",
    "status": "OK"
   },
   {
@@ -94,9 +94,9 @@
    "group": "edition",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/render_almanac.py",
    "dist_path": "edition/render_almanac.py",
-   "sha256_in_manifest": "8ae5ff2b54ffb447e7a02691a39e35a9d4b6b713407187df7ea7f2197b05b751",
+   "sha256_in_manifest": "b14b732c3cde5951881e2b7ddf1c7d1fc1be4857b4aa592ab2b3498c89ead7c2",
    "role": "edition: generator for the reading view (renders from the edition's own JSON; no transcription)",
-   "sha256_shipped": "8ae5ff2b54ffb447e7a02691a39e35a9d4b6b713407187df7ea7f2197b05b751",
+   "sha256_shipped": "b14b732c3cde5951881e2b7ddf1c7d1fc1be4857b4aa592ab2b3498c89ead7c2",
    "status": "OK"
   },
   {
@@ -688,7 +688,7 @@
    "group": "edition",
    "source_path": "MANIFEST.json",
    "dist_path": "edition/MANIFEST.json",
-   "sha256_shipped": "dce083f318c084f0fc24ae18ee6fafc26cdafa1f71fb984d6c4b24f51baf4650",
+   "sha256_shipped": "ce38e569c9721654f57fb12a4e70b1b10e0352e2fcd934592cf0670bf66a8954",
    "status": "OK",
    "role": "the edition's own machine-readable manifest"
   },
@@ -752,20 +752,20 @@
    "group": "front-matter",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/dist_src/index.html",
    "dist_path": "edition/index.html",
-   "sha256_shipped": "51ce62fc8569a46e4fca2a61e07245774023c914e5f04a1029694046c8fd434a",
+   "sha256_shipped": "bd956a8976e4b8a1f62fff6a9688b68204bc8c0d8bf130317e71f1322e3edab3",
    "status": "OK",
    "role": "the door: a lead sentence and links, nothing else",
-   "sha256_source": "9e0d990a70199603140d6653cb68583e1bd409e448c243e0bd472b43aa3584d5",
+   "sha256_source": "fc079e9a2c0ae756784d1d561ec9715eb6451bd722370a03e7439a34d62dccbf",
    "transformed_at_assembly": "The shipped bytes differ from the source: this file is transformed during assembly. Both hashes are given because only one of them is what you downloaded."
   },
   {
    "group": "front-matter",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/dist_src/statements.html",
    "dist_path": "edition/statements.html",
-   "sha256_shipped": "70847e9701ed052372f7e1623b3533cfc42337517c08e8c25e6f11604636570e",
+   "sha256_shipped": "965b787d6b75f3e4cafe78495fec57558d726715987a239d2a59ca5b1ca995aa",
    "status": "OK",
    "role": "the twelve statements with their warrants \u2014 filters, search, one row each, offline",
-   "sha256_source": "7628bede92eb089613487fdd2b32c959aa6056784d9c504f859ef287e3d93786",
+   "sha256_source": "c8ad70a58de1b4d3cb821db3199faadcd69cb5b4035c186436ae026b256e3db5",
    "transformed_at_assembly": "The shipped bytes differ from the source: this file is transformed during assembly. Both hashes are given because only one of them is what you downloaded."
   },
   {
@@ -780,17 +780,17 @@
    "group": "front-matter",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/dist_src/README.md",
    "dist_path": "README.md",
-   "sha256_shipped": "a267e4ce715386b76d24b62df5702397e5271e869c24c97ae95385ead1783d1a",
+   "sha256_shipped": "fac56e9f7b7ce94d193a770ebab639ee8a5585b238e8b98574aac66593f90b28",
    "status": "OK",
    "role": "repository front page",
-   "sha256_source": "4a885ebffcccbd1da1d327d1ce29077969057839833130816a36a11584c4298d",
+   "sha256_source": "543a4fe7ceec5e5590313aebfa6db3986b74c9ca7e65d7a90b933ba349d4736e",
    "transformed_at_assembly": "The shipped bytes differ from the source: this file is transformed during assembly. Both hashes are given because only one of them is what you downloaded."
   },
   {
    "group": "front-matter",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/dist_src/FOR_A_HUMAN.md",
    "dist_path": "edition/FOR_A_HUMAN.md",
-   "sha256_shipped": "8f8097e1f9efafa26a7cdf0b08851140c7b01f60b78d0d64563acc39ae043c25",
+   "sha256_shipped": "e0c65a43eaf0892a7aedee3a67785991c50cc2b2d380d3b7232b3bd99e940c75",
    "status": "OK",
    "role": "the human's guide, incl. software installation"
   },
@@ -798,7 +798,7 @@
    "group": "front-matter",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/dist_src/FOR_AN_AI_AGENT.md",
    "dist_path": "edition/FOR_AN_AI_AGENT.md",
-   "sha256_shipped": "78ba5322853335c2322bdb9e182a8eaa1be8316e62285671bc51481d82d27a1b",
+   "sha256_shipped": "543e2484ff924f5115d9e69c180e15516f904e1380be768fa9fdd39258efcda2",
    "status": "OK",
    "role": "operating instructions for an AI agent"
   },
@@ -902,7 +902,7 @@
    "group": "repository-furniture",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/dist_src/gitlab-ci.yml",
    "dist_path": ".gitlab-ci.yml",
-   "sha256_shipped": "5e86a7a060fc3e4f7f0ef1c1aadad73b4e574352fcb97cf800b175d4d0fee8cf",
+   "sha256_shipped": "ff3151230518b683d62824ce8bd7c598f03c7b9449d21b24b7ecffa2fcd1ca43",
    "status": "OK",
    "role": "publishes edition/ as the site root on GitLab Pages; inert elsewhere"
   },
@@ -918,7 +918,7 @@
    "group": "front-matter",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/dist_src/LICENSE-CC-BY-4.0",
    "dist_path": "LICENSE-CC-BY-4.0",
-   "sha256_shipped": "aeb0a9a72843dcc0afa85b5bbfa1d9013c692799fb8b7f5d2671a42b7d9cc0b2",
+   "sha256_shipped": "4c910a26ba552ce6de1345d909a1b0da010a10833e74133bee20cd6300c72bd9",
    "status": "OK",
    "role": "the licence for the text, the mathematics and the data: CC BY 4.0, with the file-by-file split"
   },
@@ -934,7 +934,7 @@
    "group": "repository-furniture",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/dist_src/CITATION.cff",
    "dist_path": "CITATION.cff",
-   "sha256_shipped": "fbcdee05dcf50740635d8e30248b0f9031da0a452ad2ec1d3368b5b46578e775",
+   "sha256_shipped": "00d986beea5024c116e1664ad4cc6fde82285fee6473eba613f3eb831720e2b3",
    "status": "OK",
    "role": "citation metadata \u2014 publishable builds only"
   },
@@ -997,7 +997,7 @@
    "source_path": "(generated) FOR_AN_AI_AGENT.html",
    "dist_path": "edition/FOR_AN_AI_AGENT.html",
    "sha256_in_manifest": null,
-   "sha256_shipped": "2d728f9fdd6c99f7a4494144a47228108c15f02f9bca430393474c057076739c",
+   "sha256_shipped": "d15293779842cebdedca3fb81831fdfb2d86c9c09eef3d9f75c555db4581c66e",
    "status": "GENERATED \u2014 rendered from the markdown beside it, at build time",
    "role": "edition: a guide, rendered for a browser"
   },
@@ -1006,7 +1006,7 @@
    "source_path": "(generated) FOR_A_HUMAN.html",
    "dist_path": "edition/FOR_A_HUMAN.html",
    "sha256_in_manifest": null,
-   "sha256_shipped": "2c6a165c4063ed9062fe00ae0c6fd88534f4204bf4385f0ba329fb4a42f87939",
+   "sha256_shipped": "42a06a7fe787f6bc07598716317e3958c218777adeb6c3bf8bc467c3d7e3e182",
    "status": "GENERATED \u2014 rendered from the markdown beside it, at build time",
    "role": "edition: a guide, rendered for a browser"
   },

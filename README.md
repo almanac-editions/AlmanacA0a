@@ -4,16 +4,16 @@
        alt="almanac — the word's three a's carry the three kinds of warrant: informal, computational, kernel-certified">
 </picture>
 
-# AlmanacA0a — the centre of the even hybrid family quantum GL(1)
+# almanacA0a — the centre of the even hybrid family quantum GL(1)
 
 *The pilot edition. A complete record of one small mathematical result, in three layers, with a
 per-claim account of what warrants each one.*
 
-**Start here: [open the almanac](https://almanac-editions.github.io/AlmanacA0a/edition/index.html)** —
+**Start here: [open the almanac](https://almanac-editions.github.io/almanacA0a/edition/index.html)** —
 or unzip the archive below and open `edition/index.html`, which needs no network at all.
 
 **Whole almanac:
-[Download `AlmanacA0a.zip`](https://github.com/almanac-editions/AlmanacA0a/raw/main/AlmanacA0a.zip)** — it unzips to exactly this folder.
+[Download `almanacA0a.zip`](https://github.com/almanac-editions/almanacA0a/raw/main/almanacA0a.zip)** — it unzips to exactly this folder.
 
 ---
 
@@ -46,10 +46,10 @@ can be decided from the warrants above and the convention frame carried on every
 | to… | read |
 |---|---|
 | read the mathematics | **[the paper](edition/paper.pdf)**, 8 pp., `edition/paper.pdf` |
-| read it at length, without LaTeX | **[the mathematics explained](https://almanac-editions.github.io/AlmanacA0a/edition/almanac.explained.html)** — for a general reader, `edition/almanac.explained.html` |
-| look around | **[the almanac itself](https://almanac-editions.github.io/AlmanacA0a/edition/index.html)** — interactive, and offline in `edition/index.html` |
-| see every statement and its warrant | **[the twelve statements](https://almanac-editions.github.io/AlmanacA0a/edition/statements.html)** — `edition/statements.html` |
-| check any of it independently | **[how to check it yourself](https://almanac-editions.github.io/AlmanacA0a/edition/FOR_A_HUMAN.html)** — including installing every piece of software from scratch, `edition/FOR_A_HUMAN.md` |
+| read it at length, without LaTeX | **[the mathematics explained](https://almanac-editions.github.io/almanacA0a/edition/almanac.explained.html)** — for a general reader, `edition/almanac.explained.html` |
+| look around | **[the almanac itself](https://almanac-editions.github.io/almanacA0a/edition/index.html)** — interactive, and offline in `edition/index.html` |
+| see every statement and its warrant | **[the twelve statements](https://almanac-editions.github.io/almanacA0a/edition/statements.html)** — `edition/statements.html` |
+| check any of it independently | **[how to check it yourself](https://almanac-editions.github.io/almanacA0a/edition/FOR_A_HUMAN.html)** — including installing every piece of software from scratch, `edition/FOR_A_HUMAN.md` |
 | hand it to an AI assistant | **[`AGENTS.md`](AGENTS.md)** at the root — it routes to `edition/FOR_AN_AI_AGENT.md` |
 | confirm every file is intact | **[`edition/CHECKSUMS.txt`](edition/CHECKSUMS.txt)** — `cd edition && shasum -a 256 -c CHECKSUMS.txt` |
 

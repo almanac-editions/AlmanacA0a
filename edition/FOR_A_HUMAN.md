@@ -47,17 +47,17 @@ Every file's fingerprint is listed in `CHECKSUMS.txt`.
 
 **macOS:**
 ```sh
-cd AlmanacA0a
+cd almanacA0a
 shasum -a 256 -c CHECKSUMS.txt
 ```
 **Linux:**
 ```sh
-cd AlmanacA0a
+cd almanacA0a
 sha256sum -c CHECKSUMS.txt
 ```
 **Windows (PowerShell):**
 ```powershell
-cd AlmanacA0a
+cd almanacA0a
 Get-Content CHECKSUMS.txt | Where-Object { $_ -notmatch '^#' } | ForEach-Object {
   $h,$f = $_ -split '\s+',2
   if ((Get-FileHash $f -Algorithm SHA256).Hash -ieq $h) { "OK   $f" } else { "FAIL $f" }
@@ -162,7 +162,7 @@ winget install julia -s msstore
 **Run the instrument's own test battery** (this is the honest check — the outcome is a plain
 pass or fail):
 ```sh
-cd AlmanacA0a/source/instrument
+cd almanacA0a/source/instrument
 julia --project=. -e 'using Pkg; Pkg.instantiate(); Pkg.test()'
 ```
 Expected: **87 of 87 tests pass.** The first run installs OSCAR and its dependencies and is slow —
@@ -221,7 +221,7 @@ certificate.
 
 | symptom | what it means |
 |---|---|
-| `shasum: CHECKSUMS.txt: no such file` | you are not in the `AlmanacA0a` directory |
+| `shasum: CHECKSUMS.txt: no such file` | you are not in the `almanacA0a` directory |
 | a `FAIL` line from the checksum check | that file changed after assembly — investigate before trusting it |
 | `lake: command not found` | `elan` is installed but your shell was not restarted |
 | Julia test run takes forever the first time | expected — OSCAR is large. Subsequent runs are fast. |

@@ -1,6 +1,6 @@
 {
  "schema": "almanac-edition-manifest/v1",
- "edition": "AlmanacA0a — the centre of the even hybrid family quantum GL1 (PILOT)",
+ "edition": "almanacA0a — the centre of the even hybrid family quantum GL1 (PILOT)",
  "built_utc": "2026-08-13",
  "built_by": "the Almanac Editor (AD-27)",
  "status": "ACCEPTED 2026-08-13 by hypervisorA (tree owner); deposit, publication and the row-freeze are later acts, with deposit sequenced after instrument item 2.",
@@ -210,7 +210,7 @@
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/CONCORDANCE.json",
-   "sha256": "bb154149eecdeb9a4f60e06dfcdab09457f7d789b852bf6bc161fc37b0dafccb",
+   "sha256": "daca22bc302e662a2cae853ed7f365389e2e3b1f59cf0d94ea8376d7f24fe591",
    "role": "edition: assembled by the Editor",
    "produced_by": "the Almanac Editor, 2026-08-13"
   },
@@ -271,7 +271,7 @@
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/render_almanac.py",
-   "sha256": "8ae5ff2b54ffb447e7a02691a39e35a9d4b6b713407187df7ea7f2197b05b751",
+   "sha256": "b14b732c3cde5951881e2b7ddf1c7d1fc1be4857b4aa592ab2b3498c89ead7c2",
    "role": "edition: generator for the reading view (renders from the edition's own JSON; no transcription)",
    "produced_by": "the Almanac Editor, 2026-08-13"
   },
@@ -637,7 +637,7 @@
   "F-E12": "RULED — manifest §12.6 (Architect 20260814T124410Z-architect-64561-f666), 'read-but-not-held surfaces'. (1) A redeploy is part of the repair, not a follow-up: any published copy is re-published IN THE SAME ACT that changes a file it renders from, and a repair whose published surface still shows the defect is an UNFINISHED REPAIR. (2) The manifest records the redeploy date beside the URL — a dated measurement like any other row — and the row verifies by regeneration-and-republication. (3) AT DEPOSIT the gate extends one surface outward: every published copy is re-published from the deposited bytes, or RETIRED, within the deposit act itself, so a reader's surface can never outlive the record it renders. The finding as reported: THE COPY UNDER REVIEW IS A SHIPPED SURFACE THAT NO CLAUSE REACHED, and it is the one a reviewer actually reads. §12.2 gates at DEPOSIT; this copy exists to be read BEFORE deposit, which is its whole purpose. §12.4 closes the checkable set under citation and this manifest cites the URL — but a remote page cannot carry a sha, so it cannot be a row in the ordinary way. For four hours after the repair it displayed hashes this seat had already corrected: the record was right and the thing a human was looking at was wrong. Verify by regeneration (§12.3) plus a re-publish whenever the file it renders from changes; the standing rule adopted here is that a redeploy is part of the repair, not a follow-up to it."
  },
  "repository": {
-  "url": "https://github.com/almanac-editions/AlmanacA0a",
+  "url": "https://github.com/almanac-editions/almanacA0a",
   "visibility": "public",
   "visibility_note": "PUBLIC since 2026-09-09, measured unauthenticated from castalia: the repository page answers 200, the organisation reports public_repos 1, and the API reports visibility 'public'. README, LICENSE, edition/paper.pdf and AlmanacA0a.zip (1,618,830 bytes) all fetch anonymously. This records a MEASUREMENT, not an intention; it changes when the repository does.",
   "remote_head_as_of": {
@@ -661,7 +661,8 @@
    "split_into_two_files": "2026-09-09. One dual-licence document was accurate and undetectable: GitHub published the repository as license 'Other / NOASSERTION', which tells a reader less than either licence does. The terms did not change; only which file a machine can read did.",
    "what_the_sidebar_says": "MIT. That is the licence detectable from LICENSE and it governs the code. The mathematics is CC BY 4.0 and the README says so above the fold.",
    "note": "Third-party work is NOT covered and none is redistributed: the statement cards describe the literature and name where each source is held, rather than carrying it."
-  }
+  },
+  "renamed": "2026-09-10, from AlmanacA0a. The mark is the lowercase word 'almanac' and its THREE A's are the three warrants — ink, orange, blue. A capital first A is one of those three letters set differently from the other two, which breaks the symmetry the mark is built on. previous_url below is left at its own spelling: it records where the repository used to be, under the name it had then."
  },
  "substrate_repin_authority": [
   {

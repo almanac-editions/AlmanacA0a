@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render the reading view of AlmanacA0a from the edition's own files.
+"""Render the reading view of almanacA0a from the edition's own files.
 
 The point of generating rather than hand-writing: every figure and every row comes from
 CONCORDANCE.json / MANIFEST.json at render time, so the presentation cannot drift from the

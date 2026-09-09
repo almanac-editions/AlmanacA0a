@@ -95,15 +95,15 @@ the edition.</p>
 <h2 id="part-1-checking-the-files-are-intact-5-minutes-with-tools-already-on-your-machine">Part 1 — Checking the files are intact (5 minutes, with tools already on your machine)</h2>
 <p>Every file's fingerprint is listed in <code>CHECKSUMS.txt</code>.</p>
 <p><strong>macOS:</strong></p>
-<pre><code class="language-sh">cd AlmanacA0a
+<pre><code class="language-sh">cd almanacA0a
 shasum -a 256 -c CHECKSUMS.txt
 </code></pre>
 <p><strong>Linux:</strong></p>
-<pre><code class="language-sh">cd AlmanacA0a
+<pre><code class="language-sh">cd almanacA0a
 sha256sum -c CHECKSUMS.txt
 </code></pre>
 <p><strong>Windows (PowerShell):</strong></p>
-<pre><code class="language-powershell">cd AlmanacA0a
+<pre><code class="language-powershell">cd almanacA0a
 Get-Content CHECKSUMS.txt | Where-Object { $_ -notmatch '^#' } | ForEach-Object {
   $h,$f = $_ -split '\s+',2
   if ((Get-FileHash $f -Algorithm SHA256).Hash -ieq $h) { &quot;OK   $f&quot; } else { &quot;FAIL $f&quot; }
@@ -214,7 +214,7 @@ julia --version
 </table>
 <p><strong>Run the instrument's own test battery</strong> (this is the honest check — the outcome is a plain
 pass or fail):</p>
-<pre><code class="language-sh">cd AlmanacA0a/source/instrument
+<pre><code class="language-sh">cd almanacA0a/source/instrument
 julia --project=. -e 'using Pkg; Pkg.instantiate(); Pkg.test()'
 </code></pre>
 <p>Expected: <strong>87 of 87 tests pass.</strong> The first run installs OSCAR and its dependencies and is slow —
@@ -278,7 +278,7 @@ certificate.</p>
 <tbody>
 <tr>
 <td><code>shasum: CHECKSUMS.txt: no such file</code></td>
-<td>you are not in the <code>AlmanacA0a</code> directory</td>
+<td>you are not in the <code>almanacA0a</code> directory</td>
 </tr>
 <tr>
 <td>a <code>FAIL</code> line from the checksum check</td>
