@@ -17,6 +17,26 @@ or unzip the archive below and open `edition/index.html`, which needs no network
 
 ---
 
+## What is in here
+
+This is a publication, not a codebase: the file list above is a table of contents, and GitHub's
+right-hand column shows the last commit that touched each item rather than what the item is. What
+they are:
+
+| | |
+|---|---|
+| **`edition/`** | the almanac itself — the paper, the proof, the formal sources, the concordance, the pages that read them, and the checksums that certify them |
+| **`almanacA0a.zip`** | the whole thing as one download; it unzips to exactly this folder |
+| **`README.md`** | this page |
+| **`AGENTS.md`** | where an AI assistant should start |
+| **`CITATION.cff`** | how to cite the edition |
+| **`LICENSE`** | MIT, for everything that runs |
+| **`LICENSE-CC-BY-4.0`** | CC BY 4.0, for the text, the mathematics and the data |
+
+Inside `edition/`, the three files a reader is most likely to want are **`paper.pdf`** (the
+mathematics), **`index.html`** (the almanac, offline) and **`CHECKSUMS.txt`** (proof that every
+file is the one that was certified).
+
 ## What an almanac is
 
 An almanac is its own kind of publication — a **citable, versioned package a reader downloads**:
