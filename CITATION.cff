@@ -27,6 +27,8 @@ authors:
     given-names: Tamás
     affiliation: Institute of Science and Technology Austria (ISTA)
 version: "0.1.0"
+repository-code: "https://github.com/almanac-editions/almanacA0a"
+url: "https://almanac-editions.github.io/almanacA0a/edition/"
 abstract: >-
   A complete record of one small mathematical result in three layers — an informal manuscript, a
   computational instrument, and a Lean development — joined claim by claim by a concordance that

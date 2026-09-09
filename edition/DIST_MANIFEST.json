@@ -934,7 +934,7 @@
    "group": "repository-furniture",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/dist_src/CITATION.cff",
    "dist_path": "CITATION.cff",
-   "sha256_shipped": "00d986beea5024c116e1664ad4cc6fde82285fee6473eba613f3eb831720e2b3",
+   "sha256_shipped": "552e519eef573dfac7bdae670d909a42bd7d0c261f9a63ecad05a37c022eaa82",
    "status": "OK",
    "role": "citation metadata \u2014 publishable builds only"
   },
