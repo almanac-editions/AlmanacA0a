@@ -15,9 +15,7 @@
 
 pages:
   stage: deploy
-  # ISTA's only live instance runner (#11) is TAGGED `docker`, and a tagged runner takes only
-  # jobs that ask for its tag. Without this the pipeline sits `stuck` while an idle runner
-  # watches it — which is exactly what happened on pipeline #6393.
+  # The instance runner is tagged, and a tagged runner takes only jobs that ask for its tag.
   tags:
     - docker
   image: alpine:latest          # ignored by shell runners, required by docker runners
