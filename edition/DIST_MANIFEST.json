@@ -902,7 +902,7 @@
    "group": "repository-furniture",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/dist_src/gitlab-ci.yml",
    "dist_path": ".gitlab-ci.yml",
-   "sha256_shipped": "ff3151230518b683d62824ce8bd7c598f03c7b9449d21b24b7ecffa2fcd1ca43",
+   "sha256_shipped": "ecc0674341f9104c975a6a92ff9d45b8980586e94009e7dde94bae8a4a253a82",
    "status": "OK",
    "role": "publishes edition/ as the site root on GitLab Pages; inert elsewhere"
   },
@@ -918,7 +918,7 @@
    "group": "front-matter",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/dist_src/LICENSE-CC-BY-4.0",
    "dist_path": "LICENSE-CC-BY-4.0",
-   "sha256_shipped": "4c910a26ba552ce6de1345d909a1b0da010a10833e74133bee20cd6300c72bd9",
+   "sha256_shipped": "c6723847de64b868a8d3658ef581b0b9aab9dee58a555354839e62d7a96400ec",
    "status": "OK",
    "role": "the licence for the text, the mathematics and the data: CC BY 4.0, with the file-by-file split"
   },
