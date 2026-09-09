@@ -166,27 +166,27 @@
    "group": "edition",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/paper.pdf",
    "dist_path": "edition/paper.pdf",
-   "sha256_in_manifest": "26de7386ecee37cae444978a0c22b732e8f19834b5efef3173f9df45d8a85cac",
+   "sha256_in_manifest": "8f6b0d0c06280f5c08c63cb26a223942a520dc0a7da56ee22be5d63d4e5a2c7b",
    "role": "edition: the paper, the edition's reading document",
-   "sha256_shipped": "26de7386ecee37cae444978a0c22b732e8f19834b5efef3173f9df45d8a85cac",
+   "sha256_shipped": "8f6b0d0c06280f5c08c63cb26a223942a520dc0a7da56ee22be5d63d4e5a2c7b",
    "status": "OK"
   },
   {
    "group": "edition",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/paper.tex",
    "dist_path": "edition/paper.tex",
-   "sha256_in_manifest": "3f0eb6bdf8f4a723f32d87573a770d5e7822bf115beedf655be043e33bb7d450",
+   "sha256_in_manifest": "1acfbca3c69cce1016122f435063e2f45bb0e0817b55e31523bfa8bb66fe562b",
    "role": "edition: the paper's LaTeX source",
-   "sha256_shipped": "3f0eb6bdf8f4a723f32d87573a770d5e7822bf115beedf655be043e33bb7d450",
+   "sha256_shipped": "1acfbca3c69cce1016122f435063e2f45bb0e0817b55e31523bfa8bb66fe562b",
    "status": "OK"
   },
   {
    "group": "edition",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/render_paper.py",
    "dist_path": "edition/render_paper.py",
-   "sha256_in_manifest": "c29ef3dd2c96887d9fa4817c72cc915644cec648e8684783e126ecf96e16c026",
+   "sha256_in_manifest": "70c269bc953b701d8c1e974ab0e04b72839e16396b7b89e2163c93fc2f9f5c20",
    "role": "edition: the paper's assembler",
-   "sha256_shipped": "c29ef3dd2c96887d9fa4817c72cc915644cec648e8684783e126ecf96e16c026",
+   "sha256_shipped": "70c269bc953b701d8c1e974ab0e04b72839e16396b7b89e2163c93fc2f9f5c20",
    "status": "OK"
   },
   {
@@ -688,7 +688,7 @@
    "group": "edition",
    "source_path": "MANIFEST.json",
    "dist_path": "edition/MANIFEST.json",
-   "sha256_shipped": "22d390ecaed2c123166dd1bf235857ab3ec1ea674dc7146ff4110e345daab645",
+   "sha256_shipped": "dce083f318c084f0fc24ae18ee6fafc26cdafa1f71fb984d6c4b24f51baf4650",
    "status": "OK",
    "role": "the edition's own machine-readable manifest"
   },
@@ -752,10 +752,10 @@
    "group": "front-matter",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/dist_src/index.html",
    "dist_path": "edition/index.html",
-   "sha256_shipped": "62911b4672e34e2ef93fef9887f457a92e522753fadbc8be886a2ca1b8d07965",
+   "sha256_shipped": "51ce62fc8569a46e4fca2a61e07245774023c914e5f04a1029694046c8fd434a",
    "status": "OK",
    "role": "the door: a lead sentence and links, nothing else",
-   "sha256_source": "2dce52477051593bca7e531833f57f5c12e3efa294896bea6f41525a3af325e3",
+   "sha256_source": "9e0d990a70199603140d6653cb68583e1bd409e448c243e0bd472b43aa3584d5",
    "transformed_at_assembly": "The shipped bytes differ from the source: this file is transformed during assembly. Both hashes are given because only one of them is what you downloaded."
   },
   {
@@ -780,7 +780,7 @@
    "group": "front-matter",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/dist_src/README.md",
    "dist_path": "README.md",
-   "sha256_shipped": "fbca48a2739bc48983b291af0f1b42ef9341d2c11c4ade695c7d8f3ee7434654",
+   "sha256_shipped": "a267e4ce715386b76d24b62df5702397e5271e869c24c97ae95385ead1783d1a",
    "status": "OK",
    "role": "repository front page",
    "sha256_source": "4a885ebffcccbd1da1d327d1ce29077969057839833130816a36a11584c4298d",
@@ -952,7 +952,7 @@
    "source_path": "(generated) informal.html",
    "dist_path": "edition/informal.html",
    "sha256_in_manifest": null,
-   "sha256_shipped": "b1719c29ac130e67aa5b0ff4b0aa3f91ccabb11e8e1889cf618da76401d3d271",
+   "sha256_shipped": "685eaec764ee82a5dc0672ef7590e8c42fdb98800cf44719ebafb0fcced512b0",
    "status": "GENERATED \u2014 assembled from CONCORDANCE.json's ink row",
    "role": "edition: the informal layer as a page"
   },

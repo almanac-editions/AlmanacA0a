@@ -45,7 +45,7 @@ can be decided from the warrants above and the convention frame carried on every
 
 | to… | read |
 |---|---|
-| read the mathematics | **[the paper](edition/paper.pdf)**, 9 pp., `edition/paper.pdf` |
+| read the mathematics | **[the paper](edition/paper.pdf)**, 8 pp., `edition/paper.pdf` |
 | read it at length, without LaTeX | **[the mathematics explained](https://almanac-editions.github.io/AlmanacA0a/edition/almanac.explained.html)** — for a general reader, `edition/almanac.explained.html` |
 | look around | **[the almanac itself](https://almanac-editions.github.io/AlmanacA0a/edition/index.html)** — interactive, and offline in `edition/index.html` |
 | see every statement and its warrant | **[the twelve statements](https://almanac-editions.github.io/AlmanacA0a/edition/statements.html)** — `edition/statements.html` |

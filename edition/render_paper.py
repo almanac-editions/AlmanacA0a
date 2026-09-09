@@ -16,6 +16,26 @@ Pólya's classical theorem has NO bibliography entry, deliberately: the original
 shelf, and this project does not cite what it does not hold — the theorem is reached through the
 held quotation in Harman--Hopkins, and the text says so.
 
+NO LATEX COMMENTS IN THE OUTPUT (Overseer, 2026-09-10: "that comment is for you and not for a human
+reader"). paper.tex SHIPS, so a `%` line in it is a note to a future editor sitting inside the
+document a reader opens. Every reason for an editorial decision belongs HERE, in the script that
+makes the decision, and nothing but the paper goes into the paper. Two were removed today: the one
+explaining why the title lost its footnote, and the one explaining why the classical case carries
+no year.
+
+WHY THE CLASSICAL CASE CARRIES NO YEAR: the Library's Gramain card dates Polya's theorem 1914 and
+the Attribution remark - lifted VERBATIM from the checked proof, and not this script's to edit -
+dates it 1919. Gramain's own text says "En 1914" and his bibliography gives Rend. Circ. Math.
+Palermo 40 (1915), read at source 2026-09-08. The paper carries no year rather than a plausible one
+until the two records agree.
+
+NOTHING ABOUT HOW OR WHY THIS DOCUMENT WAS MADE (Overseer, 2026-09-10): "in human-facing documents
+we do not write anything which relates to how and why this document was produced: we write a
+particular piece of mathematics in a succinct but explained way." The title's \thanks - the signing
+order, the assembly, the software agent, the accompanying edition - and the paragraph on carrying
+the case to a machine-checked formalisation are both gone. All of it is true and none of it is
+mathematics; it lives in the edition's own record.
+
 SCOPE: RANK ONE ONLY (Overseer, 2026-09-08). The GL_n statement is the subject of work in progress
 and is mentioned, never formulated. The macro-collision handling that used to live here went with
 it: goalA.tex wrote \\At for \\mathbb A_t where goalv0a.tex and proofv0a.tex write \\At for A_t, and
@@ -76,7 +96,6 @@ PREAMBLE = r"""\documentclass[11pt]{article}
 \newtheorem{remark}{Remark}
 \newtheorem*{goal}{Statement}
 
-% the rank-one meanings are the default; the rank-n section overrides and restores
 \newcommand{\At}{A_t}
 \newcommand{\Ft}{F_t}
 \newcommand{\Nev}{\mathcal N^{\mathrm{ev}}}
@@ -91,11 +110,7 @@ PREAMBLE = r"""\documentclass[11pt]{article}
 \newcommand{\Nat}{\mathcal N_{\mathbb A_t}}
 \newcommand{\Natev}{\mathcal N_{\mathbb A_t^{\mathrm{ev}}}}
 
-\title{\textbf{The centre of the even hybrid family quantum $GL_1$}\thanks{The statement for
-$n=1$ was fixed and signed before any proof was attempted, and the proof was checked against the
-signed text; this document was assembled from those two records by the Almanac Editor of Project
-Sandbox --- for the pilot edition, a software agent. The full record, including per-claim warrants
-and machine verification, is the accompanying almanac edition.}}
+\title{\textbf{The centre of the even hybrid family quantum $GL_1$}}
 \author{Tam\'as Hausel}
 \date{}
 """
@@ -152,11 +167,7 @@ $W=\{1\}$ the algebra is a torus, the Harish--Chandra projection is the identity
 clauses reduce to one substantial assertion: the even Newton lattice is spanned over $\At$ by the
 shifted divided classes $\Yc^{u}\nu_r(\Yc)$.
 
-\medskip\noindent
-The rank-one case is small on purpose. It was carried from statement to proof to machine-checked
-formalisation so that the cost and the failure modes of doing so could be measured; nine of the
-twelve results in the accompanying edition carry a proof-kernel certificate, which the edition
-records claim by claim.""")
+""")
 
     # THE GL_n STATEMENT IS NOT IN THIS PAPER (Overseer, 2026-09-08): "we cannot formulate the
     # GL_n conjecture, because that is what we are proving in a joint project ... so rewrite the
@@ -197,10 +208,6 @@ The lattice of Section~3 is the last term of a line that is additive before it i
 and classical before it is quantum.
 
 \medskip\noindent
-% NO YEAR ON THIS ONE, DELIBERATELY. The Library's Gramain card dates Polya's theorem 1914; the
-% Attribution remark below - lifted VERBATIM from the checked proof and not mine to edit - dates it
-% 1919. A paper cannot carry both, and I cannot settle which is right from what is held here, so
-% this sentence carries no year rather than a plausible one. Reported to the Overseer.
 \textbf{The classical case.} P\'olya's basis theorem: the polynomials taking integer values
 at every integer form a free $\Z$-module on the binomial coefficients $\binom{x}{k}$, strictly
 larger than $\Z[x]$ \cite[Prop.~1.1]{HarmanHopkins}. The subject it opened is surveyed in
@@ -234,7 +241,7 @@ fraction field the Harish--Chandra map is an isomorphism onto the invariants by 
 \cite[\S18.3]{DCP} and Jantzen \cite[Thm.~6.25 and \S6.26]{Jantzen}, with Jantzen's \S6.6 already
 placing the image inside the \emph{even} toral invariants; and integral forms assembled, as here,
 from a divided-power negative part and a toral lattice appear in Habiro--L\^e \cite[\S8G]{HabiroLe}.
-Clause~(ii) rests on the corresponding $GL_2$ statement proved earlier in this programme
+Clause~(ii) rests on the corresponding $GL_2$ statement, proved earlier
 \cite{SandboxGL2}. What none of them carries is the family parameter together with the integral
 condition: over the fraction field the centre is the invariant \emph{monomial} ring, and the
 content of the theorem here is that over $\At$ it is the strictly larger Newton lattice.""")
