@@ -45,21 +45,17 @@ can be decided from the warrants above and the convention frame carried on every
 
 | to… | read |
 |---|---|
-| read the mathematics | **`edition/paper.pdf`** — the paper, 12 pp.: the statement for general *n*, and the case *n* = 1 proved |
+| read the mathematics | **`edition/paper.pdf`** — the paper, 9 pp. |
 | read it at length, without LaTeX | **`edition/almanac.explained.html`** — the same mathematics explained for a general reader |
 | look around | **`edition/index.html`** — interactive, offline |
 | check any of it independently | **`edition/FOR_A_HUMAN.md`** — including how to install every piece of software from scratch |
 | hand it to an AI assistant | **`AGENTS.md`** at the root — it routes to `edition/FOR_AN_AI_AGENT.md` |
-| see what warrants what | **`edition/CONCORDANCE.json`**, and `edition/EDITION.md` for the whole |
 | confirm every file is intact | **`edition/CHECKSUMS.txt`** (`cd edition && shasum -a 256 -c CHECKSUMS.txt`) |
 
-**One file needs a word of warning about what it is.** `edition/sources-cited/MINING_LOG.md` is the
-Library's **internal working journal** — 5,600 lines, written for the next person doing the work, not
-for a reader of this edition. It travels because `ANCESTRY.md` cites it as the **second home** of
-every literature search behind a *no predecessor found* verdict, and a cited home that does not
-travel is not a home. It is candid about what went wrong and who got it wrong, including its own
-author. **That candour is the point rather than a lapse**: an estate that records its defects is the
-only kind that can show you them.
+**One file is not written for you.** `edition/sources-cited/MINING_LOG.md` is the Library's internal
+working journal, kept verbatim because `ANCESTRY.md` cites it as the second home of every literature
+search behind a *no predecessor found* verdict. It is candid about what went wrong and who got it
+wrong, including its own author.
 
 ## Licence
 
@@ -69,7 +65,7 @@ Tamás Hausel and the Institute of Science and Technology Austria (ISTA).
 | what | licence | file |
 |---|---|---|
 | the renderers, the verifier, the Lean sources | **MIT** | [`LICENSE`](LICENSE) |
-| the paper, the proofs, the guides, the concordance, the statement cards | **CC BY 4.0** | [`LICENSE-TEXT-AND-DATA`](LICENSE-TEXT-AND-DATA) |
+| the paper, the proofs, the guides, the concordance, the statement cards | **CC BY 4.0** | [`LICENSE-CC-BY-4.0`](LICENSE-CC-BY-4.0) |
 
 The split is stated file-by-file in the second file and is meant to be applied mechanically.
 **GitHub's sidebar will say &ldquo;MIT&rdquo;** — that is the licence a detector can read from
