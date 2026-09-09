@@ -638,8 +638,8 @@
  },
  "repository": {
   "url": "https://github.com/almanac-editions/AlmanacA0a",
-  "visibility": "private",
-  "visibility_note": "Ruled PUBLIC BY 17 SEPTEMBER by the Overseer, 2026-08-30, on the patent colleagues' view. THE LICENCE IT GOES PUBLIC UNDER WAS CHOSEN 2026-09-07 by the project's director: MIT for the software, CC BY 4.0 for the text and data, copyright Tamás Hausel and ISTA, shipped as LICENSE at the archive root and hashed in CHECKSUMS.txt like every other file. THE FLIP ITSELF HAS NOT HAPPENED as this manifest was written: 'visibility' above records the measured state, not the intention, and it changes when the repository does — measured, never assumed.",
+  "visibility": "public",
+  "visibility_note": "PUBLIC since 2026-09-09, measured unauthenticated from castalia: the repository page answers 200, the organisation reports public_repos 1, and the API reports visibility 'public'. README, LICENSE, edition/paper.pdf and AlmanacA0a.zip (1,618,830 bytes) all fetch anonymously. This records a MEASUREMENT, not an intention; it changes when the repository does.",
   "remote_head_as_of": {
    "commit": "ce1b556",
    "measured_utc": "2026-08-30T08:26Z",
@@ -654,8 +654,13 @@
    "text_and_data": "CC-BY-4.0",
    "copyright": "Tamás Hausel and the Institute of Science and Technology Austria (ISTA)",
    "decided": "2026-09-07, by the project's director",
-   "file": "LICENSE, at the archive root",
-   "note": "The split is by file and stated in LICENSE. Third-party work is NOT covered and none is redistributed: the statement cards describe the literature and name where each source is held, rather than carrying it."
+   "files": [
+    "LICENSE — canonical MIT, alone in the file so a licence detector can match it",
+    "LICENSE-TEXT-AND-DATA — CC BY 4.0, with the file-by-file split"
+   ],
+   "split_into_two_files": "2026-09-09. One dual-licence document was accurate and undetectable: GitHub published the repository as license 'Other / NOASSERTION', which tells a reader less than either licence does. The terms did not change; only which file a machine can read did.",
+   "what_the_sidebar_says": "MIT. That is the licence detectable from LICENSE and it governs the code. The mathematics is CC BY 4.0 and the README says so above the fold.",
+   "note": "Third-party work is NOT covered and none is redistributed: the statement cards describe the literature and name where each source is held, rather than carrying it."
   }
  },
  "substrate_repin_authority": [

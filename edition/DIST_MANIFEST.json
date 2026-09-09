@@ -11,15 +11,15 @@
   "note": "THREE DISTINCT NUMBERS DESCRIBE THIS ARTIFACT, each defined below, so the authoritative one is always explicit.",
   "files_shipped": 108,
   "files_shipped_means": "every file in the EDITION except the two written last, CHECKSUMS.txt and DIST_MANIFEST.json, which cannot hash themselves. This is the number of lines in CHECKSUMS.txt.",
-  "files_on_disk": 116,
-  "files_on_disk_means": "files_shipped, plus CHECKSUMS.txt and DIST_MANIFEST.json, plus the 6 repository-furniture files at the archive root (.gitignore, .gitlab-ci.yml, AGENTS.md, CITATION.cff, LICENSE, README.md), which ship but sit outside the edition CHECKSUMS.txt certifies. This is what `find . -type f` reports in the unzipped directory.",
-  "provenance_rows": 114,
-  "provenance_rows_means": "rows in files[] below: one per shipped file, edition and root furniture alike, so provenance_rows = files_shipped + 6 root files. (Before 2026-08-26 this was 69 against 80 shipped, because the Palomar layer, the front matter and the renderer were copied without being recorded. hypervisorA caught it at re-acceptance.)"
+  "files_on_disk": 117,
+  "files_on_disk_means": "files_shipped, plus CHECKSUMS.txt and DIST_MANIFEST.json, plus the 7 repository-furniture files at the archive root (.gitignore, .gitlab-ci.yml, AGENTS.md, CITATION.cff, LICENSE, LICENSE-TEXT-AND-DATA, README.md), which ship but sit outside the edition CHECKSUMS.txt certifies. This is what `find . -type f` reports in the unzipped directory.",
+  "provenance_rows": 115,
+  "provenance_rows_means": "rows in files[] below: one per shipped file, edition and root furniture alike, so provenance_rows = files_shipped + 7 root files. (Before 2026-08-26 this was 69 against 80 shipped, because the Palomar layer, the front matter and the renderer were copied without being recorded. hypervisorA caught it at re-acceptance.)"
  },
  "file_count": 108,
  "file_count_means": "alias of counts.files_shipped, kept for readers of earlier editions",
  "integrity": {
-  "ok": 101,
+  "ok": 102,
   "drifted": 0,
   "missing": 0,
   "drifted_paths": [],
@@ -688,7 +688,7 @@
    "group": "edition",
    "source_path": "MANIFEST.json",
    "dist_path": "edition/MANIFEST.json",
-   "sha256_shipped": "c536a4763d17f8b923d9c17f76d51f83e476cf25901bf7e46e48352a24bd2fb7",
+   "sha256_shipped": "22d390ecaed2c123166dd1bf235857ab3ec1ea674dc7146ff4110e345daab645",
    "status": "OK",
    "role": "the edition's own machine-readable manifest"
   },
@@ -780,10 +780,10 @@
    "group": "front-matter",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/dist_src/README.md",
    "dist_path": "README.md",
-   "sha256_shipped": "0c9078b006643a9a9031205ec394b80f34db6ad4a4dc27e842e56f13918e2cf2",
+   "sha256_shipped": "7ff769b6338eb803c668b49704e293ac5a4db77f45800d16e62fb0b02b16a173",
    "status": "OK",
    "role": "repository front page",
-   "sha256_source": "f07b69c183674bdaed14599df91e6bc3679b18a39dfdba217aa92d3a6b04657d",
+   "sha256_source": "ed7e6f49f532a2d666b6148ff1e6a79c7856767f22562265f07e39bb2b93a4b0",
    "transformed_at_assembly": "The shipped bytes differ from the source: this file is transformed during assembly. Both hashes are given because only one of them is what you downloaded."
   },
   {
@@ -902,9 +902,17 @@
    "group": "front-matter",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/dist_src/LICENSE",
    "dist_path": "LICENSE",
-   "sha256_shipped": "0bd282e1841dca14d1a974c05dd0b9fe370701da7bd9af94a1a738503cf3d5b4",
+   "sha256_shipped": "4944fe18de739119ebf48ab20fb0dac909895bd493ed3750275fe9277de3497b",
    "status": "OK",
-   "role": "the licence: MIT for the software, CC BY 4.0 for the text and data"
+   "role": "the licence for the software: canonical MIT, alone in this file so a licence detector can match it"
+  },
+  {
+   "group": "front-matter",
+   "source_path": "SandboxA/sandboxA0a/almanac/edition/dist_src/LICENSE-TEXT-AND-DATA",
+   "dist_path": "LICENSE-TEXT-AND-DATA",
+   "sha256_shipped": "aeb0a9a72843dcc0afa85b5bbfa1d9013c692799fb8b7f5d2671a42b7d9cc0b2",
+   "status": "OK",
+   "role": "the licence for the text, the mathematics and the data: CC BY 4.0, with the file-by-file split"
   },
   {
    "group": "edition",

@@ -1,7 +1,7 @@
 # sha256 of every file in this almanac, computed at assembly.
 # Run it from THIS directory:  cd edition && shasum -a 256 -c CHECKSUMS.txt
 # (Linux: sha256sum -c). These files at the repository root:
-#   .gitignore, .gitlab-ci.yml, AGENTS.md, CITATION.cff, LICENSE, README.md
+#   .gitignore, .gitlab-ci.yml, AGENTS.md, CITATION.cff, LICENSE, LICENSE-TEXT-AND-DATA, README.md
 # are repository furniture, outside the edition this list certifies.
 9409e30d917bc8dd1b9d1b43f465bfb97c10b3c9a7f2d9f990920db9fa90fa55  ANCESTRY.html
 426be6b5bf7a130cfc80f3147c751be79e6d589225bb805bf00bd7a894836838  ANCESTRY.md
@@ -16,7 +16,7 @@ e54788b8d41c183528ae734d3301161162d39c5c316ff1cf702bc34cf060ae8d  EMBEDDING_NOTE
 78ba5322853335c2322bdb9e182a8eaa1be8316e62285671bc51481d82d27a1b  FOR_AN_AI_AGENT.md
 2c6a165c4063ed9062fe00ae0c6fd88534f4204bf4385f0ba329fb4a42f87939  FOR_A_HUMAN.html
 8f8097e1f9efafa26a7cdf0b08851140c7b01f60b78d0d64563acc39ae043c25  FOR_A_HUMAN.md
-c536a4763d17f8b923d9c17f76d51f83e476cf25901bf7e46e48352a24bd2fb7  MANIFEST.json
+22d390ecaed2c123166dd1bf235857ab3ec1ea674dc7146ff4110e345daab645  MANIFEST.json
 2f9d2516dc6df26862eed50435c4d185842c5e61b3d69d950756a9106375f6f0  MEASUREMENT_LOG.md
 85b402eb2dbebedc98680a65672fd3c3fb2324b9ea7cdeefa5c2d209a64d8ee5  almanac-logo-dark.svg
 f4c89dd3221e95e38af391e6d5511be7fc8ef3e1bf6cc3ed109fe9ada75fcecc  almanac-logo.svg

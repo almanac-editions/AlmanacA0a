@@ -63,10 +63,17 @@ only kind that can show you them.
 ## Licence
 
 **MIT for everything that runs; CC BY 4.0 for everything written to be read.** Copyright &copy; 2026
-Tamás Hausel and the Institute of Science and Technology Austria (ISTA). The split is stated
-file-by-file in [`LICENSE`](LICENSE), and it is meant to be applied mechanically: the renderers, the
-verifier and the Lean sources are MIT; the paper, the proofs, the guides, the concordance and the
-statement cards are CC BY 4.0.
+Tamás Hausel and the Institute of Science and Technology Austria (ISTA).
+
+| what | licence | file |
+|---|---|---|
+| the renderers, the verifier, the Lean sources | **MIT** | [`LICENSE`](LICENSE) |
+| the paper, the proofs, the guides, the concordance, the statement cards | **CC BY 4.0** | [`LICENSE-TEXT-AND-DATA`](LICENSE-TEXT-AND-DATA) |
+
+The split is stated file-by-file in the second file and is meant to be applied mechanically.
+**GitHub's sidebar will say &ldquo;MIT&rdquo;** — that is the licence a detector can read from
+`LICENSE`, and it is the one that governs the code. **The mathematics is CC BY 4.0**, which asks
+only that you credit it.
 
 **A licence is not a warrant.** This says what you may *do* with the material, and nothing about
 what is proved or how well — that is the concordance's job, and every claim carries its own warrant.
