@@ -45,12 +45,16 @@ can be decided from the warrants above and the convention frame carried on every
 
 | to… | read |
 |---|---|
-| read the mathematics | **`edition/paper.pdf`** — the paper, 9 pp. |
-| read it at length, without LaTeX | **`edition/almanac.explained.html`** — the same mathematics explained for a general reader |
-| look around | **`edition/index.html`** — interactive, offline |
-| check any of it independently | **`edition/FOR_A_HUMAN.md`** — including how to install every piece of software from scratch |
-| hand it to an AI assistant | **`AGENTS.md`** at the root — it routes to `edition/FOR_AN_AI_AGENT.md` |
-| confirm every file is intact | **`edition/CHECKSUMS.txt`** (`cd edition && shasum -a 256 -c CHECKSUMS.txt`) |
+| read the mathematics | **[the paper](edition/paper.pdf)**, 9 pp., `edition/paper.pdf` |
+| read it at length, without LaTeX | **[the mathematics explained](https://almanac-editions.github.io/AlmanacA0a/edition/almanac.explained.html)** — for a general reader, `edition/almanac.explained.html` |
+| look around | **[the almanac itself](https://almanac-editions.github.io/AlmanacA0a/edition/index.html)** — interactive, and offline in `edition/index.html` |
+| see every statement and its warrant | **[the twelve statements](https://almanac-editions.github.io/AlmanacA0a/edition/statements.html)** — `edition/statements.html` |
+| check any of it independently | **[how to check it yourself](https://almanac-editions.github.io/AlmanacA0a/edition/FOR_A_HUMAN.html)** — including installing every piece of software from scratch, `edition/FOR_A_HUMAN.md` |
+| hand it to an AI assistant | **[`AGENTS.md`](AGENTS.md)** at the root — it routes to `edition/FOR_AN_AI_AGENT.md` |
+| confirm every file is intact | **[`edition/CHECKSUMS.txt`](edition/CHECKSUMS.txt)** — `cd edition && shasum -a 256 -c CHECKSUMS.txt` |
+
+*Links to pages open the published site; links to files open them here. **Both work offline**: the
+same paths exist in the archive, which is why every one of them is written out beside its link.*
 
 **One file is not written for you.** `edition/sources-cited/MINING_LOG.md` is the Library's internal
 working journal, kept verbatim because `ANCESTRY.md` cites it as the second home of every literature

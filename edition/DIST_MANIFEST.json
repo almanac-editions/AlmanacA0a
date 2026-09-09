@@ -780,10 +780,10 @@
    "group": "front-matter",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/dist_src/README.md",
    "dist_path": "README.md",
-   "sha256_shipped": "5db6471972d4eb352aded27c7bca214787f072c4a3e3a92c4e83e3312ed1f4c3",
+   "sha256_shipped": "fbca48a2739bc48983b291af0f1b42ef9341d2c11c4ade695c7d8f3ee7434654",
    "status": "OK",
    "role": "repository front page",
-   "sha256_source": "0fbc9b97cbe6c2f67744a21c4139acde32faf540969bf063a5e4740bddf59a0b",
+   "sha256_source": "4a885ebffcccbd1da1d327d1ce29077969057839833130816a36a11584c4298d",
    "transformed_at_assembly": "The shipped bytes differ from the source: this file is transformed during assembly. Both hashes are given because only one of them is what you downloaded."
   },
   {
