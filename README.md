@@ -9,7 +9,8 @@
 *The pilot edition. A complete record of one small mathematical result, in three layers, with a
 per-claim account of what warrants each one.*
 
-**Start here: [open the almanac](https://almanaca0a-02b24b.gitlabpages.ista.ac.at/).**
+**Start here: [open the almanac](https://almanac-editions.github.io/AlmanacA0a/edition/index.html)** —
+or unzip the archive below and open `edition/index.html`, which needs no network at all.
 
 **Whole almanac:
 [Download `AlmanacA0a.zip`](https://github.com/almanac-editions/AlmanacA0a/raw/main/AlmanacA0a.zip)** — it unzips to exactly this folder.
