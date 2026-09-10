@@ -1,7 +1,7 @@
 # sha256 of every file in this almanac, computed at assembly.
 # Run it from THIS directory:  cd edition && shasum -a 256 -c CHECKSUMS.txt
 # (Linux: sha256sum -c). These files at the repository root:
-#   .gitignore, .gitlab-ci.yml, .nojekyll, AGENTS.md, CITATION.cff, LICENSE, LICENSE-CC-BY-4.0, README.md
+#   .gitignore, .gitlab-ci.yml, .nojekyll, AGENTS.md, CITATION.cff, LICENSE, LICENSE-CC-BY-4.0, README.md, index.html
 # are repository furniture, outside the edition this list certifies.
 110a0e2b9c6b9b44b7849593bffb119157c8459d4b0d900ff89123e5a731f804  ANCESTRY.html
 0ca34ff7282467175922baf69b1270ad3ed9b56f9b9cb333f0c34b7b239fe7e3  ANCESTRY.md

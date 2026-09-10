@@ -28,6 +28,7 @@ they are:
 | **`edition/`** | the almanac itself — the paper, the proof, the formal sources, the concordance, the pages that read them, and the checksums that certify them |
 | **`almanacA0a.zip`** | the whole thing as one download; it unzips to exactly this folder |
 | **`README.md`** | this page |
+| **`index.html`** | a signpost: opens `edition/index.html`, so the archive's own address works |
 | **`AGENTS.md`** | where an AI assistant should start |
 | **`CITATION.cff`** | how to cite the edition |
 | **`LICENSE`** | MIT, for everything that runs |

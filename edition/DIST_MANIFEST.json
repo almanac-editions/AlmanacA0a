@@ -11,15 +11,15 @@
   "note": "THREE DISTINCT NUMBERS DESCRIBE THIS ARTIFACT, each defined below, so the authoritative one is always explicit.",
   "files_shipped": 108,
   "files_shipped_means": "every file in the EDITION except the two written last, CHECKSUMS.txt and DIST_MANIFEST.json, which cannot hash themselves. This is the number of lines in CHECKSUMS.txt.",
-  "files_on_disk": 118,
-  "files_on_disk_means": "files_shipped, plus CHECKSUMS.txt and DIST_MANIFEST.json, plus the 8 repository-furniture files at the archive root (.gitignore, .gitlab-ci.yml, .nojekyll, AGENTS.md, CITATION.cff, LICENSE, LICENSE-CC-BY-4.0, README.md), which ship but sit outside the edition CHECKSUMS.txt certifies. This is what `find . -type f` reports in the unzipped directory.",
-  "provenance_rows": 116,
-  "provenance_rows_means": "rows in files[] below: one per shipped file, edition and root furniture alike, so provenance_rows = files_shipped + 8 root files. (Before 2026-08-26 this was 69 against 80 shipped, because the Palomar layer, the front matter and the renderer were copied without being recorded. hypervisorA caught it at re-acceptance.)"
+  "files_on_disk": 119,
+  "files_on_disk_means": "files_shipped, plus CHECKSUMS.txt and DIST_MANIFEST.json, plus the 9 repository-furniture files at the archive root (.gitignore, .gitlab-ci.yml, .nojekyll, AGENTS.md, CITATION.cff, LICENSE, LICENSE-CC-BY-4.0, README.md, index.html), which ship but sit outside the edition CHECKSUMS.txt certifies. This is what `find . -type f` reports in the unzipped directory.",
+  "provenance_rows": 117,
+  "provenance_rows_means": "rows in files[] below: one per shipped file, edition and root furniture alike, so provenance_rows = files_shipped + 9 root files. (Before 2026-08-26 this was 69 against 80 shipped, because the Palomar layer, the front matter and the renderer were copied without being recorded. hypervisorA caught it at re-acceptance.)"
  },
  "file_count": 108,
  "file_count_means": "alias of counts.files_shipped, kept for readers of earlier editions",
  "integrity": {
-  "ok": 103,
+  "ok": 104,
   "drifted": 0,
   "missing": 0,
   "drifted_paths": [],
@@ -780,10 +780,10 @@
    "group": "front-matter",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/dist_src/README.md",
    "dist_path": "README.md",
-   "sha256_shipped": "0b178598252083d23c346500e1df8bf22a5f178f8713855638d0ad3d89a8a27b",
+   "sha256_shipped": "0e690f6cd244d3152427367863252f050fac063c1111a3856017020b9eecf19b",
    "status": "OK",
    "role": "repository front page",
-   "sha256_source": "a846c5a11826e6bacc45d32b942529e35bb10e5026f0af6a06913dfc6ef55b58",
+   "sha256_source": "9e3bdf2801c0904821789a5423de0d7f039acabb84f122a2a8b855ecfa411335",
    "transformed_at_assembly": "The shipped bytes differ from the source: this file is transformed during assembly. Both hashes are given because only one of them is what you downloaded."
   },
   {
@@ -889,6 +889,14 @@
    "sha256_shipped": "f1bb8745e827993437963d477a5ee256ca6a098946da514125ce8c0373fc0b51",
    "status": "OK",
    "role": "ignore rules for the published repository"
+  },
+  {
+   "group": "repository-furniture",
+   "source_path": "SandboxA/sandboxA0a/almanac/edition/dist_src/root_index.html",
+   "dist_path": "index.html",
+   "sha256_shipped": "2d0210c34c8db2a5115e8f3a5fac5a1d6af5a605ede45ad83c634d6e1cda9c07",
+   "status": "OK",
+   "role": "signpost at the archive root: sends a reader to edition/index.html"
   },
   {
    "group": "repository-furniture",
