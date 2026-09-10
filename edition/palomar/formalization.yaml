@@ -16,7 +16,7 @@
 # +---------------------------------------------------------------------------+
 version: "v0.4"
 project:
-  name: "Almanac A0a — the centre of the even hybrid family quantum GL(1)"
+  name: "almanacA0a — the centre of the even hybrid family quantum GL(1)"
   description: "For G = GL(1): the even hybrid family integral form U^ev is an A_t-subalgebra of U; the Harish-Chandra projection restricts to an isomorphism Z(U^ev) = (N^ev)^W; and the even Newton lattice is exactly the A_t-span of the shifted divided classes. This is the rank-one base case of a programme formalising the centre of the even hybrid family quantum group of a reductive G. It is an ORIGINAL result of the programme, not a formalization of a previously published theorem."
   authors:
     - "Tamas Hausel"

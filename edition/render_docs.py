@@ -124,7 +124,7 @@ PAGE = """<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>__TITLE__ — Almanac A0a</title>
+<title>__TITLE__ — almanacA0a</title>
 <style>
 :root{--paper:#fbfbfa;--ink:#16181a;--dim:#585f66;--rule:#e3e6e8;--link:#2a78d6;--code:#f2f4f5}
 @media (prefers-color-scheme:dark){

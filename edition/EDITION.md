@@ -4,7 +4,7 @@
        alt="almanac — the word's three a's carry the three kinds of warrant: informal, computational, kernel-certified">
 </picture>
 
-# Almanac A0a — the centre of the even hybrid family quantum GL₁
+# almanacA0a — the centre of the even hybrid family quantum GL₁
 
 **The pilot edition.** Assembled 2026-08-13 over the closed record `SandboxA/sandboxA0a`.
 

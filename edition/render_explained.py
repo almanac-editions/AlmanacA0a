@@ -175,7 +175,7 @@ __WARRANT_VARS__
 <div class="wrap">
 
 __WORDMARK__
-<p class="eyebrow">Project Sandbox · Almanac A0a · a reader's companion</p>
+<p class="eyebrow">Project Sandbox · almanacA0a · a reader's companion</p>
 <h1>The multiplicative&nbsp;grid</h1>
 
 <p class="lede">A polynomial can take whole-number values everywhere you look and still not have
@@ -399,7 +399,7 @@ formalities here carry real weight and the argument does not obviously transport
   <p>Every mathematical statement here is drawn from that edition's register. The seven grid values
   and the two identities in the witnesses were recomputed fresh on the project's warm
   computer-algebra oracle while this page was written.</p>
-  <p>Almanac A0a · pilot edition over the closed record <code>SandboxA/sandboxA0a</code> ·
+  <p>almanacA0a · pilot edition over the closed record <code>SandboxA/sandboxA0a</code> ·
   assembled by the Almanac Editor.</p>
 </div>
 

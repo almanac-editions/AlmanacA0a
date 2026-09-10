@@ -204,7 +204,7 @@
  "edition_artifacts": [
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/EDITION.md",
-   "sha256": "4ad3c7de90b6ef5ce1cf4ab55c1ce764d9109df82a1eab5a09fe9d045c7c98de",
+   "sha256": "ceac4c660f3ab6033b2dabe2139a77ed21a2a637fa80bf718931cf2a4d319c67",
    "role": "edition: assembled by the Editor",
    "produced_by": "the Almanac Editor, 2026-08-13"
   },
@@ -216,19 +216,19 @@
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/EMBEDDING_NOTE.md",
-   "sha256": "e54788b8d41c183528ae734d3301161162d39c5c316ff1cf702bc34cf060ae8d",
+   "sha256": "0de34322007ee772a829059132c8e8490698d198780534e030c3f7e78e19d4cc",
    "role": "edition: assembled by the Editor",
    "produced_by": "the Almanac Editor, 2026-08-13"
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/ANCESTRY.md",
-   "sha256": "426be6b5bf7a130cfc80f3147c751be79e6d589225bb805bf00bd7a894836838",
+   "sha256": "0ca34ff7282467175922baf69b1270ad3ed9b56f9b9cb333f0c34b7b239fe7e3",
    "role": "edition: assembled by the Editor",
    "produced_by": "the Almanac Editor, 2026-08-13"
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/AUTHORSHIP.md",
-   "sha256": "50cb7dcabc68f42bbd4c0e88ef85b6a2844af946b74a2d8a10d7ebd4f628da31",
+   "sha256": "cad18d8e1c888d0832f94a49f36754012c2bc79cd1b24f59087095c494cbdb6a",
    "role": "edition: assembled by the Editor",
    "produced_by": "the Almanac Editor, 2026-08-13"
   },
@@ -265,26 +265,26 @@
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/almanac.html",
-   "sha256": "7dab67c0297bf3716e9b7744b2ae0ddeb2e3b6ad8549abc3e1c34a26a342caf3",
+   "sha256": "6ef60b8bceca00ba53171f429976d7042ed0005d8c903de157bb40135e682976",
    "role": "edition: the reading view — what a reader sees",
    "produced_by": "the Almanac Editor, 2026-08-13"
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/render_almanac.py",
-   "sha256": "b14b732c3cde5951881e2b7ddf1c7d1fc1be4857b4aa592ab2b3498c89ead7c2",
+   "sha256": "db6a81b876e94864c16e71f487e1eb5a5b29273ac3df0d1b635066357d47667b",
    "role": "edition: generator for the reading view (renders from the edition's own JSON; no transcription)",
    "produced_by": "the Almanac Editor, 2026-08-13"
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/almanac.artifact.html",
-   "sha256": "fafba17cc1c48308085242f2815bd4223cd777130065a7138c2774d66893b369",
+   "sha256": "215b80ebeb7c9258c1c54cb8514bd6d3adc841539b6a9d78c3726641957cb3e0",
    "role": "edition: the READER'S EDITION — the form a reader receives",
    "produced_by": "the Almanac Editor, 2026-08-13",
    "self_reference": "NO HASH IS RECORDABLE HERE, and this is structural, not an omission — finding F-E10, 2026-08-14. The page renders its own inventory FROM this manifest, so any sha written here is embedded into the page and thereby falsified by the very act of writing it. Until 2026-08-14 this row carried b7a25bae…, the hash of the PREVIOUS render, while the file on disk hashed 8d46f37f…: one row of an integrity record that could never resolve, in the one artifact a reader is most likely to check. Verify this file instead by re-running render_artifact.py (sha recorded above) over this manifest and comparing bytes."
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/render_artifact.py",
-   "sha256": "36026501c34a604f8d094fb24aa12c2d01404056a1b76f1f0615aa669d237f7b",
+   "sha256": "070713740b9da0b19c2c1a830e6ec13fc4461cfb35c0af3d6b7065f8416d8369",
    "role": "edition: generator for the reader's edition (renders from the edition's own data; no transcription)",
    "produced_by": "the Almanac Editor, 2026-08-13"
   },
@@ -297,20 +297,20 @@
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/almanac.explained.html",
-   "sha256": "6e3939b8e7aa3c418dcfe712470a87446e0b0e0f92433e0bf2e5f5ab336ecbd3",
+   "sha256": "1a95494eb79ae282a7db8ccdc7cf9aea19dbb652bb222f0dd422aeae8f1b65b9",
    "role": "edition: the EXPLANATORY COMPANION — the mathematics explained for a reader from outside the programme",
    "produced_by": "the Almanac Editor, 2026-08-15, on the Overseer's request",
    "note": "HAND-WRITTEN, and therefore hashable — unlike almanac.artifact.html it does NOT render from this manifest, so §12.3's self-reference relation does not apply to it. It explains and does not certify; where it and the register disagree, the register is right. See the explanatory_companion block for its URL and its build-time oracle verification."
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/render_explained.py",
-   "sha256": "514f8865b12f0676d4268af59fd8a1dcc32b85b4d35a6dd6f7ddcbdd860b90da",
+   "sha256": "28e9eb5298904f0a2deb9af13d932304a4a5391b1edd00c6bbdef4e3f3b04a30",
    "role": "edition: generator for the reader's companion page (TeX -> MathML at build time; template embedded; added 2026-08-29 when the page gained typeset mathematics and, with it, a regeneration path)",
    "produced_by": "the Shadow, 2026-08-29"
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/render_docs.py",
-   "sha256": "dbe512a0c65c0e3cb0e67eedd58ebd2742c11b81a73fd8dcae6915ba4cb223e4",
+   "sha256": "d0c8f463827f4bd231acf911189caec95f55ae04c24f31c0ef181c30a9699175",
    "role": "edition: the generator for the guides' HTML pages — renders the markdown guides so a browser shows a page rather than a text file",
    "produced_by": "the Almanac Editor, 2026-09-03",
    "added": "2026-09-03 — the published site served .md as plain text. The markdown files stay; these are siblings. Ships so an unzipped copy can regenerate them, which is the same rule the other four generators travel under."

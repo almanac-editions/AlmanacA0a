@@ -6,7 +6,7 @@
 
 # Ancestry — criterion 13 at edition level
 
-*Almanac A0a. Form fixed by the edition manifest §6.*
+*almanacA0a. Form fixed by the edition manifest §6.*
 
 Criterion 13 binds a manuscript: every own result cites a predecessor or records that a search found
 none. At **edition** level the unit changes, and the question becomes: *does this edition, as a body

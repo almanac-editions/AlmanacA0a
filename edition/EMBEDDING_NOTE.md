@@ -6,7 +6,7 @@
 
 # The embedding note — what relates the code to the formal definitions
 
-*Almanac A0a. Form fixed by the edition manifest §10.*
+*almanacA0a. Form fixed by the edition manifest §10.*
 
 **Read this before reading `CONCORDANCE.json`.** Every warrant in that file is calibrated by this
 note. The edition has three layers — an informal manuscript, a Julia package, and a Lean

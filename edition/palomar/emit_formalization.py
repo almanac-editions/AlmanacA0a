@@ -75,7 +75,7 @@ doc = {}
 doc["version"] = "v0.4"
 
 doc["project"] = {
-    "name": "Almanac A0a — the centre of the even hybrid family quantum GL(1)",
+    "name": "almanacA0a — the centre of the even hybrid family quantum GL(1)",
     "description": (
         "For G = GL(1): the even hybrid family integral form U^ev is an A_t-subalgebra of U; the "
         "Harish-Chandra projection restricts to an isomorphism Z(U^ev) = (N^ev)^W; and the even "

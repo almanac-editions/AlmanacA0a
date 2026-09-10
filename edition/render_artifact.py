@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render the READER'S EDITION of Almanac A0a — the artifact form.
+"""Render the READER'S EDITION of almanacA0a — the artifact form.
 
 Generated from CONCORDANCE.json and MANIFEST.json at render time. There is no transcription
 step anywhere in this file: every row, count, hash and pin is read from the edition's own
@@ -118,7 +118,7 @@ A("<!DOCTYPE html>")
 A("<html lang='en'><head>")
 A("<meta charset='utf-8'>")
 A("<meta name='viewport' content='width=device-width, initial-scale=1'>")
-A("<title>Almanac A0a — a bilateral q-Pólya theorem</title>")
+A("<title>almanacA0a — a bilateral q-Pólya theorem</title>")
 
 A("""<style>
 :root{
@@ -274,7 +274,7 @@ __WARRANT_VARS__
 A('<div class="sheet"><div class="masthead">')
 A("__WORDMARK__")
 A('<div class="lbl">Project Sandbox · Almanac series · pilot edition</div>')
-A("<h1>Almanac A0a</h1>")
+A("<h1>almanacA0a</h1>")
 A('<p class="deck">The Laurent polynomials taking values in <code>A_t</code> at every point of the '
   "multiplicative grid are exactly the <code>A_t</code>-span of the divided classes.</p>")
 A(f'<div class="byline"><span class="lbl">Tamás Hausel</span>'
@@ -568,7 +568,7 @@ A("<p><strong>A withdrawn certificate, and what it cost.</strong> This edition a
   "<em>&ldquo;On voit que G_n(q^n) = 1&rdquo;</em> — which forces the sign without needing to read "
   "the glyph.</p>")
 
-A('<div class="colophon"><p><strong>Almanac A0a</strong> · the pilot edition · Project Sandbox · '
+A('<div class="colophon"><p><strong>almanacA0a</strong> · the pilot edition · Project Sandbox · '
   f"{esc(C['assembled_utc'])}</p>"
   "<p>Generated from the edition's own register and manifest at render time, so this presentation "
   "always matches the edition it presents; every figure in it is read from the edition's own data.</p>"

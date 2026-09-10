@@ -412,13 +412,13 @@ _head, _rowsjs = TPL[:_i], TPL[_i + len("/*__ROWSJS__*/"):]
 
 index_html = fill(_head.replace("__LINKS__", LINKS_BLOCK).replace("__ROWS__", "")
                   + "</script>\n</body></html>\n",
-                  "Almanac A0a — the centre of the even hybrid family quantum GL(1)",
+                  "almanacA0a — the centre of the even hybrid family quantum GL(1)",
                   "The pilot edition · a closed record in three layers")
 
 statements_html = fill(_head.replace("__LINKS__", BACK_LINK).replace("__ROWS__", ROWS_BLOCK)
                        + _rowsjs,
                        "Statements with their warrants",
-                       "Almanac A0a · every result, one row each, joined across the three layers")
+                       "almanacA0a · every result, one row each, joined across the three layers")
 
 staging = os.path.join(ED, "dist_src")
 base = staging if os.path.isdir(staging) else ED

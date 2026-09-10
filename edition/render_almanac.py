@@ -46,7 +46,7 @@ A = parts.append
 A(f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Almanac A0a — the centre of the even hybrid family quantum GL₁</title>
+<title>almanacA0a — the centre of the even hybrid family quantum GL₁</title>
 <style>
  :root {{
    --ink:#1a1a18; --dim:#5c5a54; --faint:#8a8780; --rule:#ddd9d0; --bg:#fbfaf7;
@@ -116,7 +116,7 @@ __WARRANT_VARS__
 
 A(f"""
 __WORDMARK__
-<h1>Almanac A0a</h1>
+<h1>almanacA0a</h1>
 <p class="sub">The centre of the even hybrid family quantum <em>GL</em><sub>1</sub></p>
 <p class="sub" style="font-size:.95rem">Issued by Project Sandbox · assembled {esc(C['assembled_utc'])} · <strong>the pilot edition</strong></p>
 <p>
@@ -286,7 +286,7 @@ measured a mis-transcribed formula, followed by a retraction that itself oversho
 every warrant stood unchanged, and each left a recorded lesson.</p>
 
 <footer>
-<p>Almanac A0a · the pilot edition · Project Sandbox · {esc(C['assembled_utc'])}<br>
+<p>almanacA0a · the pilot edition · Project Sandbox · {esc(C['assembled_utc'])}<br>
 Generated from <code>CONCORDANCE.json</code> and <code>MANIFEST.json</code> at render time, so this
 presentation always matches the edition it presents.<br>
 <strong>Proposal for review; deposit, publication and outward release each await authorisation.</strong></p>

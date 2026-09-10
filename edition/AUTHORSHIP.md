@@ -6,7 +6,7 @@
 
 # Authorship
 
-*Almanac A0a — the centre of the even hybrid family quantum GL₁.*
+*almanacA0a — the centre of the even hybrid family quantum GL₁.*
 Form fixed by the edition manifest §8; scheme settled 2026-08-05.
 
 ## Author

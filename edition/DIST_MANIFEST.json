@@ -31,9 +31,9 @@
    "group": "edition",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/EDITION.md",
    "dist_path": "edition/EDITION.md",
-   "sha256_in_manifest": "4ad3c7de90b6ef5ce1cf4ab55c1ce764d9109df82a1eab5a09fe9d045c7c98de",
+   "sha256_in_manifest": "ceac4c660f3ab6033b2dabe2139a77ed21a2a637fa80bf718931cf2a4d319c67",
    "role": "edition: assembled by the Editor",
-   "sha256_shipped": "4ad3c7de90b6ef5ce1cf4ab55c1ce764d9109df82a1eab5a09fe9d045c7c98de",
+   "sha256_shipped": "ceac4c660f3ab6033b2dabe2139a77ed21a2a637fa80bf718931cf2a4d319c67",
    "status": "OK"
   },
   {
@@ -49,27 +49,27 @@
    "group": "edition",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/EMBEDDING_NOTE.md",
    "dist_path": "edition/EMBEDDING_NOTE.md",
-   "sha256_in_manifest": "e54788b8d41c183528ae734d3301161162d39c5c316ff1cf702bc34cf060ae8d",
+   "sha256_in_manifest": "0de34322007ee772a829059132c8e8490698d198780534e030c3f7e78e19d4cc",
    "role": "edition: assembled by the Editor",
-   "sha256_shipped": "e54788b8d41c183528ae734d3301161162d39c5c316ff1cf702bc34cf060ae8d",
+   "sha256_shipped": "0de34322007ee772a829059132c8e8490698d198780534e030c3f7e78e19d4cc",
    "status": "OK"
   },
   {
    "group": "edition",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/ANCESTRY.md",
    "dist_path": "edition/ANCESTRY.md",
-   "sha256_in_manifest": "426be6b5bf7a130cfc80f3147c751be79e6d589225bb805bf00bd7a894836838",
+   "sha256_in_manifest": "0ca34ff7282467175922baf69b1270ad3ed9b56f9b9cb333f0c34b7b239fe7e3",
    "role": "edition: assembled by the Editor",
-   "sha256_shipped": "426be6b5bf7a130cfc80f3147c751be79e6d589225bb805bf00bd7a894836838",
+   "sha256_shipped": "0ca34ff7282467175922baf69b1270ad3ed9b56f9b9cb333f0c34b7b239fe7e3",
    "status": "OK"
   },
   {
    "group": "edition",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/AUTHORSHIP.md",
    "dist_path": "edition/AUTHORSHIP.md",
-   "sha256_in_manifest": "50cb7dcabc68f42bbd4c0e88ef85b6a2844af946b74a2d8a10d7ebd4f628da31",
+   "sha256_in_manifest": "cad18d8e1c888d0832f94a49f36754012c2bc79cd1b24f59087095c494cbdb6a",
    "role": "edition: assembled by the Editor",
-   "sha256_shipped": "50cb7dcabc68f42bbd4c0e88ef85b6a2844af946b74a2d8a10d7ebd4f628da31",
+   "sha256_shipped": "cad18d8e1c888d0832f94a49f36754012c2bc79cd1b24f59087095c494cbdb6a",
    "status": "OK"
   },
   {
@@ -85,36 +85,36 @@
    "group": "edition",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/almanac.html",
    "dist_path": "edition/almanac.html",
-   "sha256_in_manifest": "7dab67c0297bf3716e9b7744b2ae0ddeb2e3b6ad8549abc3e1c34a26a342caf3",
+   "sha256_in_manifest": "6ef60b8bceca00ba53171f429976d7042ed0005d8c903de157bb40135e682976",
    "role": "edition: the reading view \u2014 what a reader sees",
-   "sha256_shipped": "7dab67c0297bf3716e9b7744b2ae0ddeb2e3b6ad8549abc3e1c34a26a342caf3",
+   "sha256_shipped": "6ef60b8bceca00ba53171f429976d7042ed0005d8c903de157bb40135e682976",
    "status": "OK"
   },
   {
    "group": "edition",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/render_almanac.py",
    "dist_path": "edition/render_almanac.py",
-   "sha256_in_manifest": "b14b732c3cde5951881e2b7ddf1c7d1fc1be4857b4aa592ab2b3498c89ead7c2",
+   "sha256_in_manifest": "db6a81b876e94864c16e71f487e1eb5a5b29273ac3df0d1b635066357d47667b",
    "role": "edition: generator for the reading view (renders from the edition's own JSON; no transcription)",
-   "sha256_shipped": "b14b732c3cde5951881e2b7ddf1c7d1fc1be4857b4aa592ab2b3498c89ead7c2",
+   "sha256_shipped": "db6a81b876e94864c16e71f487e1eb5a5b29273ac3df0d1b635066357d47667b",
    "status": "OK"
   },
   {
    "group": "edition",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/almanac.artifact.html",
    "dist_path": "edition/almanac.artifact.html",
-   "sha256_in_manifest": "fafba17cc1c48308085242f2815bd4223cd777130065a7138c2774d66893b369",
+   "sha256_in_manifest": "215b80ebeb7c9258c1c54cb8514bd6d3adc841539b6a9d78c3726641957cb3e0",
    "role": "edition: the READER'S EDITION \u2014 the form a reader receives",
-   "sha256_shipped": "fafba17cc1c48308085242f2815bd4223cd777130065a7138c2774d66893b369",
+   "sha256_shipped": "215b80ebeb7c9258c1c54cb8514bd6d3adc841539b6a9d78c3726641957cb3e0",
    "status": "OK"
   },
   {
    "group": "edition",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/render_artifact.py",
    "dist_path": "edition/render_artifact.py",
-   "sha256_in_manifest": "36026501c34a604f8d094fb24aa12c2d01404056a1b76f1f0615aa669d237f7b",
+   "sha256_in_manifest": "070713740b9da0b19c2c1a830e6ec13fc4461cfb35c0af3d6b7065f8416d8369",
    "role": "edition: generator for the reader's edition (renders from the edition's own data; no transcription)",
-   "sha256_shipped": "36026501c34a604f8d094fb24aa12c2d01404056a1b76f1f0615aa669d237f7b",
+   "sha256_shipped": "070713740b9da0b19c2c1a830e6ec13fc4461cfb35c0af3d6b7065f8416d8369",
    "status": "OK"
   },
   {
@@ -130,27 +130,27 @@
    "group": "edition",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/almanac.explained.html",
    "dist_path": "edition/almanac.explained.html",
-   "sha256_in_manifest": "6e3939b8e7aa3c418dcfe712470a87446e0b0e0f92433e0bf2e5f5ab336ecbd3",
+   "sha256_in_manifest": "1a95494eb79ae282a7db8ccdc7cf9aea19dbb652bb222f0dd422aeae8f1b65b9",
    "role": "edition: the EXPLANATORY COMPANION \u2014 the mathematics explained for a reader from outside the programme",
-   "sha256_shipped": "6e3939b8e7aa3c418dcfe712470a87446e0b0e0f92433e0bf2e5f5ab336ecbd3",
+   "sha256_shipped": "1a95494eb79ae282a7db8ccdc7cf9aea19dbb652bb222f0dd422aeae8f1b65b9",
    "status": "OK"
   },
   {
    "group": "edition",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/render_explained.py",
    "dist_path": "edition/render_explained.py",
-   "sha256_in_manifest": "514f8865b12f0676d4268af59fd8a1dcc32b85b4d35a6dd6f7ddcbdd860b90da",
+   "sha256_in_manifest": "28e9eb5298904f0a2deb9af13d932304a4a5391b1edd00c6bbdef4e3f3b04a30",
    "role": "edition: generator for the reader's companion page (TeX -> MathML at build time; template embedded; added 2026-08-29 when the page gained typeset mathematics and, with it, a regeneration path)",
-   "sha256_shipped": "514f8865b12f0676d4268af59fd8a1dcc32b85b4d35a6dd6f7ddcbdd860b90da",
+   "sha256_shipped": "28e9eb5298904f0a2deb9af13d932304a4a5391b1edd00c6bbdef4e3f3b04a30",
    "status": "OK"
   },
   {
    "group": "edition",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/render_docs.py",
    "dist_path": "edition/render_docs.py",
-   "sha256_in_manifest": "dbe512a0c65c0e3cb0e67eedd58ebd2742c11b81a73fd8dcae6915ba4cb223e4",
+   "sha256_in_manifest": "d0c8f463827f4bd231acf911189caec95f55ae04c24f31c0ef181c30a9699175",
    "role": "edition: the generator for the guides' HTML pages \u2014 renders the markdown guides so a browser shows a page rather than a text file",
-   "sha256_shipped": "dbe512a0c65c0e3cb0e67eedd58ebd2742c11b81a73fd8dcae6915ba4cb223e4",
+   "sha256_shipped": "d0c8f463827f4bd231acf911189caec95f55ae04c24f31c0ef181c30a9699175",
    "status": "OK"
   },
   {
@@ -688,7 +688,7 @@
    "group": "edition",
    "source_path": "MANIFEST.json",
    "dist_path": "edition/MANIFEST.json",
-   "sha256_shipped": "fb9d7a61e251afcbc96001fecf9ccf2b7c460ec1f1e56bba56c71728b680732b",
+   "sha256_shipped": "a92d0c7f1c185b57538ce459bfe03a438116c05fede0e631eb827252a1e338b5",
    "status": "OK",
    "role": "the edition's own machine-readable manifest"
   },
@@ -704,7 +704,7 @@
    "group": "palomar",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/palomar/emit_formalization.py",
    "dist_path": "edition/palomar/emit_formalization.py",
-   "sha256_shipped": "301ddc11d5c3acec2d4c58ed4bf2d7f34ddd4811ea0f33758670819e8b0238a8",
+   "sha256_shipped": "0749bd8d1db7553038fa2f2c5f1e5f02adae6b8fb0bb21c3febddb1240ffabd3",
    "status": "OK",
    "role": "Palomar / Mathlib-Initiative disclosure layer"
   },
@@ -712,7 +712,7 @@
    "group": "palomar",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/palomar/formalization.yaml",
    "dist_path": "edition/palomar/formalization.yaml",
-   "sha256_shipped": "7e126b29e19f2f80a52e5176b528a369cbc1a01e288ab07bdcb68cb777e20b0a",
+   "sha256_shipped": "436fb8dda2a9abe45c97023cfa7d844aec372b3947c26201ed9c13698f3d45ae",
    "status": "OK",
    "role": "Palomar / Mathlib-Initiative disclosure layer"
   },
@@ -752,20 +752,20 @@
    "group": "front-matter",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/dist_src/index.html",
    "dist_path": "edition/index.html",
-   "sha256_shipped": "bd956a8976e4b8a1f62fff6a9688b68204bc8c0d8bf130317e71f1322e3edab3",
+   "sha256_shipped": "9bbc2b08db7819fa324b73f09ae77ca2437513aa9cf02f7d8a6d72417f7cd82f",
    "status": "OK",
    "role": "the door: a lead sentence and links, nothing else",
-   "sha256_source": "fc079e9a2c0ae756784d1d561ec9715eb6451bd722370a03e7439a34d62dccbf",
+   "sha256_source": "59930ec281fbf423689625bd6f803d730323c1a9e48b502a950820d04ec6efde",
    "transformed_at_assembly": "The shipped bytes differ from the source: this file is transformed during assembly. Both hashes are given because only one of them is what you downloaded."
   },
   {
    "group": "front-matter",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/dist_src/statements.html",
    "dist_path": "edition/statements.html",
-   "sha256_shipped": "965b787d6b75f3e4cafe78495fec57558d726715987a239d2a59ca5b1ca995aa",
+   "sha256_shipped": "ff5a8fcfa3553eaffc12cb3c11e9e9642362546d9a67246aa9cc5eb9916779de",
    "status": "OK",
    "role": "the twelve statements with their warrants \u2014 filters, search, one row each, offline",
-   "sha256_source": "c8ad70a58de1b4d3cb821db3199faadcd69cb5b4035c186436ae026b256e3db5",
+   "sha256_source": "24fae5e8c6143f0d0d81fe643c138c909132c372c15aa221d6afa94e5d7665c1",
    "transformed_at_assembly": "The shipped bytes differ from the source: this file is transformed during assembly. Both hashes are given because only one of them is what you downloaded."
   },
   {
@@ -926,7 +926,7 @@
    "group": "edition",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/render_index.py",
    "dist_path": "edition/render_index.py",
-   "sha256_shipped": "a0fbdeabf8249e0ec161edb7e9d7c4dd0540e331d52e27823264d5f4a199ef37",
+   "sha256_shipped": "3c16d85ff3321b002530b8d75e8fc2e2c43b00355762db9a0b4ebf895e1456f2",
    "status": "OK",
    "role": "regenerates index.html from the record"
   },
@@ -943,7 +943,7 @@
    "source_path": "(generated) formal.html",
    "dist_path": "edition/formal.html",
    "sha256_in_manifest": null,
-   "sha256_shipped": "ea56a966d2fec72fbaffb691e0d13de79ad7e4ebac1e58800a8c715fe35dae61",
+   "sha256_shipped": "1206564a9e1821101d95fecc0f5667035843b4df525402f39637c6e9add0c2c6",
    "status": "GENERATED \u2014 assembled from CONCORDANCE.json and the release log",
    "role": "edition: the formal layer as a page"
   },
@@ -952,7 +952,7 @@
    "source_path": "(generated) informal.html",
    "dist_path": "edition/informal.html",
    "sha256_in_manifest": null,
-   "sha256_shipped": "685eaec764ee82a5dc0672ef7590e8c42fdb98800cf44719ebafb0fcced512b0",
+   "sha256_shipped": "735db7601ec026dcbc1a6813de2dfea6543ee591c13aea3b9b484e79845a2771",
    "status": "GENERATED \u2014 assembled from CONCORDANCE.json's ink row",
    "role": "edition: the informal layer as a page"
   },
@@ -961,7 +961,7 @@
    "source_path": "(generated) ANCESTRY.html",
    "dist_path": "edition/ANCESTRY.html",
    "sha256_in_manifest": null,
-   "sha256_shipped": "9409e30d917bc8dd1b9d1b43f465bfb97c10b3c9a7f2d9f990920db9fa90fa55",
+   "sha256_shipped": "110a0e2b9c6b9b44b7849593bffb119157c8459d4b0d900ff89123e5a731f804",
    "status": "GENERATED \u2014 rendered from the markdown beside it, at build time",
    "role": "edition: a guide, rendered for a browser"
   },
@@ -970,7 +970,7 @@
    "source_path": "(generated) AUTHORSHIP.html",
    "dist_path": "edition/AUTHORSHIP.html",
    "sha256_in_manifest": null,
-   "sha256_shipped": "31ca0c28228d8c73e3e6a5c4933c60b4366312167a6ad6c3b89766886bbb3473",
+   "sha256_shipped": "e44149feb2be07ebaef51e2ab509db6fd16c5554028780db98db589466d91a86",
    "status": "GENERATED \u2014 rendered from the markdown beside it, at build time",
    "role": "edition: a guide, rendered for a browser"
   },
@@ -979,7 +979,7 @@
    "source_path": "(generated) EDITION.html",
    "dist_path": "edition/EDITION.html",
    "sha256_in_manifest": null,
-   "sha256_shipped": "e95934ef1b734a4204ab249038da2e06a74cf873ed0dce68f29ec4f617a710d8",
+   "sha256_shipped": "d90d80721cbe15c22573f6178ea9dfa7a2bee42f13776f4dc4541cf06774b9e6",
    "status": "GENERATED \u2014 rendered from the markdown beside it, at build time",
    "role": "edition: a guide, rendered for a browser"
   },
@@ -988,7 +988,7 @@
    "source_path": "(generated) EMBEDDING_NOTE.html",
    "dist_path": "edition/EMBEDDING_NOTE.html",
    "sha256_in_manifest": null,
-   "sha256_shipped": "55fa791a5399088c8d765230bf42ffe20a3aa87e6ebd8dfbe773095229b53f7d",
+   "sha256_shipped": "7f17fe43cd29a6a9093d7b96e7e71fdd313ce7f671bb170becc26e4cae62e816",
    "status": "GENERATED \u2014 rendered from the markdown beside it, at build time",
    "role": "edition: a guide, rendered for a browser"
   },
@@ -997,7 +997,7 @@
    "source_path": "(generated) FOR_AN_AI_AGENT.html",
    "dist_path": "edition/FOR_AN_AI_AGENT.html",
    "sha256_in_manifest": null,
-   "sha256_shipped": "d15293779842cebdedca3fb81831fdfb2d86c9c09eef3d9f75c555db4581c66e",
+   "sha256_shipped": "5c5408d8089c9955d7a774da90eb8dfb63dc113ee729a48691a76fbf028d7039",
    "status": "GENERATED \u2014 rendered from the markdown beside it, at build time",
    "role": "edition: a guide, rendered for a browser"
   },
@@ -1006,7 +1006,7 @@
    "source_path": "(generated) FOR_A_HUMAN.html",
    "dist_path": "edition/FOR_A_HUMAN.html",
    "sha256_in_manifest": null,
-   "sha256_shipped": "42a06a7fe787f6bc07598716317e3958c218777adeb6c3bf8bc467c3d7e3e182",
+   "sha256_shipped": "794712daf5460bd1037c038e52b4303bdfc2da1560a7140c76ad25e5d224811b",
    "status": "GENERATED \u2014 rendered from the markdown beside it, at build time",
    "role": "edition: a guide, rendered for a browser"
   },
@@ -1015,7 +1015,7 @@
    "source_path": "(generated) source/informal/CITATION_VERIFICATION_2026-08-09.html",
    "dist_path": "edition/source/informal/CITATION_VERIFICATION_2026-08-09.html",
    "sha256_in_manifest": null,
-   "sha256_shipped": "040c7de7c2ffdb6ebc71f8517bb671a5af5908a53b258f468af1526274c3652b",
+   "sha256_shipped": "604e9260b0a036e6b735d992432757f6722362f6fda57ea5431ae10e0133642a",
    "status": "GENERATED \u2014 rendered from the markdown beside it, at build time",
    "role": "edition: a guide, rendered for a browser"
   },
@@ -1024,7 +1024,7 @@
    "source_path": "(generated) source/informal/EDITION_ACCEPTANCE_2026-08-13.html",
    "dist_path": "edition/source/informal/EDITION_ACCEPTANCE_2026-08-13.html",
    "sha256_in_manifest": null,
-   "sha256_shipped": "b4068f2f8b7c0cfd8b9f38103a26af763af49572deefe80f73ec3c574cd71338",
+   "sha256_shipped": "d5c16bc3ad21b15ceb3df41adaa5024e4245217d048a7a98978537baffc8708a",
    "status": "GENERATED \u2014 rendered from the markdown beside it, at build time",
    "role": "edition: a guide, rendered for a browser"
   },
@@ -1033,7 +1033,7 @@
    "source_path": "(generated) source/informal/EDITORIAL_REFEREE_REPORT_2026-08-12.html",
    "dist_path": "edition/source/informal/EDITORIAL_REFEREE_REPORT_2026-08-12.html",
    "sha256_in_manifest": null,
-   "sha256_shipped": "74ba1de28dcc83f3eadd30c0facb49eb40db2edf8ea3cf987e9797b220e07445",
+   "sha256_shipped": "5251339aed475af3ce71e29734c5fe98b15e585f8c996adb5dd750c4bcf52f46",
    "status": "GENERATED \u2014 rendered from the markdown beside it, at build time",
    "role": "edition: a guide, rendered for a browser"
   },
@@ -1042,7 +1042,7 @@
    "source_path": "(generated) source/informal/REFEREE_REPORT_PROOFv0a.html",
    "dist_path": "edition/source/informal/REFEREE_REPORT_PROOFv0a.html",
    "sha256_in_manifest": null,
-   "sha256_shipped": "2090fd22d9d3027779ee9555101a0b8334e8fba3598c470c99e3c8bdb6ec9330",
+   "sha256_shipped": "d77b86c885457138cba93084d52cac0fc9d874a2a39be044dbcc8fe661b9a2cd",
    "status": "GENERATED \u2014 rendered from the markdown beside it, at build time",
    "role": "edition: a guide, rendered for a browser"
   },
@@ -1051,7 +1051,7 @@
    "source_path": "(generated) source/informal/proofv0a.ledger.cas_receipts.html",
    "dist_path": "edition/source/informal/proofv0a.ledger.cas_receipts.html",
    "sha256_in_manifest": null,
-   "sha256_shipped": "6ba529c0661a8afd43f3c95249b29e31dedfbf6c15a9007c7abded6a3e2b0b1f",
+   "sha256_shipped": "fcb5d5720faebef82c045b97782cdc407175dae3b2710b78db4c6ca65e14869d",
    "status": "GENERATED \u2014 rendered from the markdown beside it, at build time",
    "role": "edition: a guide, rendered for a browser"
   }
