@@ -113,7 +113,7 @@ PREAMBLE = r"""\documentclass[11pt]{article}
 \title{\textbf{The centre of the even hybrid family quantum $GL_1$}}
 \author{Tam\'as Hausel}
 \date{\normalsize Part of \textbf{almanacA0a} \cite{almanacA0a}, the pilot edition of the
-Almanac series.\\[2pt]
+almanac series.\\[2pt]
 \small\url{https://almanac-editions.github.io/almanacA0a/edition/}}
 """
 
@@ -293,9 +293,10 @@ G.~Lusztig,
 Progress in Mathematics \textbf{110}, Birkh\"auser, 1993.
 
 \bibitem{almanacA0a}
-\emph{almanac\/{\rm A0a} --- the centre of the even hybrid family quantum $GL_1$},
-the pilot edition of the Almanac series, 2026.
-\url{https://almanac-editions.github.io/almanacA0a/edition/}
+T.~Hausel, \emph{almanacA0a --- the centre of the even hybrid family quantum GL(1)},
+pilot edition of the almanac series, version 0.1.0, 2026; not yet deposited, a DOI is
+minted at deposit.
+\url{https://github.com/almanac-editions/almanacA0a}
 
 \bibitem{SandboxGL2}
 Project Sandbox,
