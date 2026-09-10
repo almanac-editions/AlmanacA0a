@@ -297,14 +297,14 @@
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/almanac.explained.html",
-   "sha256": "9891a7dd93997ee0ee49e5139654f821b2cdb28b709f893c37805263e613681c",
+   "sha256": "6e3939b8e7aa3c418dcfe712470a87446e0b0e0f92433e0bf2e5f5ab336ecbd3",
    "role": "edition: the EXPLANATORY COMPANION — the mathematics explained for a reader from outside the programme",
    "produced_by": "the Almanac Editor, 2026-08-15, on the Overseer's request",
    "note": "HAND-WRITTEN, and therefore hashable — unlike almanac.artifact.html it does NOT render from this manifest, so §12.3's self-reference relation does not apply to it. It explains and does not certify; where it and the register disagree, the register is right. See the explanatory_companion block for its URL and its build-time oracle verification."
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/render_explained.py",
-   "sha256": "4b0d9e998ef6fbe0a81db14df614d6e86b74f19a2f2fe4957c7251341b544d44",
+   "sha256": "514f8865b12f0676d4268af59fd8a1dcc32b85b4d35a6dd6f7ddcbdd860b90da",
    "role": "edition: generator for the reader's companion page (TeX -> MathML at build time; template embedded; added 2026-08-29 when the page gained typeset mathematics and, with it, a regeneration path)",
    "produced_by": "the Shadow, 2026-08-29"
   },

@@ -130,18 +130,18 @@
    "group": "edition",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/almanac.explained.html",
    "dist_path": "edition/almanac.explained.html",
-   "sha256_in_manifest": "9891a7dd93997ee0ee49e5139654f821b2cdb28b709f893c37805263e613681c",
+   "sha256_in_manifest": "6e3939b8e7aa3c418dcfe712470a87446e0b0e0f92433e0bf2e5f5ab336ecbd3",
    "role": "edition: the EXPLANATORY COMPANION \u2014 the mathematics explained for a reader from outside the programme",
-   "sha256_shipped": "9891a7dd93997ee0ee49e5139654f821b2cdb28b709f893c37805263e613681c",
+   "sha256_shipped": "6e3939b8e7aa3c418dcfe712470a87446e0b0e0f92433e0bf2e5f5ab336ecbd3",
    "status": "OK"
   },
   {
    "group": "edition",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/render_explained.py",
    "dist_path": "edition/render_explained.py",
-   "sha256_in_manifest": "4b0d9e998ef6fbe0a81db14df614d6e86b74f19a2f2fe4957c7251341b544d44",
+   "sha256_in_manifest": "514f8865b12f0676d4268af59fd8a1dcc32b85b4d35a6dd6f7ddcbdd860b90da",
    "role": "edition: generator for the reader's companion page (TeX -> MathML at build time; template embedded; added 2026-08-29 when the page gained typeset mathematics and, with it, a regeneration path)",
-   "sha256_shipped": "4b0d9e998ef6fbe0a81db14df614d6e86b74f19a2f2fe4957c7251341b544d44",
+   "sha256_shipped": "514f8865b12f0676d4268af59fd8a1dcc32b85b4d35a6dd6f7ddcbdd860b90da",
    "status": "OK"
   },
   {
@@ -688,7 +688,7 @@
    "group": "edition",
    "source_path": "MANIFEST.json",
    "dist_path": "edition/MANIFEST.json",
-   "sha256_shipped": "da9b1a13202bf08d29bcfb6a68b527264e6376616eb4e1472184c0da27284c21",
+   "sha256_shipped": "fb9d7a61e251afcbc96001fecf9ccf2b7c460ec1f1e56bba56c71728b680732b",
    "status": "OK",
    "role": "the edition's own machine-readable manifest"
   },

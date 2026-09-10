@@ -315,25 +315,27 @@ kinds of claim, each meaning exactly what it states</strong>, and the edition ke
 distinct.</p>
 
 <div class="grades">
-  <div class="grade g-k">
-    <div class="n">9<span class="nm" style="font-size:.62rem"> / 11</span></div>
-    <div class="nm">kernel-certified</div>
-    <div class="wh">A Lean declaration states the claim and its axiom base is exactly
-      <code>propext</code>, <code>Classical.choice</code>, <code>Quot.sound</code> — no
-      <code>sorryAx</code>, no custom axiom. Every one of these was measured first-hand
-      through the Lean language server.</div>
+  <div class="grade g-n">
+    <div class="n">1<span class="nm" style="font-size:.62rem"> / 12</span></div>
+    <div class="nm">ink — a refereed argument</div>
+    <div class="wh">An argument written for a human reader and refereed. No kernel certifies it and
+      no computation bounds it: the check is a referee reading the proof. The one here is the claim
+      every other result rests on — that the proof proves the statement that was signed.</div>
   </div>
   <div class="grade g-c">
-    <div class="n">2<span class="nm" style="font-size:.62rem"> / 11</span></div>
-    <div class="nm">computed over a declared range</div>
+    <div class="n">2<span class="nm" style="font-size:.62rem"> / 12</span></div>
+    <div class="nm">orange — computed over a declared range</div>
     <div class="wh">Verified by computation over a stated bound, and over nothing else. The bound
       is part of the claim. Neither of these could ever be kernel-certified: no Lean declaration
       states what a Julia program does.</div>
   </div>
-  <div class="grade g-n">
-    <div class="n">0<span class="nm" style="font-size:.62rem"> / 11</span></div>
-    <div class="nm">ink</div>
-    <div class="wh">—</div>
+  <div class="grade g-k">
+    <div class="n">9<span class="nm" style="font-size:.62rem"> / 12</span></div>
+    <div class="nm">blue — kernel-certified</div>
+    <div class="wh">A Lean declaration states the claim and its axiom base is exactly
+      <code>propext</code>, <code>Classical.choice</code>, <code>Quot.sound</code> — no
+      <code>sorryAx</code>, no custom axiom. Every one of these was measured first-hand
+      through the Lean language server.</div>
   </div>
 </div>
 

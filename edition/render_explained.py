@@ -353,28 +353,7 @@ objects, and a Lean development the proof kernel accepts. <strong>The grades bel
 kinds of claim, each meaning exactly what it states</strong>, and the edition keeps them
 distinct.</p>
 
-<div class="grades">
-  <div class="grade g-k">
-    <div class="n">9<span class="nm" style="font-size:.62rem"> / 11</span></div>
-    <div class="nm">kernel-certified</div>
-    <div class="wh">A Lean declaration states the claim and its axiom base is exactly
-      <code>propext</code>, <code>Classical.choice</code>, <code>Quot.sound</code> — no
-      <code>sorryAx</code>, no custom axiom. Every one of these was measured first-hand
-      through the Lean language server.</div>
-  </div>
-  <div class="grade g-c">
-    <div class="n">2<span class="nm" style="font-size:.62rem"> / 11</span></div>
-    <div class="nm">computed over a declared range</div>
-    <div class="wh">Verified by computation over a stated bound, and over nothing else. The bound
-      is part of the claim. Neither of these could ever be kernel-certified: no Lean declaration
-      states what a Julia program does.</div>
-  </div>
-  <div class="grade g-n">
-    <div class="n">0<span class="nm" style="font-size:.62rem"> / 11</span></div>
-    <div class="nm">ink</div>
-    <div class="wh">—</div>
-  </div>
-</div>
+__GRADES__
 
 <p class="note">The computed rows are the instrument (acceptance battery 87/87, with the grid
 integrality checked for \(r\) in \(0\dots 8\) against \(\chi\) in \(-9\dots 9\), and a negative
@@ -453,8 +432,46 @@ s = pat.sub(repl, s)
 for leftover in (r"\\(", r"\\["):
     if leftover in s:
         sys.exit(f"unconverted TeX delimiter {leftover!r} left in output")
+# THE GRADES ARE COUNTED, NOT TYPED, AND THEY RUN INK -> ORANGE -> BLUE.
+# They were typed as 9/11, 2/11 and 0/11 with an em-dash where ink's description belongs, and had
+# been wrong since 2026-08-31, when the twelfth row - the ink one - was added. The Overseer found it
+# on the published page: "does not have ink certified statement (only 11 statements are mentioned)".
+# FOURTH typed count in this edition to go stale; every other one is a measurement now, and so is
+# this. The order is the standing one, ink -> orange -> blue, which this page had backwards too.
+import json as _json
+_con = _json.load(open(os.path.join(HERE, "CONCORDANCE.json"), encoding="utf-8"))
+_w = [r.get("warrant") for r in _con["rows"]]
+GRADES = """<div class="grades">
+  <div class="grade g-n">
+    <div class="n">{ink}<span class="nm" style="font-size:.62rem"> / {tot}</span></div>
+    <div class="nm">ink \u2014 a refereed argument</div>
+    <div class="wh">An argument written for a human reader and refereed. No kernel certifies it and
+      no computation bounds it: the check is a referee reading the proof. The one here is the claim
+      every other result rests on \u2014 that the proof proves the statement that was signed.</div>
+  </div>
+  <div class="grade g-c">
+    <div class="n">{orange}<span class="nm" style="font-size:.62rem"> / {tot}</span></div>
+    <div class="nm">orange \u2014 computed over a declared range</div>
+    <div class="wh">Verified by computation over a stated bound, and over nothing else. The bound
+      is part of the claim. Neither of these could ever be kernel-certified: no Lean declaration
+      states what a Julia program does.</div>
+  </div>
+  <div class="grade g-k">
+    <div class="n">{blue}<span class="nm" style="font-size:.62rem"> / {tot}</span></div>
+    <div class="nm">blue \u2014 kernel-certified</div>
+    <div class="wh">A Lean declaration states the claim and its axiom base is exactly
+      <code>propext</code>, <code>Classical.choice</code>, <code>Quot.sound</code> \u2014 no
+      <code>sorryAx</code>, no custom axiom. Every one of these was measured first-hand
+      through the Lean language server.</div>
+  </div>
+</div>""".format(ink=_w.count("ink"), orange=_w.count("orange"),
+                 blue=_w.count("blue"), tot=len(_w))
+
 # The mark goes in BEFORE the no-network check, so the check reads the bytes that ship.
 s = s.replace("__WORDMARK__", wordmark()).replace("__WARRANT_VARS__", WARRANT_VARS)
+s = s.replace("__GRADES__", GRADES)
+if re.search(r"__[A-Z][A-Z0-9_]*__", s):
+    sys.exit("render_explained: a placeholder survived into the page")
 
 # The MathML xmlns URI is an identifier, never fetched. A NETWORK reference is something a tag
 # would load: script/src/href. Check those.
