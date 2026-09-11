@@ -248,7 +248,7 @@
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/ACTIVITY.md",
-   "sha256": "43415d92377c43f7168c5701c5d4ad5deda858fe452155c530ace43167d6dc28",
+   "sha256": "c6643024093a0f94da5c4d782a5cf2130c0f344fdaa73b6afd3ea429072235d4",
    "role": "edition: the campaign journal — the per-activity timestamps the measurement log is summed from",
    "produced_by": "the Almanac Editor, 2026-08-13 onward",
    "self_reference": "F-E11, 2026-08-14 — a THIRD instance of the §12.3 relation, and it had been UNLISTED while the manifest cited it: `how_to_re_measure` sends a reader here to re-derive the cost figure, and this file was not in the checkable set at all (the F-E7 class). It cannot be pinned before deposit, because the journal records the act of writing the manifest — every entry, including the one recording the pinning, falsifies the pin. Under §12.2 it pins at the deposit re-hash gate, when journalling for this edition stops. STATE.md is deliberately NOT listed: it is this seat's resume header, working state rather than edition content, and nothing in the edition cites it.",
@@ -324,19 +324,19 @@
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/paper.pdf",
-   "sha256": "00cb49b3db2a1ad66f4ca7b08c961e6d6e8f2c30c8a89fd33ffb0655ac14a2a2",
+   "sha256": "a2aa6bab4144d9ec40513ed8116bfc783f37bfb8b86e4883a878f8cda6150623",
    "role": "edition: the paper, the edition's reading document",
    "produced_by": "render_paper.py, assembled from sandboxA0a/informal/goalv0a.tex and proofv0a.tex; paper.tex reproduces byte-for-byte from those two sources. The type-A programme's signed goal was a third source until 2026-09-08, when the GL_n section was removed on the Overseer's instruction; the paper no longer reads it, and its path is deliberately not written here because §12.4 reads a path in this manifest as a CITATION and would require a row for a file this edition no longer uses."
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/paper.tex",
-   "sha256": "8ae4a9d5a1b268c89fd20afa5eabd156b24bb456603f2a19fd41ce12209aba0d",
+   "sha256": "c4f313badfca0ad7f2c4e48b5865b9b7ba963b8a926be7bdc2f50ade9d7bc004",
    "role": "edition: the paper's LaTeX source",
    "produced_by": "render_paper.py, assembled from sandboxA0a/informal/goalv0a.tex and proofv0a.tex; paper.tex reproduces byte-for-byte from those two sources. The type-A programme's signed goal was a third source until 2026-09-08, when the GL_n section was removed on the Overseer's instruction; the paper no longer reads it, and its path is deliberately not written here because §12.4 reads a path in this manifest as a CITATION and would require a row for a file this edition no longer uses."
   },
   {
    "path": "SandboxA/sandboxA0a/almanac/edition/render_paper.py",
-   "sha256": "9e4b5bfc660d34b0be3d02374c9dcd7ef8ecfd2173c8cdafa9cb5661ebf5422c",
+   "sha256": "123db47e0d7b48e14d7c99994cd999bd281914548294d9199a9478565619123f",
    "role": "edition: the paper's assembler",
    "produced_by": "render_paper.py, assembled from sandboxA0a/informal/goalv0a.tex and proofv0a.tex; paper.tex reproduces byte-for-byte from those two sources. The type-A programme's signed goal was a third source until 2026-09-08, when the GL_n section was removed on the Overseer's instruction; the paper no longer reads it, and its path is deliberately not written here because §12.4 reads a path in this manifest as a CITATION and would require a row for a file this edition no longer uses."
   },
