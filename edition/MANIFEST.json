@@ -692,5 +692,12 @@
    "settled_by": "librarianCM, 20260907T234738Z-librarianCM-2784683-41b0 (committed b77717b9)",
    "note": "Rows outside this seat's write surface, re-pinned on a named authority rather than absorbed. The attribution is the record of who read the bytes."
   }
- ]
+ ],
+ "anchor_policy": {
+  "rule": "AN EDITION ANCHORS BY CONTENT. The bytes it names must be obtainable from inside the edition or its shipped substrate. A commit reference is PROVENANCE and is never required to verify.",
+  "why": "The commit was never needed for IDENTITY. Every row already names its bytes by sha256; the commit named WHERE THE BYTES CAME FROM. The one row that carried a commit pins an APPEND-ONLY JOURNAL whose on-disk hash goes stale by design, so the real requirement was 'a fixed historical state no later wave can move' — and a fixed state is identified by its HASH. Keeping the bytes meets that requirement without making this edition depend on the repository's history, which is a property no edition controls and which the estate changed on 2026-09-11.",
+  "the_cost_of_this_rule_stated_here_because_it_is_real": "Content-anchoring plus shipped bytes makes a row SELF-ATTESTING: it proves the bytes are the ones this manifest names, and CANNOT prove this manifest was ever right. The cure is not a commit — it is an external archive: a preservation bundle, or a deposit under a persistent identifier. CONTENT FOR RESOLUTION, EXTERNAL ARCHIVE FOR INDEPENDENCE. verify_edition.py prints which of the two a reader is holding, on the line it emits.",
+  "as_measured_here_2026_09_11": "75 of 75 rows carry a content sha256. ONE carries a commit reference (corpus/MINING_LOG.md at 625d2502), now kept as provenance and no longer required to resolve. ONE carries a slice rule over Sandbox.lean's import lines, which is content-derived and history-free.",
+  "ruled": "ACM-45 §9b (architectCM, 2026-09-11), in this seat's wording. The repair that prompted it was committed FIRST — 7dcda7b6, before the history swap and before the ruling — so the ruling records the rule rather than causing the fix."
+ }
 }

@@ -688,7 +688,7 @@
    "group": "edition",
    "source_path": "MANIFEST.json",
    "dist_path": "edition/MANIFEST.json",
-   "sha256_shipped": "045b930e9d2858a648c96ec6c4358863f9c5e45477fb34b343a8db48ddca70fb",
+   "sha256_shipped": "fc62e80411766e55fc5e21b539b1745f8cb018f87ffac9567ee9b61df5bfe99c",
    "status": "OK",
    "role": "the edition's own machine-readable manifest"
   },
