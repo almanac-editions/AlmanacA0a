@@ -69,7 +69,7 @@ def slice_of(path, rule):
     return ("\n".join(lines) + "\n").encode("utf-8")
 
 
-def blob_at(path, commit):
+def blob_at(path, commit, expect_sha=None):
     """The bytes of a file AS OF a named commit, not as they sit on disk.
 
     THE LIBRARIAN'S DISTINCTION, 2026-09-01 (20260901T112750Z-librarianCM-71933-bb5d), and it is a
@@ -85,16 +85,55 @@ def blob_at(path, commit):
     """
     out = subprocess.run(["git", "--no-optional-locks", "show", f"{commit}:{path}"],
                          cwd=ROOT, capture_output=True)
-    if out.returncode:
-        raise SystemExit(f"verify_edition: {path} is pinned at commit {commit[:12]}, which does not "
-                         f"resolve. A pinned commit that cannot be read is a broken anchor, not a "
-                         f"passing row.\n{out.stderr.decode()[:300]}")
-    return out.stdout
+    if not out.returncode:
+        return out.stdout
+
+    # THE HISTORY CAN BE REPLACED UNDER THIS EDITION, AND ON 2026-09-11 IT WAS. The estate swapped
+    # HQ's history for a fresh orphan commit (Overseer's commission, HQ_PUSH_DESIGN_2026-09-11);
+    # pre-swap history survives only as a bundle. The Architect's §14 survey caught what that does
+    # here: `git show` exits 128, this function raised, and NOT ONE of the 75 rows reported - the
+    # edition could be neither verified nor rebuilt, and --repin could not write.
+    #
+    # THREE ROUTES, IN DESCENDING STRENGTH, AND THE PAGE SAYS WHICH ONE IT USED.
+    #   1. the live history           - independent of the manifest
+    #   2. a clone of the bundle      - independent of the manifest;  set ALMANAC_HISTORY_BUNDLE
+    #   3. a tracked byte-copy here   - NOT independent: it is checked against the manifest's own
+    #                                   sha256, so it can prove the bytes are the ones the manifest
+    #                                   names, and cannot prove the manifest was ever right.
+    # Route 3 is a fallback for REBUILDING, not evidence for verifying, and saying so is the point.
+    bundle = os.environ.get("ALMANAC_HISTORY_BUNDLE")
+    if bundle and os.path.isdir(bundle):
+        out = subprocess.run(["git", "--no-optional-locks", "show", f"{commit}:{path}"],
+                             cwd=bundle, capture_output=True)
+        if not out.returncode:
+            print(f"  blob_at: {path}@{commit[:12]} read from the history bundle at {bundle}")
+            return out.stdout
+
+    copy = os.path.join(HERE, "pinned", path.replace("/", "__") + f".at-{commit[:12]}")
+    if os.path.exists(copy):
+        with open(copy, "rb") as fh:
+            payload = fh.read()
+        got = hashlib.sha256(payload).hexdigest()
+        if expect_sha is None:
+            raise SystemExit(f"verify_edition: {path} is pinned at {commit[:12]}, the history no "
+                             f"longer resolves it, and the tracked copy cannot be accepted without "
+                             f"the sha256 the manifest records for it.")
+        if got != expect_sha:
+            raise SystemExit(f"verify_edition: the tracked copy of {path}@{commit[:12]} does NOT "
+                             f"match the manifest: {got[:12]} vs {expect_sha[:12]}. A byte-copy "
+                             f"that disagrees with the row it stands in for is worse than none.")
+        print(f"  blob_at: {path}@{commit[:12]} read from the tracked copy "
+              f"(history unavailable; checked against the manifest, not independent of it)")
+        return payload
+
+    raise SystemExit(f"verify_edition: {path} is pinned at commit {commit[:12]}, which does not "
+                     f"resolve, and no tracked copy stands in for it. A pinned commit that cannot "
+                     f"be read is a broken anchor, not a passing row.\n{out.stderr.decode()[:300]}")
 
 
-def sha_of(path, rule=None, commit=None):
+def sha_of(path, rule=None, commit=None, expect_sha=None):
     if commit:
-        return hashlib.sha256(blob_at(path, commit)).hexdigest()
+        return hashlib.sha256(blob_at(path, commit, expect_sha)).hexdigest()
     if rule:
         return hashlib.sha256(slice_of(path, rule)).hexdigest()
     with open(path, "rb") as fh:
@@ -111,7 +150,7 @@ ATOMIC_WRITERS = {
 }
 
 
-def stable_sha_of(path, rule=None, commit=None):
+def stable_sha_of(path, rule=None, commit=None, expect_sha=None):
     """Hash, and confirm the file is not being written underneath us.
 
     F-E13, the symmetric half. This gate cold re-hashes files owned by OTHER seats,
@@ -132,9 +171,9 @@ def stable_sha_of(path, rule=None, commit=None):
     every possible torn read, so it is a floor under writers who have no atomic write
     and never a licence to skip one.
     """
-    first = sha_of(path, rule, commit)
+    first = sha_of(path, rule, commit, expect_sha)
     before = os.stat(path)
-    second = sha_of(path, rule, commit)
+    second = sha_of(path, rule, commit, expect_sha)
     after = os.stat(path)
     stable = (first == second
               and (before.st_mtime_ns, before.st_size) == (after.st_mtime_ns, after.st_size))
@@ -187,7 +226,7 @@ def main():
         if r["sha256"] is None:
             selfref.append(r["path"])
             continue
-        actual, stable = stable_sha_of(r["path"], r.get("slice_rule"), r.get("at_commit"))
+        actual, stable = stable_sha_of(r["path"], r.get("slice_rule"), r.get("at_commit"), r.get("sha256"))
         if not stable:
             unstable.append(r["path"])
             continue

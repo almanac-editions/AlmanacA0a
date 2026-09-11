@@ -121,9 +121,9 @@
    "group": "edition",
    "source_path": "SandboxA/sandboxA0a/almanac/edition/verify_edition.py",
    "dist_path": "edition/verify_edition.py",
-   "sha256_in_manifest": "3b914e8ef0a1585f6b12f487e499315ede9effbd01e9017124ebbb0f57313c7f",
+   "sha256_in_manifest": "56a0490f84d5b58dc288425be801806f9a23bacd6aa89e893e2447074dbbeaab",
    "role": "edition: the \u00a712.2 gate, executable \u2014 cold re-hash of every row, re-pin, and derivation of the aggregates",
-   "sha256_shipped": "3b914e8ef0a1585f6b12f487e499315ede9effbd01e9017124ebbb0f57313c7f",
+   "sha256_shipped": "56a0490f84d5b58dc288425be801806f9a23bacd6aa89e893e2447074dbbeaab",
    "status": "OK"
   },
   {
@@ -688,7 +688,7 @@
    "group": "edition",
    "source_path": "MANIFEST.json",
    "dist_path": "edition/MANIFEST.json",
-   "sha256_shipped": "a92d0c7f1c185b57538ce459bfe03a438116c05fede0e631eb827252a1e338b5",
+   "sha256_shipped": "4b432cfa8db8ab6b402095f514dc5eafc7be102123ec3a9815a13a8c8994cf89",
    "status": "OK",
    "role": "the edition's own machine-readable manifest"
   },
